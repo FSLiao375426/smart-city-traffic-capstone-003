@@ -1,0 +1,44 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.egg-info/
+
+# Local configuration
+.env
+.env.*
+!.env.example
+/.vscode/
+/.codex/
+/.agents/
+/.aws/
+
+# Temporary and operating-system files
+/tmp/
+/temp/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.tmp
+
+# Supplied course reference documents remain local
+/Capstone Submission.pdf
+/Capstone_Plan_of_Attack.pdf
+/NUSSOC_AMLDS_Capstone Project Instructions.docx
+/NUSSOC_AMLDS_Capstone Project Template.docx
+/NUSSOC_AMLDS_Guide to GitHub for Capstone.docx
+
+# Personal learning and conversation records remain local
+/AGENTS.md
+/PROJECT_PROGRESS.md
+/DISCUSSION_NOTES.md
+/LEARNING_GUIDE.md
+
+# Keep required project deliverables trackable:
+# SQL, databases, figures, reports, sample pipeline.log, models and
+# selected MLflow evidence are intentionally not ignored here.
