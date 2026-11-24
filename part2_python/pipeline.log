@@ -1,27 +1,54 @@
-2026-11-24T04:15:19Z | INFO | __main__ | Loaded raw CSV: 48204 rows, 9 columns
-2026-11-24T04:15:19Z | INFO | __main__ | Schema validated: all 9 required columns are present
-2026-11-24T04:15:19Z | INFO | __main__ | Schema validated: all 9 required columns are present
-2026-11-24T04:15:19Z | INFO | __main__ | Categorical text checked: holiday; no changes
-2026-11-24T04:15:19Z | INFO | __main__ | Categorical text checked: weather_main; no changes
-2026-11-24T04:15:20Z | WARNING | __main__ | Standardised 1730 rows in weather_description: inconsistent categorical text
-2026-11-24T04:15:20Z | INFO | __main__ | Parsed and validated 48204 hourly timestamps
-2026-11-24T04:15:20Z | WARNING | __main__ | Dropped 17 duplicate rows: all nine values identical after standardisation
-2026-11-24T04:15:20Z | INFO | __main__ | Traffic consistency checked: same-hour traffic volumes agree
-2026-11-24T04:15:20Z | WARNING | __main__ | Marked 10 rows invalid in temp: missing/non-finite or rule violation
-2026-11-24T04:15:20Z | WARNING | __main__ | Marked 1 rows invalid in rain_1h: missing/non-finite or rule violation
-2026-11-24T04:15:20Z | INFO | __main__ | Validity checks completed: snow_1h; no readings changed
-2026-11-24T04:15:20Z | INFO | __main__ | Validity checks completed: clouds_all; no readings changed
-2026-11-24T04:16:12Z | WARNING | __main__ | Updated 1150 hourly holiday labels: propagated known labels within the same calendar date
-2026-11-24T04:16:12Z | WARNING | __main__ | Collapsed 7612 additional weather-observation rows to 40575 unique traffic hours; weather labels retained separately
-2026-11-24T04:16:12Z | INFO | __main__ | Hourly tables built: 40575 traffic hours and 47893 hour/weather pairs
-2026-11-24T04:16:12Z | WARNING | __main__ | Imputed 4 hourly temp readings in month 1 using reference-period median 264.2500
-2026-11-24T04:16:12Z | WARNING | __main__ | Imputed 6 hourly temp readings in month 2 using reference-period median 264.1500
-2026-11-24T04:16:12Z | WARNING | __main__ | Imputed 1 hourly rain_1h readings in month 7 using reference-period median 0.0000
-2026-11-24T04:16:13Z | WARNING | __main__ | Coverage audit: 9 full months absent and 11976 unobserved hours inside the time range; no hours fabricated
-2026-11-24T04:16:15Z | INFO | __main__ | Saved processed\traffic_hourly.csv: 40575 rows, 28 columns
-2026-11-24T04:16:15Z | INFO | __main__ | Saved processed\hourly_weather.csv: 47893 rows, 3 columns
-2026-11-24T04:16:15Z | INFO | __main__ | Saved processed\coverage_by_year.csv: 7 rows, 8 columns
-2026-11-24T04:16:15Z | INFO | __main__ | Saved processed\time_gaps.csv: 2588 rows, 3 columns
-2026-11-24T04:16:15Z | INFO | __main__ | Saved processing metadata: quality_report.json
-2026-11-24T04:16:15Z | INFO | __main__ | Saved processing metadata: imputation_values.json
-2026-11-24T04:16:15Z | INFO | __main__ | Pipeline completed: 40575 observed hours; raw input SHA-256 unchanged
+2026-11-24T15:11:49Z | INFO | __main__ | Loaded raw CSV: 48204 rows, 9 columns
+2026-11-24T15:11:49Z | INFO | __main__ | Schema validated: all 9 required columns are present
+2026-11-24T15:11:49Z | INFO | __main__ | Schema validated: all 9 required columns are present
+2026-11-24T15:11:49Z | INFO | __main__ | Categorical text checked: holiday; no changes
+2026-11-24T15:11:49Z | INFO | __main__ | Categorical text checked: weather_main; no changes
+2026-11-24T15:11:49Z | WARNING | __main__ | Standardised 1730 rows in weather_description: inconsistent categorical text
+2026-11-24T15:11:49Z | INFO | __main__ | Parsed and validated 48204 hourly timestamps
+2026-11-24T15:11:50Z | WARNING | __main__ | Dropped 17 duplicate rows: all nine values identical after standardisation
+2026-11-24T15:11:50Z | INFO | __main__ | Traffic consistency checked: same-hour traffic volumes agree
+2026-11-24T15:11:50Z | WARNING | __main__ | Marked 10 rows invalid in temp: missing/non-finite or rule violation
+2026-11-24T15:11:50Z | WARNING | __main__ | Marked 1 rows invalid in rain_1h: missing/non-finite or rule violation
+2026-11-24T15:11:50Z | INFO | __main__ | Validity checks completed: snow_1h; no readings changed
+2026-11-24T15:11:50Z | INFO | __main__ | Validity checks completed: clouds_all; no readings changed
+2026-11-24T15:12:39Z | WARNING | __main__ | Updated 1150 hourly holiday labels: propagated known labels within the same calendar date
+2026-11-24T15:12:39Z | WARNING | __main__ | Collapsed 7612 additional weather-observation rows to 40575 unique traffic hours; weather labels retained separately
+2026-11-24T15:12:39Z | INFO | __main__ | Hourly tables built: 40575 traffic hours and 47893 hour/weather pairs
+2026-11-24T15:12:39Z | WARNING | __main__ | Imputed 4 hourly temp readings in month 1 using reference-period median 264.2500
+2026-11-24T15:12:39Z | WARNING | __main__ | Imputed 6 hourly temp readings in month 2 using reference-period median 264.1500
+2026-11-24T15:12:39Z | WARNING | __main__ | Imputed 1 hourly rain_1h readings in month 7 using reference-period median 0.0000
+2026-11-24T15:12:40Z | WARNING | __main__ | Coverage audit: 9 full months absent and 11976 unobserved hours inside the time range; no hours fabricated
+2026-11-24T15:12:41Z | INFO | __main__ | Saved processed\traffic_hourly.csv: 40575 rows, 28 columns
+2026-11-24T15:12:41Z | INFO | __main__ | Saved processed\hourly_weather.csv: 47893 rows, 3 columns
+2026-11-24T15:12:41Z | INFO | __main__ | Saved processed\coverage_by_year.csv: 7 rows, 8 columns
+2026-11-24T15:12:41Z | INFO | __main__ | Saved processed\time_gaps.csv: 2588 rows, 3 columns
+2026-11-24T15:12:41Z | INFO | __main__ | Saved processing metadata: quality_report.json
+2026-11-24T15:12:41Z | INFO | __main__ | Saved processing metadata: imputation_values.json
+2026-11-24T15:12:41Z | INFO | __main__ | Pipeline completed: 40575 observed hours; raw input SHA-256 unchanged
+2026-11-24T15:12:43Z | INFO | __main__ | Starting feature stage: time only
+2026-11-24T15:12:43Z | INFO | part2_python.features | Loaded cleaned hourly table: 40575 rows, 28 columns
+2026-11-24T15:12:43Z | INFO | part2_python.features | Added 3 calendar features to 40575 rows: hour, day_of_week, is_weekend
+2026-11-24T15:12:43Z | INFO | part2_python.features | Added 2 cyclic hour features using the fixed 24-hour period
+2026-11-24T15:12:45Z | INFO | part2_python.features | Saved traffic_time_features.csv: 40575 rows, 33 columns; input observations and file unchanged
+2026-11-24T15:12:45Z | INFO | __main__ | Starting feature stage: ['--scale']
+2026-11-24T15:12:45Z | INFO | part2_python.features | Loaded cleaned hourly table: 40575 rows, 28 columns
+2026-11-24T15:12:45Z | INFO | part2_python.features | Added 3 calendar features to 40575 rows: hour, day_of_week, is_weekend
+2026-11-24T15:12:45Z | INFO | part2_python.features | Added 2 cyclic hour features using the fixed 24-hour period
+2026-11-24T15:12:45Z | INFO | part2_python.features | Scaled temp: reference=25329, fit_end=2016-12-31 23:59:59, mean=280.94088130, population_std=13.15421926
+2026-11-24T15:12:45Z | INFO | part2_python.features | Scaled clouds_all: reference=25329, fit_end=2016-12-31 23:59:59, mean=45.43313988, population_std=38.47978187
+2026-11-24T15:12:47Z | INFO | part2_python.features | Saved traffic_scaled_features.csv: 40575 rows, 35 columns; input observations and file unchanged
+2026-11-24T15:12:47Z | INFO | __main__ | Starting feature stage: ['--quartiles']
+2026-11-24T15:12:47Z | INFO | part2_python.features | Loaded cleaned hourly table: 40575 rows, 28 columns
+2026-11-24T15:12:47Z | INFO | part2_python.features | Added 3 calendar features to 40575 rows: hour, day_of_week, is_weekend
+2026-11-24T15:12:47Z | INFO | part2_python.features | Added 2 cyclic hour features using the fixed 24-hour period
+2026-11-24T15:12:47Z | INFO | part2_python.features | Scaled temp: reference=25329, fit_end=2016-12-31 23:59:59, mean=280.94088130, population_std=13.15421926
+2026-11-24T15:12:47Z | INFO | part2_python.features | Scaled clouds_all: reference=25329, fit_end=2016-12-31 23:59:59, mean=45.43313988, population_std=38.47978187
+2026-11-24T15:12:47Z | INFO | part2_python.features | Quartile counts (reference): {1: 6337, 2: 6329, 3: 6332, 4: 6331}
+2026-11-24T15:12:47Z | INFO | part2_python.features | Quartile counts (holdout): {1: 3625, 2: 3567, 3: 4062, 4: 3992}
+2026-11-24T15:12:50Z | INFO | part2_python.features | Saved traffic_model_features.csv: 40575 rows, 36 columns; input observations and file unchanged
+2026-11-24T15:12:50Z | INFO | __main__ | Starting visualization stage
+2026-11-24T15:12:52Z | INFO | part2_python.visualize | Saved figure C:\Users\f_s_l\Documents\GitHub\smart-city-traffic-capstone-003\part2_python\figures\01_hourly_profile.png
+2026-11-24T15:12:53Z | INFO | part2_python.visualize | Saved figure C:\Users\f_s_l\Documents\GitHub\smart-city-traffic-capstone-003\part2_python\figures\02_traffic_distribution.png
+2026-11-24T15:12:55Z | INFO | part2_python.visualize | Saved figure C:\Users\f_s_l\Documents\GitHub\smart-city-traffic-capstone-003\part2_python\figures\03_temperature_traffic.png
+2026-11-24T15:12:55Z | INFO | part2_python.visualize | Verified 40575 observed hours; source hash unchanged; r=0.13949269
+2026-11-24T15:12:55Z | INFO | __main__ | End-to-end pipeline completed: raw CSV, cleaning, features and three figures

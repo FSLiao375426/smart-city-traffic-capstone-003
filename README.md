@@ -65,3 +65,7 @@ These components will be added incrementally. Reproduction commands and dependen
 Hogue, J. (2019). *Metro Interstate Traffic Volume* [Dataset]. UCI Machine Learning Repository. [https://doi.org/10.24432/C5X60B](https://doi.org/10.24432/C5X60B).
 
 The [UCI dataset page](https://archive.ics.uci.edu/dataset/492/metro%2Binterstate%2Btraffic%2Bvolume) identifies the dataset licence as [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/). This attribution refers to the dataset.
+
+## Part 2 reproduction
+
+Run python -m part2_python.pipeline --all from this repository root for raw-to-figures processing. The three user queries are python -m part2_python.cli at, summary and compare; arguments and evidence are documented in [Part 2 README](part2_python/README.md). The Part 2 report and final submission packaging remain pending.

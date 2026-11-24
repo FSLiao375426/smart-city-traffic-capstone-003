@@ -47,6 +47,8 @@ def configure_logging(path: Path, level: str = "INFO") -> None:
     for handler in handlers:
         handler.setFormatter(formatter)
     logging.basicConfig(level=getattr(logging, level), handlers=handlers, force=True)
+    # Keep application DEBUG values useful without third-party font diagnostics.
+    logging.getLogger("matplotlib").setLevel(logging.WARNING)
 
 
 def validate_schema(frame: pd.DataFrame) -> None:
@@ -311,8 +313,16 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--log-file", type=Path, default=PROJECT_ROOT / "part2_python" / "pipeline.log")
     parser.add_argument("--fit-end", default=DEFAULT_FIT_END)
     parser.add_argument("--log-level", choices=["DEBUG", "INFO", "WARNING", "ERROR"], default="INFO")
+    parser.add_argument("--all", action="store_true", help="Run cleaning, features and all three figures with one event log")
     args = parser.parse_args(argv)
+    if args.all and args.output_dir.resolve() != (PROJECT_ROOT / "data/processed").resolve():
+        parser.error("--all requires the default output directory used by downstream modules")
     output_paths = {(args.output_dir / name).resolve() for name in OUTPUT_FILENAMES}
+    if args.all:
+        output_paths.update((PROJECT_ROOT / "data/processed" / name).resolve() for name in (
+            "traffic_time_features.csv", "traffic_scaled_features.csv", "traffic_model_features.csv",
+            "scaling_values.json", "quartile_values.json"))
+        output_paths.update(path.resolve() for path in (PROJECT_ROOT / "part2_python/figures").glob("*"))
     if args.input.resolve() in output_paths | {args.log_file.resolve()}:
         parser.error("The raw input must differ from all generated output and log paths")
     if args.log_file.resolve() in output_paths:
@@ -320,6 +330,16 @@ def main(argv: list[str] | None = None) -> int:
     configure_logging(args.log_file, args.log_level)
     try:
         run_pipeline(args.input, args.output_dir, pd.Timestamp(args.fit_end))
+        if args.all:
+            from part2_python import features, visualize
+            for flags in ([], ["--scale"], ["--quartiles"]):
+                logger.info("Starting feature stage: %s", flags or "time only")
+                if features.main(flags, configure=False) != 0:
+                    raise RuntimeError("Feature stage failed")
+            logger.info("Starting visualization stage")
+            if visualize.main(configure=False) != 0:
+                raise RuntimeError("Visualization stage failed")
+            logger.info("End-to-end pipeline completed: raw CSV, cleaning, features and three figures")
     except Exception:
         # CLI 邊界攔截並記錄失敗；不是未指定型別的 bare except。
         logger.error("Pipeline failed; no successful completion was recorded", exc_info=True)
