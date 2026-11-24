@@ -1,0 +1,11 @@
+{
+  "source": "data\\processed\\traffic_time_features.csv",
+  "source_sha256": "26ffa6cc5bb1f908c405287f9107800df249e2a4c9ca842206a84405b97f2405",
+  "observed_hours": 40575,
+  "zero_traffic_hours": 2,
+  "pearson_temp_traffic": 0.1394926889604413,
+  "histogram_bin_width": 250,
+  "histogram_intervals": "[left, right), except last includes right edge",
+  "matplotlib_version": "3.11.2",
+  "scope": "Full-period descriptive analysis; not held-out model performance"
+}
