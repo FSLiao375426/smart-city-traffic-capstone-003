@@ -1,0 +1,5 @@
+method,group,standardized_congestion_probability,weight_population_hours
+hour,clear_without_clouds,0.152798557348,28484
+hour,clouds_without_clear,0.152303632743,28484
+hour_weekend,clear_without_clouds,0.156450559875,28484
+hour_weekend,clouds_without_clear,0.149887561203,28484

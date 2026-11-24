@@ -1,0 +1,3 @@
+group,congested_hours,noncongested_hours,observed_hours,congestion_probability,congestion_odds
+clear_without_clouds,1762,11602,13364,0.131846752469,0.151870367178
+clouds_without_clear,2586,12534,15120,0.171031746032,0.206318812829

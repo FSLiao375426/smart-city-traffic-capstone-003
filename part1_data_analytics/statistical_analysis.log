@@ -1,0 +1,11 @@
+2026-11-24T15:52:31Z | INFO | __main__ | Loaded 40575 rows and 28 columns
+2026-11-24T15:52:31Z | INFO | __main__ | Saved descriptive_statistics.csv: 10 rows
+2026-11-24T15:52:31Z | INFO | __main__ | Saved temperature_correlation.csv: 2 rows
+2026-11-24T15:52:31Z | INFO | __main__ | Saved probabilities.csv: 6 rows
+2026-11-24T15:52:31Z | INFO | __main__ | Saved weather_contingency.csv: 2 rows
+2026-11-24T15:52:31Z | INFO | __main__ | Saved weather_standardized_rates.csv: 4 rows
+2026-11-24T15:52:31Z | INFO | __main__ | Saved weather_strata.csv: 144 rows
+2026-11-24T15:52:31Z | INFO | __main__ | Saved hourly_profile_2017.csv: 24 rows
+2026-11-24T15:52:31Z | INFO | __main__ | Saved weather_average_traffic.csv: 11 rows
+2026-11-24T15:52:31Z | INFO | __main__ | Saved congested_temperature_range.csv: 4 rows
+2026-11-24T15:52:31Z | INFO | __main__ | Analysis verified; source unchanged; crude odds ratio 0.7360955848

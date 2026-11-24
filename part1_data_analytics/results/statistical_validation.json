@@ -1,0 +1,18 @@
+{
+  "observed_hours": 40575,
+  "congested_hours": 6107,
+  "congestion_definition": "traffic_volume > 5500",
+  "high_temperature_definition": "temp > 292 K; observed temperature only",
+  "joint_clear_congestion": 0.043450400492914355,
+  "independence_product": 0.04959920915034913,
+  "joint_minus_product": -0.006148808657434772,
+  "independence_equality_holds": false,
+  "clear_vs_clouds_crude_odds_ratio": 0.7360955847679675,
+  "excluded_both_weather_hours": 7,
+  "excluded_neither_weather_hours": 12084,
+  "temperature_imputed_hours": 10,
+  "interpretation": "Descriptive association only; no causal or predictive performance claim",
+  "source_sha256": "7aa0c57332dcef8518b839a4afb9c1b606a59519b7923cf91396804f337a896b",
+  "cross_checks": "SQLite event counts and statistics.pstdev passed",
+  "source": "data/processed/traffic_hourly.csv"
+}

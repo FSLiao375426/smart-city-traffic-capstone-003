@@ -1,0 +1,3 @@
+scope,paired_hours,pearson_r
+observed_temperature_only,40565,0.139226386398
+including_imputed_sensitivity,40575,0.139492688960

@@ -1,0 +1,7 @@
+event,numerator_hours,denominator_hours,probability
+P(congestion),6107,40575,0.150511398644
+P(clear),13371,40575,0.329537892791
+P(congestion_and_clear),1763,40575,0.043450400493
+P(clear_given_congestion),1763,6107,0.288685115441
+P(congestion_given_clear),1763,13371,0.131852516640
+P(high_temperature_given_congestion),1699,6107,0.278205338137
