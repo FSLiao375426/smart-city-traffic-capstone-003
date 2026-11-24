@@ -1,6 +1,6 @@
 # Traffic Data Pipeline
 
-This first implementation validates the supplied observations, builds one traffic row per observed hour and preserves multiple weather labels in a separate table. A separate feature step adds three calendar fields and two cyclic-hour coordinates. Reference-period scaling, quartile labels and three saved Matplotlib figures are implemented. The analytics CLI and end-to-end entry point are implemented; the short report and final submission packaging remain pending.
+This first implementation validates the supplied observations, builds one traffic row per observed hour and preserves multiple weather labels in a separate table. A separate feature step adds three calendar fields and two cyclic-hour coordinates. Reference-period scaling, quartile labels and three saved Matplotlib figures are implemented. The analytics CLI and end-to-end entry point are implemented; a two-page report and standalone submission ZIP are now available.
 
 ## Run
 
@@ -141,18 +141,18 @@ This checklist explicitly tracks the logging requirements and submission checkli
 | Module loggers via logging.getLogger(__name__); no bare root logging in library operations | pipeline.py, features.py and visualize.py each declare a named module logger; current source search found no root-level logging.info/warning/error/debug calls. Root configuration via basicConfig is setup, not an operational root-log message. |
 | Configure logging only at the main/entry point; console and file output | Each main() calls the shared configure_logging helper; imports do not configure logging. Current setup attaches one StreamHandler and one FileHandler to the root logger. This is one configuration with TWO destination handlers, not literally one handler object. The original DOCX says 'Configure a handler only in your main/entry-point script' and cites a multiple-handler cookbook. We interpret this as an entry-point-only configuration requirement, with one handler per output destination. pipeline.py --all now provides the integrated entry point and unified event trail. |
 | Timestamp, level, module and message | Formatter: %(asctime)s | %(levelname)s | %(name)s | %(message)s; UTC timestamp. Direct -m execution reports the module name as __main__, while imported library execution uses its qualified module name. |
-| Appropriate DEBUG / INFO / WARNING / ERROR | Cleaning has DEBUG fitted parameters, INFO milestones, WARNING recoverable drops/imputation/coverage, ERROR failed execution with traceback and return code 1. Features/visualization use INFO milestones and ERROR failures. Final CLI and integrated run still require review. |
+| Appropriate DEBUG / INFO / WARNING / ERROR | Cleaning has DEBUG fitted parameters, INFO milestones, WARNING recoverable drops/imputation/coverage, ERROR failed execution with traceback and return code 1. Features/visualization use INFO milestones and ERROR failures. CLI and integrated runs have passed acceptance checks. |
 | No internal progress print(); CLI user-facing result is the stated exception | Current Part 2 source contains no print() calls. Continue using logger for status/progress. Future CLI output must follow the course's stated distinction; re-audit all final source files before submission. |
 
 | Submission item | Status and evidence |
 |---|---|
-| End-to-end run from raw CSV without errors | PARTIAL: cleaning and downstream stages have individual successful run evidence. A fresh complete raw-to-final run including the future analytics CLI has NOT yet been accepted. |
-| Generated, clear and ordered event trail | PARTIAL: pipeline.log, features.log and visualize.log exist with formatted event records. Each command overwrites its own log; these are not yet a unified complete-pipeline trace. |
+| End-to-end run from raw CSV without errors | DONE: pipeline.py --all passed from raw CSV to all feature tables and three figures; the three CLI commands have separate acceptance evidence. |
+| Generated, clear and ordered event trail | DONE: pipeline.log contains the integrated raw-to-figures trail; standalone commands keep separate logs. |
 | No print() | Current Part 2 source audit passes; final repository-wide submission audit remains pending. Ad hoc verification output in chat is not submitted program source. |
 | At least three visualizations saved to disk | DONE: figures/01_hourly_profile.png, 02_traffic_distribution.png and 03_temperature_traffic.png, plus supporting CSVs and metadata; inspected 2026-11-24. |
-| CLI responds to at least three distinct commands | PENDING: feature flags and three SQL files are not counted as the three analytics commands. Implement and verify three user-facing queries with input validation and useful results. |
-| Multiple incremental GitHub commits | Local history contains 5854a56, 3b5f3e3, c5cb5b6 and bfa2339. Current new work is uncommitted; user handles stage/commit/push. Current remote publication was not reverified during this audit. |
-| README and report | PARTIAL: repository and Part 2 README exist; Part 2 1–2 page methods/results report remains pending, along with final README reconciliation. |
+| CLI responds to at least three distinct commands | DONE: at, summary and compare passed with input validation and useful JSON responses. |
+| Multiple incremental GitHub commits | DONE for the core implementation: 0bf9a7e, 5829ce3, fae789c and 63c0018 were committed by the user; live origin main matched 63c0018 on 2026-11-24. Report/package additions await the user next commit. |
+| README and report | README and two-page report available; see output/pdf/part2_traffic_pipeline_report.pdf and the standalone ZIP described below. |
 
 Final acceptance must include command lines, return codes, output checks and a clear complete event trail. Do not mark the whole Part 2 complete on the strength of individual module runs or the three saved figures alone.
 ## End-to-end entry point and three query commands (2026-11-24)
@@ -183,10 +183,23 @@ Apply these commits in order using explicit file selection. The user performs st
 | Order | Suggested commit subject | Files to select |
 |---|---|---|
 | 1 | Add reference-fitted scaling and traffic quartile labels | part2_python/features.py; part2_python/features.log; part2_python/tests/test_features.py; data/processed/scaling_values.json; data/processed/quartile_values.json; data/processed/traffic_scaled_features.csv; data/processed/traffic_model_features.csv |
-| 2 | Add three reproducible traffic visualizations | part2_python/visualize.py; part2_python/visualize.log; part2_python/requirements.txt; all eight current files in part2_python/figures/ |
+| 2 | Add three reproducible traffic visualizations | part2_python/visualize.py; part2_python/visualize.log; part2_python/requirements.txt; all seven current files in part2_python/figures/ |
 | 3 | Add three traffic query commands with validation | part2_python/cli.py; part2_python/cli.log; part2_python/tests/test_cli.py; part2_python/validation/cli_acceptance.json |
 | 4 | Integrate end-to-end pipeline and document acceptance | part2_python/pipeline.py; part2_python/pipeline.log; part2_python/README.md; README.md |
 
 Dependency order: labels before CLI; figures before integrated --all. Each earlier feature/figure/CLI module works standalone with the pre-integration pipeline logging helper. The final commit documents the combined state and adds the integrated entry point. Review git diff --cached --stat before each commit. Latest complete-state verification: 16 tests, seven CLI acceptance cases and successful raw-to-figures runs. This is verification of the full working tree, not a claim that each proposed historical commit was separately checked out and tested.
 
 Leave the existing untracked part1_data_analytics/PowerBI/ and traffic_dashboard.pbix for a separate Part 1 deliverable commit after its artifacts are assembled and reviewed. The pending Part 2 short report and final packaging should be another descriptive commit when actually finished. Personal learning notes, supplied course files, tmp verification scripts and unrelated files are not part of these four batches. No new commits or pushes have been made by the assistant.
+## Report and standalone submission package
+
+The user completed the four planned implementation commits: 0bf9a7e (features), 5829ce3 (figures), fae789c (CLI) and 63c0018 (integration). Local HEAD, origin/main and live remote main were verified equal to 63c00188f8059ffc64851f292469583c64324992 on 2026-11-24. The earlier incremental plan is retained as a record; report/package changes are new and uncommitted.
+
+The two-page English report is output/pdf/part2_traffic_pipeline_report.pdf. Its data/methodology and findings are derived from saved outputs; it discloses the demonstration cutoff, missing months, proxy labels, confounding and undecided modelling split. Two pages were rendered and visually checked.
+
+Build the submission with `python -m part2_python.build_submission`. This creates output/submission/capstone_part2.zip with a top-level capstone_part2 folder, raw data, processed outputs, implementation modules/tests, three figures, logs, CLI evidence, report and a SHA-256 manifest. Generated root entry-point aliases provide the course filenames pipeline.py, feature_engineering.py and visualizations.py, plus traffic_app.py; they call the existing modules without duplicating processing logic. Extract the complete folder before running. This portable copy is a submission artifact; program development remains in the designated Git repository. No personal notes, original course documents, temporary checks, Part 1 artifacts or credentials are included.
+
+Report authoring is optional: `part2_python/build_report.py` uses ReportLab (not a pipeline runtime dependency). Run it with the Codex bundled document Python/ReportLab environment used for this task, or a separately prepared ReportLab environment. The ordinary pipeline uses only requirements.txt. The PDF and ZIP are generated artifacts; do not place temporary page renders in Git.
+
+The package is tested after extraction under repo tmp/: manifest hashes, a fresh raw-to-figures run, the test suite, all three analytics commands and entry aliases. Evidence is saved outside the ZIP in validation/submission_acceptance.json to avoid a circular archive hash. A future change requires rebuilding and revalidating the ZIP. The sample logs in the ZIP are evidence of the source runs; rerunning extracted commands overwrites the extracted logs only.
+
+Final cross-part submission review, report approval and publication of these new report/package files remain pending. No model training or final prediction-input design is claimed by the Part 2 report.
