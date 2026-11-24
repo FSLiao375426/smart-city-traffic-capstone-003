@@ -1,0 +1,12 @@
+2026-11-24T05:58:38Z | INFO | part2_python.pipeline | Loaded raw CSV: 48204 rows, 9 columns
+2026-11-24T05:58:38Z | INFO | part2_python.pipeline | Schema validated: all 9 required columns are present
+2026-11-24T05:58:38Z | INFO | __main__ | Validated hourly input: 40575 rows and 28 columns
+2026-11-24T05:58:40Z | INFO | __main__ | SQLite load verified: 48204 raw rows; 40575 distinct hourly rows
+2026-11-24T05:58:41Z | INFO | __main__ | Executed 01_yearly_traffic.sql: 6 rows, 4 columns
+2026-11-24T05:58:41Z | INFO | __main__ | Executed 02_yearly_changes.sql: 6 rows, 11 columns
+2026-11-24T05:58:42Z | INFO | __main__ | Executed 03_holiday_temperature.sql: 7 rows, 14 columns
+2026-11-24T05:58:42Z | INFO | __main__ | Saved yearly_traffic_2012_2017.csv
+2026-11-24T05:58:42Z | INFO | __main__ | Saved yearly_changes_2012_2017.csv
+2026-11-24T05:58:42Z | INFO | __main__ | Saved holiday_temperature_2015_2017.csv
+2026-11-24T05:58:42Z | INFO | __main__ | SQLite queries completed: 6 annual years and 7 holiday/date-basis rows
+2026-11-24T05:58:42Z | INFO | __main__ | SQLite step completed; input hashes unchanged

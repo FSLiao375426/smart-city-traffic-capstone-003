@@ -1,0 +1,8 @@
+year,holiday_name,date_basis,holiday_date,source_holiday_labels,observed_hours,daily_coverage_pct,temp_imputed_hours,avg_temp_k,avg_temp_c,min_temp_c,max_temp_c,avg_hourly_traffic,coverage_status
+2015,New Years Day,calendar_date,2015-01-01,None,0,0.00,0,NA,NA,NA,NA,NA,NO_OBSERVATIONS
+2015,Labor Day,calendar_date,2015-09-07,Labor Day,24,100.00,0,295.32,22.17,18.70,26.45,2430.29,COMPLETE_DAY
+2016,New Years Day,calendar_date,2016-01-01,New Years Day,18,75.00,0,267.09,-6.06,-9.16,-1.17,1832.00,PARTIAL_DAY
+2016,Labor Day,calendar_date,2016-09-05,Labor Day,24,100.00,0,295.01,21.86,18.73,24.84,2151.54,COMPLETE_DAY
+2017,New Years Day,calendar_date,2017-01-01,None,24,100.00,0,270.09,-3.06,-5.44,-1.25,2127.63,COMPLETE_DAY
+2017,New Years Day,dataset_label_date,2017-01-02,New Years Day,24,100.00,0,271.85,-1.30,-2.73,-0.13,2091.08,COMPLETE_DAY
+2017,Labor Day,calendar_date,2017-09-04,Labor Day,24,100.00,0,291.29,18.14,11.78,23.07,2395.17,COMPLETE_DAY

@@ -1,0 +1,51 @@
+{
+  "sqlite_version": "3.53.4",
+  "sources": [
+    {
+      "file": "Metro_Interstate_Traffic_Volume.csv",
+      "sha256": "749c90d720360a4215bb15345526073c079ba4cc95e3fa558796d083f85fce9e"
+    },
+    {
+      "file": "data\\processed\\traffic_hourly.csv",
+      "sha256": "7aa0c57332dcef8518b839a4afb9c1b606a59519b7923cf91396804f337a896b"
+    }
+  ],
+  "raw_rows": 48204,
+  "raw_distinct_hours": 40575,
+  "hourly_rows": 40575,
+  "hourly_distinct_hours": 40575,
+  "sqlite_integrity": "ok",
+  "query_file": "01_yearly_traffic.sql",
+  "queries": [
+    {
+      "file": "01_yearly_traffic.sql",
+      "sha256": "1c6205c48cc6d535442262d55c0d8e12495c79db5322d99e62eda441d71732da",
+      "output": "yearly_traffic_2012_2017.csv",
+      "rows": 6,
+      "columns": 4
+    },
+    {
+      "file": "02_yearly_changes.sql",
+      "sha256": "1fef242dfe51f68fba0ffb6a61d5e374dcf766337f2b0caddb52c6a5d1c76a79",
+      "output": "yearly_changes_2012_2017.csv",
+      "rows": 6,
+      "columns": 11
+    },
+    {
+      "file": "03_holiday_temperature.sql",
+      "sha256": "eba3833681a742cdb06c4697696d9e37b65fdeda9b0d2b731332d29dd2aa2d0d",
+      "output": "holiday_temperature_2015_2017.csv",
+      "rows": 7,
+      "columns": 14
+    }
+  ],
+  "output_years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+  ],
+  "input_files_unchanged": true
+}

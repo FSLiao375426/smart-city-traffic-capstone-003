@@ -10,10 +10,11 @@ The public project repository is [FSLiao375426/smart-city-traffic-capstone-003](
 
 ## Current status
 
-This milestone contains a validated data-cleaning pipeline and five time features. The raw dataset remains preserved. Hourly traffic, multiple weather labels, quality flags, coverage gaps, fitted imputation metadata and sample logs are included. SQL analyses, additional features, plots, the analytics CLI and models follow in later milestones.
+The first data-cleaning pipeline, five time features and SQL analysis draft have been implemented and verified locally. Cleaning preserves the supplied dataset, builds one traffic row per observed hour, retains multiple weather conditions, records data-quality decisions and reports coverage gaps. The separate feature step adds calendar and cyclic-hour fields. SQLite retains raw/hourly tables and provides annual totals, coverage-aware changes and holiday-temperature comparisons. Further features, descriptive statistics/probabilities, Power BI, models and deployment components are still pending.
 
 Run cleaning from the project root with `python -m part2_python.pipeline`, then calendar features with `python -m part2_python.features`. See [pipeline instructions](part2_python/README.md) for dependencies, outputs, cleaning rules and verification.
 
+After cleaning, run SQL analysis with `python -m part1_data_analytics.sqlite_analysis`. See [Part 1 instructions](part1_data_analytics/README.md) for the database, queries, results and interpretations.
 
 ## Project scope
 
@@ -28,6 +29,10 @@ Run cleaning from the project root with `python -m part2_python.pipeline`, then 
 | `Metro_Interstate_Traffic_Volume.csv` | Unmodified input dataset supplied for the capstone. |
 | `README.md` | Project overview and documentation entry point. |
 | `.gitignore` | Excludes local environment files, temporary files, supplied course documents and personal learning notes from version tracking. |
+| `part1_data_analytics/sqlite_analysis.py` | Imports and verifies raw/hourly tables, then runs three historical-analysis SQL files. |
+| `part1_data_analytics/sql/` | Annual summaries, annual changes and holiday temperatures with explicit coverage and date definitions. |
+| `part1_data_analytics/traffic.sqlite` | Generated database with raw and hourly tables. |
+| `part1_data_analytics/results/` | Three query-result CSVs and source/query validation metadata. |
 | `part2_python/pipeline.py` | Validates, cleans and constructs hourly traffic/weather tables; logs decisions and failures. |
 | `part2_python/features.py` | Adds three calendar features and two cyclic-hour coordinates to a separate output, preserving all cleaned observations. |
 | `part2_python/tests/test_pipeline.py` | Tests preservation, conflicts, holiday scope, imputation reference data and raw-input protection. |
