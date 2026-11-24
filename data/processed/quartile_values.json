@@ -1,0 +1,19 @@
+{
+  "fit_end": "2016-12-31 23:59:59",
+  "reference_hours": 25329,
+  "source_column": "traffic_volume",
+  "label_column": "traffic_volume_quartile",
+  "quantile_interpolation": "linear",
+  "thresholds": {
+    "q1": 1204.0,
+    "q2": 3339.0,
+    "q3": 4932.0
+  },
+  "intervals": [
+    "x <= q1",
+    "q1 < x <= q2",
+    "q2 < x <= q3",
+    "x > q3"
+  ],
+  "meaning": "Traffic-volume proxy levels, not observed accident risk"
+}
