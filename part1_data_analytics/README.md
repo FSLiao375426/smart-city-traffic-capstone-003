@@ -1,6 +1,6 @@
 # Historical Traffic Analysis
 
-This SQL draft implements raw/hourly loading and verification, annual totals and changes for 2012–2017, and holiday-temperature comparisons for 2015–2017. Interpretations and qualifications appear below. Formal descriptive statistics/probabilities, Power BI and the integrated Part 1 report remain pending.
+This SQL draft implements raw/hourly loading and verification, annual totals and changes for 2012–2017, and holiday-temperature comparisons for 2015–2017. Interpretations and qualifications appear below. Descriptive statistics, probabilities, weather stratification and a two-page insights report are now available alongside the previously verified Power BI dashboard. New deliverables await user review and commit/push.
 
 ## Run
 
@@ -70,3 +70,56 @@ Labor Day mean temperatures decline from 22.17 C (2015) to 21.86 C (2016) and 18
 ## Extended verification
 
 All three SQL files completed with warnings treated as errors: six annual rows, six change rows and seven holiday/date-basis rows. Independent calculations checked every change percentage, calendar coverage, holiday aggregate and missing-value case. The raw/hourly database read-back and integrity checks were repeated after the extension. Input and query hashes match the saved metadata.
+
+## Reproducible statistics and probabilities (2026-11-24)
+
+```powershell
+python -W error -m part1_data_analytics.statistical_analysis
+python -W error -m unittest discover -s part1_data_analytics/tests -v
+```
+
+Input: data/processed/traffic_hourly.csv (40,575 unique hours). The analysis leaves the source unchanged, checks event counts with independent SQLite queries and population standard deviation with Python statistics. Its named logger writes normal events and failures to statistical_analysis.log and the console. Three independent checks passed, including exact four-cell counts and rational odds ratio, standard-library descriptive statistics, correlation and standardization weights/regression values.
+
+| Result in results/ | Purpose |
+|---|---|
+| descriptive_statistics.csv | Mean 3290.65047443, median 3427, population SD 1984.74845105, variance 3939226.41392553, range 7280. Sample SD/variance are separately labelled. |
+| temperature_correlation.csv | Main: 40,565 directly observed temperature pairs, Pearson r=0.1392263864. Sensitivity including ten imputed hours: 40,575 pairs, r=0.1394926890. |
+| probabilities.csv | Event numerator/denominator counts and six probabilities, including all required basic and conditional probabilities. |
+| weather_contingency.csv | Two mutually exclusive Clear/Clouds comparison groups and their congested/noncongested counts. |
+| weather_standardized_rates.csv | Common-weight rates adjusted for hour or hour x weekday/weekend. |
+| weather_strata.csv | All component counts and pooled weights; NA weekend values identify hour-only strata. |
+| hourly_profile_2017.csv | 24 mean traffic values and observation counts for the dashboard's required year. |
+| weather_average_traffic.csv | Mean traffic and support count for each nonexclusive weather category. |
+| congested_temperature_range.csv | Observed temperature minimum, 10th/90th percentiles and maximum among congested hours. |
+| statistical_validation.json | Source SHA-256, definitions, overlap exclusions, independence comparison and crude odds ratio. |
+
+### Interpretation and definitions
+
+Congestion is strictly traffic_volume >5500; high temperature is strictly >292 K. Clear means weather_Clear=1, including hours with additional weather labels. Counts give P(congestion)=6107/40575=15.05%, P(clear)=13371/40575=32.95%, P(both)=1763/40575=4.35%, P(clear given congestion)=1763/6107=28.87% and P(high temperature given congestion)=1699/6107=27.82%. All ten imputed-temperature hours are noncongested, so excluding them does not change this last conditional probability.
+
+The observed joint probability 0.04345040049 differs from the independence product 0.04959920915. This is an empirical equality comparison, not a formal hypothesis test or proof of a causal effect.
+
+For the odds ratio only, compare Clear without Clouds (1762 congested, 11602 not) with Clouds without Clear (2586 congested, 12534 not), excluding seven overlapping hours and 12,084 hours with neither category. Other labels may coexist. OR=(1762/11602)/(2586/12534)=0.7360955848. It describes lower crude odds in the first group; odds and probability are different quantities.
+
+Common weights come from the pooled 28,484 hours in these two groups. Every hour stratum and hour/weekend stratum has both groups. Hour-standardized congestion rates are 15.2799% (clear group) and 15.2304% (cloudy group); hour/weekend rates are 15.6451% and 14.9888%. Compare these descriptive rates, not the adjusted rate ratio with the crude odds ratio. Weather group composition and time of day limit a simple weather ranking.
+
+Clouds has the highest nonexclusive weather-category mean (3616.95 vehicles/hour; 15,127 hours), Squall the lowest (2061.75; only four hours), difference 1555.20. The tiny Squall group does not support a reliable operational recommendation. Congested hours span -26.00 to 36.14 C; the middle 80% span -6.93 to 25.97 C. The maximum observed traffic (7280 at 2017-03-09 16:00) occurred at -2.40 C. These are descriptive ranges, not learned decision thresholds or causal effects.
+
+## Power BI and report deliverables
+
+- traffic_dashboard.pbix: saved report, previously interactively verified by the user. Current archive integrity and report layout show one page, four charts, three KPI cards, three slicers and one title. No live Power BI interactions were repeated in this round.
+- PowerBI/: three existing PNGs documenting earlier tooltip/visual checks; these are not represented as a fresh screenshot of the entire final dashboard.
+- [Two-page Data Analytics Insights Report](../output/pdf/part1_data_analytics_insights_report.pdf): methodology, statistical/probability results, annual coverage, holiday-date limits, dashboard findings and recommendations for the mobility team. Both final pages were rendered and visually checked. This repo-local report consolidates the prior discussion; it does not claim to be the inaccessible earlier cloud PDF's exact bytes.
+- build_report.py: optional ReportLab authoring tool. It runs with the bundled PDF Python/ReportLab environment; ReportLab is not needed for the statistical analysis or dashboard.
+
+The course's four Part 1 deliverables map to sql/ and traffic.sqlite, results/ plus statistical_analysis.py, traffic_dashboard.pbix, and the linked report. The dashboard's fixed Low/Medium/High bins are distinct from Part 2 quartile labels. Final source-to-report verification, user review and publication remain part of final acceptance.
+
+## Suggested incremental commits
+
+1. Add reproducible Part 1 statistical and probability analysis: statistical_analysis.py, statistical_analysis.log, tests/test_statistics.py and the ten new results files (nine CSVs plus statistical_validation.json).
+2. Add Power BI traffic dashboard and supporting screenshots: traffic_dashboard.pbix and the three files under PowerBI/.
+3. Add Part 1 insights report and delivery documentation: build_report.py, build_report.log, output/pdf/part1_data_analytics_insights_report.pdf and this README. The root README now links both reports; commit it with the documentation batch after reviewing its shared Part 2 changes.
+
+The Part 2 report/package changes from the preceding round remain a separate pending commit. Do not stage all of output/ when preparing only the Part 1 report commit. The user handles stage, commit and push; no new Git write was performed by the assistant.
+
+Current file/hash/layout checks are recorded in results/deliverable_validation.json. Include this additional validation file in the analysis evidence commit; it records the latest PDF hash and prior-interaction scope without claiming a fresh Power BI UI test.

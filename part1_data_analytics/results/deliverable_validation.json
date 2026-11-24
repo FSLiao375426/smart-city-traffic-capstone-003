@@ -1,0 +1,19 @@
+{
+  "source_and_sql_hashes_match_previous_validation": true,
+  "pbix_sha256": "7c098a6a59704a6085b98b15d08b64641f34ffc43faaa3d4b6b14991ad6599b5",
+  "pbix_zip_integrity": "ok",
+  "visual_types": {
+    "lineChart": 1,
+    "clusteredColumnChart": 1,
+    "clusteredBarChart": 1,
+    "scatterChart": 1,
+    "cardVisual": 3,
+    "slicer": 3,
+    "textbox": 1
+  },
+  "interactive_validation": "Prior user verification retained; not repeated in this round",
+  "report_pages": 2,
+  "report_sha256": "ff8f2a8a779cb4da65eb4d30f49e67e1c4a90f85b9f01629f789fd122af71afa",
+  "statistical_tests_passed": 3,
+  "report_render_review": "Both latest pages inspected"
+}
