@@ -1,0 +1,50 @@
+{
+  "raw_rows": 48204,
+  "raw_columns": 9,
+  "categorical_cells_standardised": 1730,
+  "exact_duplicates_removed": 17,
+  "numeric_conflicting_hours": {
+    "temp": 78,
+    "rain_1h": 9,
+    "snow_1h": 0,
+    "clouds_all": 32,
+    "traffic_volume": 0
+  },
+  "invalid_observation_counts": {
+    "temp": 10,
+    "rain_1h": 1,
+    "snow_1h": 0,
+    "clouds_all": 0
+  },
+  "rows_after_exact_deduplication": 48187,
+  "unique_observed_hours": 40575,
+  "hour_weather_pairs": 47893,
+  "holiday_labels_extended_hours": 1150,
+  "holiday_hours": 1203,
+  "zero_traffic_hours_preserved": 2,
+  "clear_clouds_overlap_hours": 7,
+  "input_file": "Metro_Interstate_Traffic_Volume.csv",
+  "input_sha256": "749c90d720360a4215bb15345526073c079ba4cc95e3fa558796d083f85fce9e",
+  "fit_end": "2016-12-31 23:59:59",
+  "date_min": "2012-10-02 09:00:00",
+  "date_max": "2018-09-30 23:00:00",
+  "missing_full_months": [
+    "2014-09",
+    "2014-10",
+    "2014-11",
+    "2014-12",
+    "2015-01",
+    "2015-02",
+    "2015-03",
+    "2015-04",
+    "2015-05"
+  ],
+  "missing_hours_inside_observed_range": 11976,
+  "longest_missing_interval_hours": 7386,
+  "hourly_imputation_counts": {
+    "temp": 10,
+    "rain_1h": 1,
+    "snow_1h": 0,
+    "clouds_all": 0
+  }
+}

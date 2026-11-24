@@ -1,0 +1,4 @@
+2026-11-24T04:54:48Z | INFO | __main__ | Loaded cleaned hourly table: 40575 rows, 28 columns
+2026-11-24T04:54:48Z | INFO | __main__ | Added 3 calendar features to 40575 rows: hour, day_of_week, is_weekend
+2026-11-24T04:54:48Z | INFO | __main__ | Added 2 cyclic hour features using the fixed 24-hour period
+2026-11-24T04:54:50Z | INFO | __main__ | Saved traffic_time_features.csv: 40575 rows, 33 columns; input observations and file unchanged

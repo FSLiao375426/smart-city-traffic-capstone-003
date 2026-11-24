@@ -1,0 +1,27 @@
+2026-11-24T04:15:19Z | INFO | __main__ | Loaded raw CSV: 48204 rows, 9 columns
+2026-11-24T04:15:19Z | INFO | __main__ | Schema validated: all 9 required columns are present
+2026-11-24T04:15:19Z | INFO | __main__ | Schema validated: all 9 required columns are present
+2026-11-24T04:15:19Z | INFO | __main__ | Categorical text checked: holiday; no changes
+2026-11-24T04:15:19Z | INFO | __main__ | Categorical text checked: weather_main; no changes
+2026-11-24T04:15:20Z | WARNING | __main__ | Standardised 1730 rows in weather_description: inconsistent categorical text
+2026-11-24T04:15:20Z | INFO | __main__ | Parsed and validated 48204 hourly timestamps
+2026-11-24T04:15:20Z | WARNING | __main__ | Dropped 17 duplicate rows: all nine values identical after standardisation
+2026-11-24T04:15:20Z | INFO | __main__ | Traffic consistency checked: same-hour traffic volumes agree
+2026-11-24T04:15:20Z | WARNING | __main__ | Marked 10 rows invalid in temp: missing/non-finite or rule violation
+2026-11-24T04:15:20Z | WARNING | __main__ | Marked 1 rows invalid in rain_1h: missing/non-finite or rule violation
+2026-11-24T04:15:20Z | INFO | __main__ | Validity checks completed: snow_1h; no readings changed
+2026-11-24T04:15:20Z | INFO | __main__ | Validity checks completed: clouds_all; no readings changed
+2026-11-24T04:16:12Z | WARNING | __main__ | Updated 1150 hourly holiday labels: propagated known labels within the same calendar date
+2026-11-24T04:16:12Z | WARNING | __main__ | Collapsed 7612 additional weather-observation rows to 40575 unique traffic hours; weather labels retained separately
+2026-11-24T04:16:12Z | INFO | __main__ | Hourly tables built: 40575 traffic hours and 47893 hour/weather pairs
+2026-11-24T04:16:12Z | WARNING | __main__ | Imputed 4 hourly temp readings in month 1 using reference-period median 264.2500
+2026-11-24T04:16:12Z | WARNING | __main__ | Imputed 6 hourly temp readings in month 2 using reference-period median 264.1500
+2026-11-24T04:16:12Z | WARNING | __main__ | Imputed 1 hourly rain_1h readings in month 7 using reference-period median 0.0000
+2026-11-24T04:16:13Z | WARNING | __main__ | Coverage audit: 9 full months absent and 11976 unobserved hours inside the time range; no hours fabricated
+2026-11-24T04:16:15Z | INFO | __main__ | Saved processed\traffic_hourly.csv: 40575 rows, 28 columns
+2026-11-24T04:16:15Z | INFO | __main__ | Saved processed\hourly_weather.csv: 47893 rows, 3 columns
+2026-11-24T04:16:15Z | INFO | __main__ | Saved processed\coverage_by_year.csv: 7 rows, 8 columns
+2026-11-24T04:16:15Z | INFO | __main__ | Saved processed\time_gaps.csv: 2588 rows, 3 columns
+2026-11-24T04:16:15Z | INFO | __main__ | Saved processing metadata: quality_report.json
+2026-11-24T04:16:15Z | INFO | __main__ | Saved processing metadata: imputation_values.json
+2026-11-24T04:16:15Z | INFO | __main__ | Pipeline completed: 40575 observed hours; raw input SHA-256 unchanged
