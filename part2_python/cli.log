@@ -1,0 +1,2 @@
+2026-11-24T15:13:51Z | INFO | __main__ | CLI invoked with arguments: ['compare', '--start', '2017-01-01', '--end', '2017-01-31']
+2026-11-24T15:13:51Z | INFO | __main__ | CLI command compare completed: ok

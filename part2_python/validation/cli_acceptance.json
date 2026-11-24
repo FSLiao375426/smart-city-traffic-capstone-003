@@ -1,0 +1,119 @@
+{
+  "source_sha256": "d1f0f1683ee0775ce22adf8487c4e0ba4cd002041e9bc9f062e48aa037f7c52d",
+  "cases": [
+    {
+      "arguments": [
+        "at",
+        "--time",
+        "2017-01-01 00:00:00"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "ok",
+        "date_time": "2017-01-01 00:00:00",
+        "traffic_volume": 1848,
+        "temp_c": -3.3999999999999773,
+        "clouds_all": 75.0,
+        "traffic_volume_quartile": 2
+      },
+      "log": "2026-11-24T15:13:15Z | INFO | __main__ | CLI invoked with arguments: ['at', '--time', '2017-01-01 00:00:00']\n2026-11-24T15:13:16Z | INFO | __main__ | CLI command at completed: ok\n"
+    },
+    {
+      "arguments": [
+        "summary",
+        "--start",
+        "2017-01-01",
+        "--end",
+        "2017-01-31"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "ok",
+        "observed_hours": 744,
+        "mean_traffic": 3120.2647849462364,
+        "min_traffic": 216,
+        "max_traffic": 6772,
+        "quartile_counts": {
+          "1": 188,
+          "2": 193,
+          "3": 220,
+          "4": 143
+        }
+      },
+      "log": "2026-11-24T15:13:21Z | INFO | __main__ | CLI invoked with arguments: ['summary', '--start', '2017-01-01', '--end', '2017-01-31']\n2026-11-24T15:13:21Z | INFO | __main__ | CLI command summary completed: ok\n"
+    },
+    {
+      "arguments": [
+        "compare",
+        "--start",
+        "2017-01-01",
+        "--end",
+        "2017-01-31"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "ok",
+        "observed_hours": 744,
+        "groups": {
+          "weekday": {
+            "observed_hours": 528,
+            "mean_traffic": 3347.4469696969695
+          },
+          "weekend": {
+            "observed_hours": 216,
+            "mean_traffic": 2564.9305555555557
+          }
+        },
+        "note": "Means per observed hour; year/season composition is not adjusted."
+      },
+      "log": "2026-11-24T15:13:26Z | INFO | __main__ | CLI invoked with arguments: ['compare', '--start', '2017-01-01', '--end', '2017-01-31']\n2026-11-24T15:13:26Z | INFO | __main__ | CLI command compare completed: ok\n"
+    },
+    {
+      "arguments": [
+        "summary",
+        "--start",
+        "2015-01-01",
+        "--end",
+        "2015-01-31"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "no_data",
+        "observed_hours": 0,
+        "mean_traffic": null,
+        "message": "No observed data; this does not imply zero traffic."
+      },
+      "log": "2026-11-24T15:13:31Z | INFO | __main__ | CLI invoked with arguments: ['summary', '--start', '2015-01-01', '--end', '2015-01-31']\n2026-11-24T15:13:31Z | WARNING | __main__ | No observed hours match this query; missing data is not zero traffic\n2026-11-24T15:13:31Z | INFO | __main__ | CLI command summary completed: no_data\n"
+    },
+    {
+      "arguments": [
+        "at",
+        "--time",
+        "bad-date"
+      ],
+      "returncode": 2,
+      "result": null,
+      "log": "2026-11-24T15:13:37Z | INFO | __main__ | CLI invoked with arguments: ['at', '--time', 'bad-date']\n2026-11-24T15:13:37Z | ERROR | __main__ | Cannot complete query: Use YYYY-MM-DD HH:MM:SS\n"
+    },
+    {
+      "arguments": [
+        "summary",
+        "--start",
+        "2017-02-01",
+        "--end",
+        "2017-01-01"
+      ],
+      "returncode": 2,
+      "result": null,
+      "log": "2026-11-24T15:13:42Z | INFO | __main__ | CLI invoked with arguments: ['summary', '--start', '2017-02-01', '--end', '2017-01-01']\n2026-11-24T15:13:42Z | ERROR | __main__ | Cannot complete query: start must be on or before end\n"
+    },
+    {
+      "arguments": [
+        "unknown"
+      ],
+      "returncode": 2,
+      "result": null,
+      "log": "2026-11-24T15:13:47Z | INFO | __main__ | CLI invoked with arguments: ['unknown']\n2026-11-24T15:13:47Z | ERROR | __main__ | Cannot complete query: argument command: invalid choice: 'unknown' (choose from 'at', 'summary', 'compare')\n"
+    }
+  ]
+}
