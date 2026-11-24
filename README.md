@@ -4,6 +4,10 @@ An AI, ML and Data Science capstone using hourly westbound I-94 traffic, weather
 
 The project will connect historical analysis, a reproducible Python workflow and machine learning to support evidence-based travel-timing recommendations.
 
+## Repository
+
+The public project repository is [FSLiao375426/smart-city-traffic-capstone-003](https://github.com/FSLiao375426/smart-city-traffic-capstone-003).
+
 ## Current status
 
 Initial project setup. The supplied dataset is preserved unchanged. Analysis outputs, executable pipelines, trained models and deployment components have not yet been implemented.
