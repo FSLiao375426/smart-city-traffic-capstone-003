@@ -2,7 +2,7 @@
 
 An AI, ML and Data Science capstone using hourly westbound I-94 traffic, weather and holiday observations near Minneapolis–St Paul.
 
-The project will connect historical analysis, a reproducible Python workflow and machine learning to support evidence-based travel-timing recommendations.
+The project connects historical analysis, a reproducible Python workflow and machine learning to compare departure times under specified weather conditions.
 
 ## Repository
 
@@ -10,7 +10,11 @@ The public project repository is [FSLiao375426/smart-city-traffic-capstone-003](
 
 ## Current status
 
-The first data-cleaning pipeline, five time features and SQL analysis draft have been implemented and verified locally. Cleaning preserves the supplied dataset, builds one traffic row per observed hour, retains multiple weather conditions, records data-quality decisions and reports coverage gaps. The separate feature step adds calendar and cyclic-hour fields. SQLite retains raw/hourly tables and provides annual totals, coverage-aware changes and holiday-temperature comparisons. Further features, descriptive statistics/probabilities, Power BI, models and deployment components are still pending.
+| Course deliverable | Where to start | Supporting files |
+|---|---|---|
+| Part 1: Data analytics | [Insights report](output/pdf/part1_data_analytics_insights_report.pdf) | [SQL, statistics and probability](part1_data_analytics/README.md) and [Power BI dashboard](part1_data_analytics/traffic_dashboard.pbix) |
+| Part 2: Reproducible Python pipeline | [Methods and findings](output/pdf/part2_traffic_pipeline_report.pdf) | [Course folder in ZIP format](output/submission/capstone_part2.zip), including the CLI, figures, sample log and README |
+| Part 3: Machine learning and AI | [Final capstone report](part3_machine_learning/final_capstone_report.md) and [bias and fairness report](part3_machine_learning/bias_and_fairness_report.md) | [Course folder in ZIP format](output/submission/capstone_part3.zip) and [extracted-package checks](output/submission/capstone_part3_acceptance.json) |
 
 Run cleaning from the project root with `python -m part2_python.pipeline`, then calendar features with `python -m part2_python.features`. See [pipeline instructions](part2_python/README.md) for dependencies, outputs, cleaning rules and verification.
 
@@ -41,14 +45,14 @@ After cleaning, run SQL analysis with `python -m part1_data_analytics.sqlite_ana
 | `part2_python/pipeline.log` | Sample INFO/WARNING log from the successful real-data run. |
 | `part2_python/features.log` | Sample log for the separate calendar-feature step. |
 
-## Planned organisation
+## Project folders
 
 - `part1_data_analytics/`: SQL, statistics, Power BI and the insights report.
 - `part2_python/`: Data-processing modules, the CLI application, figures, a sample log and usage instructions.
 - `part3_machine_learning/`: Models, experiment tracking, recommendations, deployment, monitoring and responsible-AI analysis.
 - A final report integrating the three parts.
 
-These components will be added incrementally. Reproduction commands and dependency specifications will be documented alongside the implemented components.
+Each part includes instructions and evidence alongside its implementation.
 
 ## Data considerations
 
@@ -57,8 +61,8 @@ These components will be added incrementally. Reproduction commands and dependen
 - The dataset has substantial gaps in time coverage; yearly totals need coverage context.
 - Saved input hashes describe the bytes used in each recorded run. Git can normalise CSV line endings, so hashes can differ across checkouts even when data values match. Rerunning the workflow records the input hash for that checkout; the supplied source file remains preserved.
 - Implausible sensor values require documented validation and handling.
-- The dataset covers a single corridor. Recommendations will focus on departure timing.
-- No real accident dataset is supplied. The classification task will use a documented proxy risk label; its results must not be interpreted as verified accident probabilities.
+- The dataset covers a single corridor. Recommendations focus on departure timing.
+- No real accident dataset was supplied. The classification task uses a documented proxy risk label; its results cannot establish accident probabilities.
 
 ## Dataset attribution
 
@@ -73,3 +77,7 @@ Run python -m part2_python.pipeline --all from this repository root for raw-to-f
 Part 2 report: [two-page methods and results](output/pdf/part2_traffic_pipeline_report.pdf). Portable course package: output/submission/capstone_part2.zip; build with python -m part2_python.build_submission. See Part 2 README for reproduction and verification details.
 
 Part 1 statistical/probability reproduction and deliverable mapping: [analysis README](part1_data_analytics/README.md). [Part 1 insights report](output/pdf/part1_data_analytics_insights_report.pdf) consolidates the verified findings and operational implications.
+
+## Part 3 machine learning and submission
+
+The [final capstone report](part3_machine_learning/final_capstone_report.md) covers all seven tasks, including the frozen models' evaluation on 6,533 observed hours in 2018. The [bias and fairness report](part3_machine_learning/bias_and_fairness_report.md) explains the proxy label, subgroup errors and limits of the recommendations. For code and reviewer instructions, open the [Part 3 technical README](part3_machine_learning/README.md) or extract the [portable Part 3 submission](output/submission/capstone_part3.zip) and start with its top-level README.

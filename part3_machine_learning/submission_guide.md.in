@@ -1,0 +1,25 @@
+# Reviewing Smart City Traffic Intelligence, Part 3
+
+Open the **final capstone report** and the **bias and fairness report** in the `part3_machine_learning` folder. The project estimates same-hour traffic volume on westbound I-94. Its classifier uses a documented volume-and-weather proxy. There is no accident dataset.
+
+From the extracted `capstone_part3` root:
+
+| Review item | Location |
+|---|---|
+| Methods, findings and links to the Part 1 and Part 2 PDFs | [Final capstone report](part3_machine_learning/final_capstone_report.md) |
+| Coverage, proxy, subgroup errors, governance and sustainability | [Bias and fairness report](part3_machine_learning/bias_and_fairness_report.md) |
+| Development history and detailed commands | [Technical README](part3_machine_learning/README.md) |
+| Experiments | `part3_machine_learning/results/` contains the MLflow run exports and manifests, including run IDs, parameters and metrics. The original host's local tracking database and duplicate artifact store are excluded. Historical paths in the exports identify the original run. |
+| Models and evaluation | `part3_machine_learning/models/` contains the saved estimators, neural networks and preprocessing. `results/final_2018/` inside the Part 3 folder holds the frozen evaluation and timestamped predictions. |
+
+Use Python 3.11 with the packages in `part3_machine_learning/requirements.txt`. In a new environment, install with `python -m pip install -r part3_machine_learning/requirements.txt`. Run these commands from the extracted root:
+
+```text
+python -m part3_machine_learning.recommend --request part3_machine_learning/results/recommendation/requests/weekday_clear.json
+python -W error -m unittest discover -s part3_machine_learning/tests
+python -m part3_machine_learning.verify_api
+```
+
+The first command loads the saved forest and prints a conditional recommendation. The HTTP check starts and stops a loopback server; it writes its log and acceptance output in the extracted copy. The monitoring simulation can be inspected in `part3_machine_learning/results/monitoring/simulation.json`. For a new demonstration, run `python -m part3_machine_learning.monitoring`. Training scripts are supplied for review; rerunning them creates new runs and can replace saved artifacts.
+
+The package contains a SHA-256 manifest of the original file contents. Verify it before running commands that update logs. Git history and incremental commits are available in the [project repository](https://github.com/FSLiao375426/smart-city-traffic-capstone-003).
