@@ -1,0 +1,17 @@
+{
+  "run_id": "ddd12fbe81ed4684a2fc0588f5ee4223",
+  "status": "FINISHED",
+  "params": {
+    "model_name": "random_forest_regressor",
+    "model_run_id": "fce53c631e684562b8a5238f03cfaa4f",
+    "prediction_mode": "conditional_same_hour",
+    "allowed_hours": "08:00-19:00 end exclusive",
+    "window_hours": "2",
+    "min_support_hours": "30",
+    "scenario_count": "4"
+  },
+  "metrics": {
+    "example_count": 4.0,
+    "examples_with_recommendation": 3.0
+  }
+}

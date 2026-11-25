@@ -1,0 +1,5 @@
+2026-11-25T07:29:10Z | INFO | part3_machine_learning.recommend | Saved self-contained recommendation bundle from random_forest_regressor; 25329 training support hours
+2026-11-25T07:29:13Z | INFO | __main__ | Example weekday_clear: ok; selected {'start_hour': 10, 'end_hour': 12, 'mean_estimated_traffic': 4425.213305770007, 'minimum_support_hours': 205}
+2026-11-25T07:29:13Z | INFO | __main__ | Example weekend_clear: ok; selected {'start_hour': 8, 'end_hour': 10, 'mean_estimated_traffic': 2842.3524224456096, 'minimum_support_hours': 90}
+2026-11-25T07:29:13Z | INFO | __main__ | Example weekday_rain: ok; selected {'start_hour': 10, 'end_hour': 12, 'mean_estimated_traffic': 4304.864968201711, 'minimum_support_hours': 45}
+2026-11-25T07:29:13Z | INFO | __main__ | Example rare_squall: insufficient_support; selected None

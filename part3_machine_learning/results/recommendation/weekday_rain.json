@@ -1,0 +1,180 @@
+{
+  "status": "ok",
+  "request": {
+    "date": "2017-06-05",
+    "start_hour": 8,
+    "end_hour": 19,
+    "window_hours": 2,
+    "weather": [
+      "Rain"
+    ],
+    "is_holiday": 0,
+    "temp_c": 15.0,
+    "clouds_all": 90.0,
+    "rain_1h": 1.0,
+    "snow_1h": 0.0
+  },
+  "model": "random_forest_regressor",
+  "model_run_id": "fce53c631e684562b8a5238f03cfaa4f",
+  "prediction_mode": "conditional_same_hour_scenario",
+  "source_calendar_day_type": "weekday",
+  "weather_assumed_constant_across_hours": true,
+  "numeric_imputation_assumptions": [],
+  "outside_training_weather_range": [],
+  "minimum_support_hours": 30,
+  "support_note": "Training-only cohort: same hour, day type, holiday and exact weather label set; numerical weather is not matched; not a calibrated confidence interval",
+  "best_window": {
+    "start_hour": 10,
+    "end_hour": 12,
+    "mean_estimated_traffic": 4304.864968201711,
+    "minimum_support_hours": 45
+  },
+  "ranked_supported_windows": [
+    {
+      "start_hour": 10,
+      "end_hour": 12,
+      "mean_estimated_traffic": 4304.864968201711,
+      "minimum_support_hours": 45
+    },
+    {
+      "start_hour": 11,
+      "end_hour": 13,
+      "mean_estimated_traffic": 4508.736160627663,
+      "minimum_support_hours": 62
+    },
+    {
+      "start_hour": 9,
+      "end_hour": 11,
+      "mean_estimated_traffic": 4581.446825470612,
+      "minimum_support_hours": 45
+    },
+    {
+      "start_hour": 12,
+      "end_hour": 14,
+      "mean_estimated_traffic": 4703.993327364405,
+      "minimum_support_hours": 62
+    },
+    {
+      "start_hour": 13,
+      "end_hour": 15,
+      "mean_estimated_traffic": 4796.259435219872,
+      "minimum_support_hours": 61
+    },
+    {
+      "start_hour": 17,
+      "end_hour": 19,
+      "mean_estimated_traffic": 5044.886397671802,
+      "minimum_support_hours": 65
+    },
+    {
+      "start_hour": 14,
+      "end_hour": 16,
+      "mean_estimated_traffic": 5237.655340241089,
+      "minimum_support_hours": 61
+    },
+    {
+      "start_hour": 8,
+      "end_hour": 10,
+      "mean_estimated_traffic": 5362.791203894982,
+      "minimum_support_hours": 44
+    },
+    {
+      "start_hour": 15,
+      "end_hour": 17,
+      "mean_estimated_traffic": 5943.585688563294,
+      "minimum_support_hours": 59
+    },
+    {
+      "start_hour": 16,
+      "end_hour": 18,
+      "mean_estimated_traffic": 6069.620574087225,
+      "minimum_support_hours": 59
+    }
+  ],
+  "hourly_estimates": [
+    {
+      "hour": 8,
+      "estimated_traffic": 5840.141221095277,
+      "support_hours": 44,
+      "historical_mean_traffic": 5577.704545454545,
+      "support_sufficient": true
+    },
+    {
+      "hour": 9,
+      "estimated_traffic": 4885.441186694687,
+      "support_hours": 45,
+      "historical_mean_traffic": 5003.6,
+      "support_sufficient": true
+    },
+    {
+      "hour": 10,
+      "estimated_traffic": 4277.452464246537,
+      "support_hours": 45,
+      "historical_mean_traffic": 4367.2444444444445,
+      "support_sufficient": true
+    },
+    {
+      "hour": 11,
+      "estimated_traffic": 4332.277472156885,
+      "support_hours": 64,
+      "historical_mean_traffic": 4693.21875,
+      "support_sufficient": true
+    },
+    {
+      "hour": 12,
+      "estimated_traffic": 4685.19484909844,
+      "support_hours": 62,
+      "historical_mean_traffic": 4886.322580645161,
+      "support_sufficient": true
+    },
+    {
+      "hour": 13,
+      "estimated_traffic": 4722.79180563037,
+      "support_hours": 67,
+      "historical_mean_traffic": 4902.537313432836,
+      "support_sufficient": true
+    },
+    {
+      "hour": 14,
+      "estimated_traffic": 4869.7270648093745,
+      "support_hours": 61,
+      "historical_mean_traffic": 5272.459016393443,
+      "support_sufficient": true
+    },
+    {
+      "hour": 15,
+      "estimated_traffic": 5605.583615672804,
+      "support_hours": 63,
+      "historical_mean_traffic": 5722.555555555556,
+      "support_sufficient": true
+    },
+    {
+      "hour": 16,
+      "estimated_traffic": 6281.587761453784,
+      "support_hours": 59,
+      "historical_mean_traffic": 6250.9152542372885,
+      "support_sufficient": true
+    },
+    {
+      "hour": 17,
+      "estimated_traffic": 5857.653386720665,
+      "support_hours": 65,
+      "historical_mean_traffic": 5873.0615384615385,
+      "support_sufficient": true
+    },
+    {
+      "hour": 18,
+      "estimated_traffic": 4232.11940862294,
+      "support_hours": 65,
+      "historical_mean_traffic": 4488.707692307692,
+      "support_sufficient": true
+    }
+  ],
+  "recommendation": "在你指定的 08:00-19:00 區間與固定天氣情境下，可考慮 10:00-12:00 出發；該窗口平均估計車流為 4305 輛／小時。這是情境比較，不是即時或提前路況預報。",
+  "limitations": [
+    "Departure window, not trip duration or route optimization",
+    "No live traffic, future weather service or accident probability",
+    "Lower estimated traffic does not guarantee shorter travel time or greater safety",
+    "Default support floor 30 is an analyst setting, not a statistical guarantee"
+  ]
+}

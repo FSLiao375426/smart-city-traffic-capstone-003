@@ -1,0 +1,21 @@
+{
+  "mlflow_run_id": "ddd12fbe81ed4684a2fc0588f5ee4223",
+  "model_name": "random_forest_regressor",
+  "model_run_id": "fce53c631e684562b8a5238f03cfaa4f",
+  "support_training_end": "2016-12-31 23:59:59",
+  "example_names": [
+    "weekday_clear",
+    "weekend_clear",
+    "weekday_rain",
+    "rare_squall"
+  ],
+  "date_note": "Historical calendar dates chosen for controlled examples; no observed 2017 outcomes are read",
+  "status_summary": {
+    "weekday_clear": "ok",
+    "weekend_clear": "ok",
+    "weekday_rain": "ok",
+    "rare_squall": "insufficient_support"
+  },
+  "test_scored": false,
+  "stage": "recommendation prototype, no deployment or travel-time performance claim"
+}

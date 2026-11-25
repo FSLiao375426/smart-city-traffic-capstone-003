@@ -1,0 +1,53 @@
+{
+  "features": [
+    "hour_sin",
+    "hour_cos",
+    "day_of_week_sin",
+    "day_of_week_cos",
+    "is_weekend",
+    "is_holiday",
+    "temp_z",
+    "clouds_all_z",
+    "rain_1h",
+    "snow_1h",
+    "weather_Clear",
+    "weather_Clouds",
+    "weather_Drizzle",
+    "weather_Fog",
+    "weather_Haze",
+    "weather_Mist",
+    "weather_Rain",
+    "weather_Smoke",
+    "weather_Snow",
+    "weather_Squall",
+    "weather_Thunderstorm"
+  ],
+  "model_name": "random_forest_regressor",
+  "model_run_id": "fce53c631e684562b8a5238f03cfaa4f",
+  "model_sha256": "79d32cc25bdc3643dfe25b99c931fe6d602c5ea3a471b0fa414cfdbe3869a3cf",
+  "dataset_sha256": "3f2328d1f3e0e4691788b422063e1b59929b0e3abce70e993e940fc0594a8d3e",
+  "fit_end": "2016-12-31 23:59:59",
+  "weather_ranges": {
+    "temp": [
+      243.39,
+      308.24
+    ],
+    "clouds_all": [
+      0.0,
+      100.0
+    ],
+    "rain_1h": [
+      0.0,
+      55.63
+    ],
+    "snow_1h": [
+      0.0,
+      0.51
+    ]
+  },
+  "support_hours": 25329,
+  "bundle_sha256": "cd1e201cc111f9c2c8a490b9dc529f0e5b638116d12c46d799a9c734789192e8",
+  "mode": "Fixed supplied weather across candidate hours; conditional comparison, not a weather or traffic forecast",
+  "default_min_support_hours": 30,
+  "support_definition": "Same source hour, weekday/weekend, holiday flag and exact multi-hot weather label set; numerical weather values are not matched"
+}

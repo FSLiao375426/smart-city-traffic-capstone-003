@@ -1,0 +1,2 @@
+2026-11-25T07:33:06Z | INFO | __main__ | Recommendation request: {'date': 'not-a-date'}
+2026-11-25T07:33:17Z | ERROR | __main__ | Cannot complete recommendation: Provide date, start_hour, end_hour, window_hours, weather and is_holiday; no unknown fields

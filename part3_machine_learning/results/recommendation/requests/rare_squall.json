@@ -1,0 +1,14 @@
+{
+  "date": "2017-06-05",
+  "start_hour": 8,
+  "end_hour": 19,
+  "window_hours": 2,
+  "weather": [
+    "Squall"
+  ],
+  "is_holiday": 0,
+  "temp_c": 20.0,
+  "clouds_all": 75.0,
+  "rain_1h": 0.0,
+  "snow_1h": 0.0
+}
