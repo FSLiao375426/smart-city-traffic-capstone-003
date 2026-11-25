@@ -1,0 +1,226 @@
+{
+  "dataset_sha256": "3f2328d1f3e0e4691788b422063e1b59929b0e3abce70e993e940fc0594a8d3e",
+  "validation_rows_per_model": 8713,
+  "test_scored": false,
+  "completed_runs": [
+    {
+      "model": "dummy_prior",
+      "run_id": "576f76f8f9ff455f93b7ac7e3cb72757",
+      "status": "FINISHED",
+      "start_time_ms": 1795539286532,
+      "end_time_ms": 1795539286880,
+      "params": {
+        "random_seed": "42",
+        "train_hours": "25329",
+        "validation_hours": "8713",
+        "fit_end": "2016-12-31 23:59:59",
+        "feature_count": "21",
+        "target": "high_risk",
+        "classification_threshold": "0.5"
+      },
+      "tags": {
+        "task": "classification",
+        "evaluation_split": "validation_2017",
+        "prediction_mode": "conditional_same_hour",
+        "label_status": "constructed_proxy_not_accidents",
+        "model_version": "v1",
+        "dataset_sha256": "3f2328d1f3e0e4691788b422063e1b59929b0e3abce70e993e940fc0594a8d3e"
+      },
+      "metrics": {
+        "validation_accuracy": 0.8848846551130495,
+        "validation_precision": 0.0,
+        "validation_recall": 0.0,
+        "validation_f1": 0.0,
+        "validation_roc_auc": 0.5,
+        "fit_seconds": 0.045587800006615
+      },
+      "model_sha256": "3bfe12ba742cb4c633d4cebf25747cbbc467cf6320c21cdc5f9956dd689fa403",
+      "model_artifacts": [
+        "model/metadata.json",
+        "model/model.joblib"
+      ]
+    },
+    {
+      "model": "logistic_regression",
+      "run_id": "9441a361704a421095939865c27d413e",
+      "status": "FINISHED",
+      "start_time_ms": 1795539286896,
+      "end_time_ms": 1795539287280,
+      "params": {
+        "random_seed": "42",
+        "train_hours": "25329",
+        "validation_hours": "8713",
+        "fit_end": "2016-12-31 23:59:59",
+        "feature_count": "21",
+        "target": "high_risk",
+        "classification_threshold": "0.5"
+      },
+      "tags": {
+        "task": "classification",
+        "evaluation_split": "validation_2017",
+        "prediction_mode": "conditional_same_hour",
+        "label_status": "constructed_proxy_not_accidents",
+        "model_version": "v1",
+        "dataset_sha256": "3f2328d1f3e0e4691788b422063e1b59929b0e3abce70e993e940fc0594a8d3e"
+      },
+      "metrics": {
+        "validation_accuracy": 0.9412372317227132,
+        "validation_precision": 0.6687285223367697,
+        "validation_recall": 0.9700897308075773,
+        "validation_f1": 0.7917005695687551,
+        "validation_roc_auc": 0.9899502530023419,
+        "fit_seconds": 0.10683099998277612
+      },
+      "model_sha256": "0f23e87aec110717849db17af00b108aabb5d58d0dee25bf490f0f4f920378f2",
+      "model_artifacts": [
+        "model/metadata.json",
+        "model/model.joblib"
+      ]
+    },
+    {
+      "model": "random_forest_classifier",
+      "run_id": "f5486785d3ab4deeb919962d036061bf",
+      "status": "FINISHED",
+      "start_time_ms": 1795539287318,
+      "end_time_ms": 1795539288543,
+      "params": {
+        "random_seed": "42",
+        "train_hours": "25329",
+        "validation_hours": "8713",
+        "fit_end": "2016-12-31 23:59:59",
+        "feature_count": "21",
+        "target": "high_risk",
+        "classification_threshold": "0.5"
+      },
+      "tags": {
+        "task": "classification",
+        "evaluation_split": "validation_2017",
+        "prediction_mode": "conditional_same_hour",
+        "label_status": "constructed_proxy_not_accidents",
+        "model_version": "v1",
+        "dataset_sha256": "3f2328d1f3e0e4691788b422063e1b59929b0e3abce70e993e940fc0594a8d3e"
+      },
+      "metrics": {
+        "validation_accuracy": 0.9881785837254677,
+        "validation_precision": 0.9197761194029851,
+        "validation_recall": 0.9830508474576272,
+        "validation_f1": 0.9503614457831325,
+        "validation_roc_auc": 0.9986243603818894,
+        "fit_seconds": 0.8169521999952849
+      },
+      "model_sha256": "9d8e2c5531864b440a638068922227f07e26e75fb30da6a128f2852cf706c50b",
+      "model_artifacts": [
+        "model/metadata.json",
+        "model/model.joblib"
+      ]
+    },
+    {
+      "model": "dummy_mean",
+      "run_id": "5b674fd3f56f4075a503e904405e8ebc",
+      "status": "FINISHED",
+      "start_time_ms": 1795539288561,
+      "end_time_ms": 1795539288728,
+      "params": {
+        "random_seed": "42",
+        "train_hours": "25329",
+        "validation_hours": "8713",
+        "fit_end": "2016-12-31 23:59:59",
+        "feature_count": "21",
+        "target": "traffic_volume",
+        "classification_threshold": "not_applicable"
+      },
+      "tags": {
+        "task": "regression",
+        "evaluation_split": "validation_2017",
+        "prediction_mode": "conditional_same_hour",
+        "label_status": "constructed_proxy_not_accidents",
+        "model_version": "v1",
+        "dataset_sha256": "3f2328d1f3e0e4691788b422063e1b59929b0e3abce70e993e940fc0594a8d3e"
+      },
+      "metrics": {
+        "validation_mae": 1744.457767810504,
+        "validation_r2": -0.0039171515699589765,
+        "fit_seconds": 0.0022384000185411423
+      },
+      "model_sha256": "e3e1fc1b94e87356fea47c6278baa94098879f5fa103fd9352e18a4d98bee940",
+      "model_artifacts": [
+        "model/metadata.json",
+        "model/model.joblib"
+      ]
+    },
+    {
+      "model": "linear_regression",
+      "run_id": "3f1b8eb61310436fba4d05649be81a3d",
+      "status": "FINISHED",
+      "start_time_ms": 1795539288753,
+      "end_time_ms": 1795539288980,
+      "params": {
+        "random_seed": "42",
+        "train_hours": "25329",
+        "validation_hours": "8713",
+        "fit_end": "2016-12-31 23:59:59",
+        "feature_count": "21",
+        "target": "traffic_volume",
+        "classification_threshold": "not_applicable"
+      },
+      "tags": {
+        "task": "regression",
+        "evaluation_split": "validation_2017",
+        "prediction_mode": "conditional_same_hour",
+        "label_status": "constructed_proxy_not_accidents",
+        "model_version": "v1",
+        "dataset_sha256": "3f2328d1f3e0e4691788b422063e1b59929b0e3abce70e993e940fc0594a8d3e"
+      },
+      "metrics": {
+        "validation_mae": 825.7535696813337,
+        "validation_r2": 0.7106264049992275,
+        "fit_seconds": 0.045808900002157316
+      },
+      "model_sha256": "f732327485cdcfd460b8cd3bcf5bbc4c0f86a66b069f0e43d9c7f877e15e7851",
+      "model_artifacts": [
+        "model/metadata.json",
+        "model/model.joblib"
+      ]
+    },
+    {
+      "model": "random_forest_regressor",
+      "run_id": "fce53c631e684562b8a5238f03cfaa4f",
+      "status": "FINISHED",
+      "start_time_ms": 1795539289012,
+      "end_time_ms": 1795539292427,
+      "params": {
+        "random_seed": "42",
+        "train_hours": "25329",
+        "validation_hours": "8713",
+        "fit_end": "2016-12-31 23:59:59",
+        "feature_count": "21",
+        "target": "traffic_volume",
+        "classification_threshold": "not_applicable"
+      },
+      "tags": {
+        "task": "regression",
+        "evaluation_split": "validation_2017",
+        "prediction_mode": "conditional_same_hour",
+        "label_status": "constructed_proxy_not_accidents",
+        "model_version": "v1",
+        "dataset_sha256": "3f2328d1f3e0e4691788b422063e1b59929b0e3abce70e993e940fc0594a8d3e"
+      },
+      "metrics": {
+        "validation_mae": 246.25545308318468,
+        "validation_r2": 0.958317193983379,
+        "fit_seconds": 2.9035270000167657
+      },
+      "model_sha256": "79d32cc25bdc3643dfe25b99c931fe6d602c5ea3a471b0fa414cfdbe3869a3cf",
+      "model_artifacts": [
+        "model/metadata.json",
+        "model/model.joblib"
+      ]
+    }
+  ],
+  "checks": [
+    "Six real FINISHED MLflow runs",
+    "Persisted model hashes match",
+    "Saved metrics match MLflow",
+    "Predictions contain only 2017 validation hours"
+  ]
+}

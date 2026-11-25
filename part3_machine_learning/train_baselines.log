@@ -1,0 +1,14 @@
+2026-11-24T16:54:45Z | INFO | __main__ | Train 25329 hours; validation 8713 hours; 21 common inputs; test untouched
+2026-11-24T16:54:45Z | INFO | __main__ | Fitting dummy_prior (classification)
+2026-11-24T16:54:46Z | INFO | __main__ | Validated dummy_prior: {'accuracy': 0.8848846551130495, 'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'roc_auc': 0.5}
+2026-11-24T16:54:46Z | INFO | __main__ | Fitting logistic_regression (classification)
+2026-11-24T16:54:47Z | INFO | __main__ | Validated logistic_regression: {'accuracy': 0.9412372317227132, 'precision': 0.6687285223367697, 'recall': 0.9700897308075773, 'f1': 0.7917005695687551, 'roc_auc': 0.9899502530023419}
+2026-11-24T16:54:47Z | INFO | __main__ | Fitting random_forest_classifier (classification)
+2026-11-24T16:54:48Z | INFO | __main__ | Validated random_forest_classifier: {'accuracy': 0.9881785837254677, 'precision': 0.9197761194029851, 'recall': 0.9830508474576272, 'f1': 0.9503614457831325, 'roc_auc': 0.9986243603818894}
+2026-11-24T16:54:48Z | INFO | __main__ | Fitting dummy_mean (regression)
+2026-11-24T16:54:48Z | INFO | __main__ | Validated dummy_mean: {'mae': 1744.457767810504, 'r2': -0.0039171515699589765}
+2026-11-24T16:54:48Z | INFO | __main__ | Fitting linear_regression (regression)
+2026-11-24T16:54:48Z | INFO | __main__ | Validated linear_regression: {'mae': 825.7535696813337, 'r2': 0.7106264049992275}
+2026-11-24T16:54:48Z | INFO | __main__ | Fitting random_forest_regressor (regression)
+2026-11-24T16:54:52Z | INFO | __main__ | Validated random_forest_regressor: {'mae': 246.25545308318468, 'r2': 0.958317193983379}
+2026-11-24T16:54:52Z | INFO | __main__ | Saved six validation runs and candidate selection; final test remains untouched
