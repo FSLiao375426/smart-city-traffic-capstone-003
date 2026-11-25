@@ -1,0 +1,20 @@
+{
+  "run_id": "cf3975529aa9450db952199912c54cf9",
+  "status": "FINISHED",
+  "params": {
+    "min_support": "0.01",
+    "min_antecedent_hours": "500",
+    "min_confidence": "0.3",
+    "min_lift": "1.2",
+    "max_antecedent_items": "3",
+    "train_hours": "25329",
+    "validation_hours": "8713",
+    "algorithm": "FP-growth",
+    "mlxtend_version": "0.25.0"
+  },
+  "metrics": {
+    "frequent_itemsets": 291.0,
+    "selected_rules": 83.0,
+    "highest_train_lift": 3.5857065380608013
+  }
+}

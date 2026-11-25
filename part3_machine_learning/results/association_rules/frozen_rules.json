@@ -1,0 +1,1340 @@
+[
+  {
+    "antecedents": [
+      "day=weekend",
+      "time=night_00_05"
+    ],
+    "consequent": "congestion=Low",
+    "total_hours": 25329,
+    "antecedent_hours": 1827,
+    "consequent_hours": 6337,
+    "joint_hours": 1639,
+    "support": 0.06470843696948163,
+    "confidence": 0.8970990695128627,
+    "base_rate": 0.25018753207785543,
+    "lift": 3.5857065380608013,
+    "rule_id": "R001"
+  },
+  {
+    "antecedents": [
+      "day=weekend",
+      "time=night_00_05",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=Low",
+    "total_hours": 25329,
+    "antecedent_hours": 568,
+    "consequent_hours": 6337,
+    "joint_hours": 509,
+    "support": 0.02009554265861266,
+    "confidence": 0.8961267605633803,
+    "base_rate": 0.25018753207785543,
+    "lift": 3.5818202175019502,
+    "rule_id": "R002"
+  },
+  {
+    "antecedents": [
+      "day=weekend",
+      "time=night_00_05",
+      "weather=Clear"
+    ],
+    "consequent": "congestion=Low",
+    "total_hours": 25329,
+    "antecedent_hours": 666,
+    "consequent_hours": 6337,
+    "joint_hours": 592,
+    "support": 0.023372418966402148,
+    "confidence": 0.8888888888888888,
+    "base_rate": 0.25018753207785543,
+    "lift": 3.5528904318552414,
+    "rule_id": "R003"
+  },
+  {
+    "antecedents": [
+      "time=night_00_05",
+      "weather=Clear"
+    ],
+    "consequent": "congestion=Low",
+    "total_hours": 25329,
+    "antecedent_hours": 2214,
+    "consequent_hours": 6337,
+    "joint_hours": 1909,
+    "support": 0.07536815507915828,
+    "confidence": 0.8622402890695574,
+    "base_rate": 0.25018753207785543,
+    "lift": 3.4463759321197442,
+    "rule_id": "R004"
+  },
+  {
+    "antecedents": [
+      "day=weekend",
+      "time=afternoon_13_16",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 572,
+    "consequent_hours": 6332,
+    "joint_hours": 491,
+    "support": 0.019384894784634215,
+    "confidence": 0.8583916083916084,
+    "base_rate": 0.24999012989063918,
+    "lift": 3.43370199762335,
+    "rule_id": "R005"
+  },
+  {
+    "antecedents": [
+      "time=night_00_05"
+    ],
+    "consequent": "congestion=Low",
+    "total_hours": 25329,
+    "antecedent_hours": 6388,
+    "consequent_hours": 6337,
+    "joint_hours": 5456,
+    "support": 0.21540526669035492,
+    "confidence": 0.8541014402003757,
+    "base_rate": 0.25018753207785543,
+    "lift": 3.413844939061909,
+    "rule_id": "R006"
+  },
+  {
+    "antecedents": [
+      "time=night_00_05",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=Low",
+    "total_hours": 25329,
+    "antecedent_hours": 2120,
+    "consequent_hours": 6337,
+    "joint_hours": 1808,
+    "support": 0.07138063089739034,
+    "confidence": 0.8528301886792453,
+    "base_rate": 0.25018753207785543,
+    "lift": 3.408763744525265,
+    "rule_id": "R007"
+  },
+  {
+    "antecedents": [
+      "time=night_00_05",
+      "weather=Rain"
+    ],
+    "consequent": "congestion=Low",
+    "total_hours": 25329,
+    "antecedent_hours": 858,
+    "consequent_hours": 6337,
+    "joint_hours": 731,
+    "support": 0.028860199771013464,
+    "confidence": 0.8519813519813519,
+    "base_rate": 0.25018753207785543,
+    "lift": 3.4053709427703427,
+    "rule_id": "R008"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=morning_06_09",
+      "weather=Clear"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 810,
+    "consequent_hours": 6331,
+    "joint_hours": 689,
+    "support": 0.027202021398397093,
+    "confidence": 0.8506172839506173,
+    "base_rate": 0.24995064945319595,
+    "lift": 3.4031409232641265,
+    "rule_id": "R009"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=night_00_05",
+      "weather=Clear"
+    ],
+    "consequent": "congestion=Low",
+    "total_hours": 25329,
+    "antecedent_hours": 1548,
+    "consequent_hours": 6337,
+    "joint_hours": 1317,
+    "support": 0.05199573611275613,
+    "confidence": 0.8507751937984496,
+    "base_rate": 0.25018753207785543,
+    "lift": 3.400549926419588,
+    "rule_id": "R010"
+  },
+  {
+    "antecedents": [
+      "day=weekend",
+      "time=afternoon_13_16"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 1201,
+    "consequent_hours": 6332,
+    "joint_hours": 1017,
+    "support": 0.04015160487978207,
+    "confidence": 0.8467943380516236,
+    "base_rate": 0.24999012989063918,
+    "lift": 3.387311084729876,
+    "rule_id": "R011"
+  },
+  {
+    "antecedents": [
+      "time=night_00_05",
+      "weather=Mist"
+    ],
+    "consequent": "congestion=Low",
+    "total_hours": 25329,
+    "antecedent_hours": 1163,
+    "consequent_hours": 6337,
+    "joint_hours": 982,
+    "support": 0.03876978956926843,
+    "confidence": 0.8443680137575237,
+    "base_rate": 0.25018753207785543,
+    "lift": 3.374940416674186,
+    "rule_id": "R012"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=night_00_05",
+      "weather=Rain"
+    ],
+    "consequent": "congestion=Low",
+    "total_hours": 25329,
+    "antecedent_hours": 626,
+    "consequent_hours": 6337,
+    "joint_hours": 524,
+    "support": 0.02068774922026136,
+    "confidence": 0.8370607028753994,
+    "base_rate": 0.25018753207785543,
+    "lift": 3.3457330823940334,
+    "rule_id": "R013"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=night_00_05",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=Low",
+    "total_hours": 25329,
+    "antecedent_hours": 1552,
+    "consequent_hours": 6337,
+    "joint_hours": 1299,
+    "support": 0.051285088238777685,
+    "confidence": 0.8369845360824743,
+    "base_rate": 0.25018753207785543,
+    "lift": 3.3454286435904987,
+    "rule_id": "R014"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=night_00_05"
+    ],
+    "consequent": "congestion=Low",
+    "total_hours": 25329,
+    "antecedent_hours": 4561,
+    "consequent_hours": 6337,
+    "joint_hours": 3817,
+    "support": 0.1506968297208733,
+    "confidence": 0.8368778776584083,
+    "base_rate": 0.25018753207785543,
+    "lift": 3.345002329684365,
+    "rule_id": "R015"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=morning_06_09",
+      "weather=Mist"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 629,
+    "consequent_hours": 6331,
+    "joint_hours": 521,
+    "support": 0.02056930790793162,
+    "confidence": 0.8282988871224165,
+    "base_rate": 0.24995064945319595,
+    "lift": 3.313849709670461,
+    "rule_id": "R016"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=morning_06_09"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 2960,
+    "consequent_hours": 6331,
+    "joint_hours": 2425,
+    "support": 0.09574006079987367,
+    "confidence": 0.8192567567567568,
+    "base_rate": 0.24995064945319595,
+    "lift": 3.2776740470528973,
+    "rule_id": "R017"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=night_00_05",
+      "weather=Mist"
+    ],
+    "consequent": "congestion=Low",
+    "total_hours": 25329,
+    "antecedent_hours": 836,
+    "consequent_hours": 6337,
+    "joint_hours": 677,
+    "support": 0.02672825614907813,
+    "confidence": 0.8098086124401914,
+    "base_rate": 0.25018753207785543,
+    "lift": 3.236806429619316,
+    "rule_id": "R018"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=afternoon_13_16",
+      "weather=Clear"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 813,
+    "consequent_hours": 6331,
+    "joint_hours": 656,
+    "support": 0.02589916696276995,
+    "confidence": 0.8068880688806888,
+    "base_rate": 0.24995064945319595,
+    "lift": 3.228189527196172,
+    "rule_id": "R019"
+  },
+  {
+    "antecedents": [
+      "day=weekend",
+      "time=late_evening_21_23"
+    ],
+    "consequent": "congestion=Medium",
+    "total_hours": 25329,
+    "antecedent_hours": 921,
+    "consequent_hours": 6329,
+    "joint_hours": 737,
+    "support": 0.029097082395672946,
+    "confidence": 0.8002171552660152,
+    "base_rate": 0.24987168857830944,
+    "lift": 3.2025122966871384,
+    "rule_id": "R020"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=morning_06_09",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 1129,
+    "consequent_hours": 6331,
+    "joint_hours": 902,
+    "support": 0.03561135457380868,
+    "confidence": 0.7989371124889283,
+    "base_rate": 0.24995064945319595,
+    "lift": 3.196379422244837,
+    "rule_id": "R021"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=late_evening_21_23",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=Medium",
+    "total_hours": 25329,
+    "antecedent_hours": 856,
+    "consequent_hours": 6329,
+    "joint_hours": 681,
+    "support": 0.02688617789885112,
+    "confidence": 0.7955607476635514,
+    "base_rate": 0.24987168857830944,
+    "lift": 3.1838771018439083,
+    "rule_id": "R022"
+  },
+  {
+    "antecedents": [
+      "time=late_evening_21_23",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=Medium",
+    "total_hours": 25329,
+    "antecedent_hours": 1208,
+    "consequent_hours": 6329,
+    "joint_hours": 960,
+    "support": 0.037901219945517,
+    "confidence": 0.7947019867549668,
+    "base_rate": 0.24987168857830944,
+    "lift": 3.180440294282913,
+    "rule_id": "R023"
+  },
+  {
+    "antecedents": [
+      "time=late_evening_21_23",
+      "weather=Clear"
+    ],
+    "consequent": "congestion=Medium",
+    "total_hours": 25329,
+    "antecedent_hours": 1213,
+    "consequent_hours": 6329,
+    "joint_hours": 960,
+    "support": 0.037901219945517,
+    "confidence": 0.7914262159934048,
+    "base_rate": 0.24987168857830944,
+    "lift": 3.1673304826824067,
+    "rule_id": "R024"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=afternoon_13_16",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 1459,
+    "consequent_hours": 6331,
+    "joint_hours": 1150,
+    "support": 0.0454025030597339,
+    "confidence": 0.7882111034955449,
+    "base_rate": 0.24995064945319595,
+    "lift": 3.1534669152485635,
+    "rule_id": "R025"
+  },
+  {
+    "antecedents": [
+      "time=late_evening_21_23"
+    ],
+    "consequent": "congestion=Medium",
+    "total_hours": 25329,
+    "antecedent_hours": 3253,
+    "consequent_hours": 6329,
+    "joint_hours": 2558,
+    "support": 0.10099095897982549,
+    "confidence": 0.7863510605594836,
+    "base_rate": 0.24987168857830944,
+    "lift": 3.1470194363898183,
+    "rule_id": "R026"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=afternoon_13_16"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 2992,
+    "consequent_hours": 6331,
+    "joint_hours": 2352,
+    "support": 0.09285798886651664,
+    "confidence": 0.786096256684492,
+    "base_rate": 0.24995064945319595,
+    "lift": 3.1450058577731004,
+    "rule_id": "R027"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=late_evening_21_23",
+      "weather=Clear"
+    ],
+    "consequent": "congestion=Medium",
+    "total_hours": 25329,
+    "antecedent_hours": 866,
+    "consequent_hours": 6329,
+    "joint_hours": 679,
+    "support": 0.026807217023964627,
+    "confidence": 0.7840646651270208,
+    "base_rate": 0.24987168857830944,
+    "lift": 3.137869158319215,
+    "rule_id": "R028"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=late_evening_21_23"
+    ],
+    "consequent": "congestion=Medium",
+    "total_hours": 25329,
+    "antecedent_hours": 2332,
+    "consequent_hours": 6329,
+    "joint_hours": 1821,
+    "support": 0.07189387658415256,
+    "confidence": 0.7808747855917667,
+    "base_rate": 0.24987168857830944,
+    "lift": 3.1251030880476947,
+    "rule_id": "R029"
+  },
+  {
+    "antecedents": [
+      "day=weekend",
+      "time=midday_10_12"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 897,
+    "consequent_hours": 6332,
+    "joint_hours": 672,
+    "support": 0.026530853961861896,
+    "confidence": 0.7491638795986622,
+    "base_rate": 0.24999012989063918,
+    "lift": 2.996773832336468,
+    "rule_id": "R030"
+  },
+  {
+    "antecedents": [
+      "time=midday_10_12"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 3154,
+    "consequent_hours": 6332,
+    "joint_hours": 2266,
+    "support": 0.08946267124639741,
+    "confidence": 0.7184527584020292,
+    "base_rate": 0.24999012989063918,
+    "lift": 2.8739244974044533,
+    "rule_id": "R031"
+  },
+  {
+    "antecedents": [
+      "time=midday_10_12",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 1338,
+    "consequent_hours": 6332,
+    "joint_hours": 954,
+    "support": 0.03766433732085751,
+    "confidence": 0.7130044843049327,
+    "base_rate": 0.24999012989063918,
+    "lift": 2.8521305405811184,
+    "rule_id": "R032"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=midday_10_12"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 2257,
+    "consequent_hours": 6332,
+    "joint_hours": 1594,
+    "support": 0.06293181728453551,
+    "confidence": 0.7062472308373948,
+    "base_rate": 0.24999012989063918,
+    "lift": 2.8251004595515434,
+    "rule_id": "R033"
+  },
+  {
+    "antecedents": [
+      "time=midday_10_12",
+      "weather=Clear"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 928,
+    "consequent_hours": 6332,
+    "joint_hours": 655,
+    "support": 0.025859686525326702,
+    "confidence": 0.7058189655172413,
+    "base_rate": 0.24999012989063918,
+    "lift": 2.8233873306358506,
+    "rule_id": "R034"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=midday_10_12",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 967,
+    "consequent_hours": 6332,
+    "joint_hours": 667,
+    "support": 0.026333451774645664,
+    "confidence": 0.6897621509824199,
+    "base_rate": 0.24999012989063918,
+    "lift": 2.7591575366762027,
+    "rule_id": "R035"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=midday_10_12",
+      "weather=Clear"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 634,
+    "consequent_hours": 6332,
+    "joint_hours": 433,
+    "support": 0.017095029412925896,
+    "confidence": 0.6829652996845426,
+    "base_rate": 0.24999012989063918,
+    "lift": 2.7319690580716642,
+    "rule_id": "R036"
+  },
+  {
+    "antecedents": [
+      "day=weekend",
+      "time=morning_06_09"
+    ],
+    "consequent": "congestion=Medium",
+    "total_hours": 25329,
+    "antecedent_hours": 1190,
+    "consequent_hours": 6329,
+    "joint_hours": 762,
+    "support": 0.030084093331754116,
+    "confidence": 0.6403361344537815,
+    "base_rate": 0.24987168857830944,
+    "lift": 2.5626598119102275,
+    "rule_id": "R037"
+  },
+  {
+    "antecedents": [
+      "time=morning_06_09",
+      "weather=Rain"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 564,
+    "consequent_hours": 6331,
+    "joint_hours": 353,
+    "support": 0.013936594417466145,
+    "confidence": 0.625886524822695,
+    "base_rate": 0.24995064945319595,
+    "lift": 2.5040404023430805,
+    "rule_id": "R038"
+  },
+  {
+    "antecedents": [
+      "time=afternoon_13_16",
+      "weather=Rain"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 578,
+    "consequent_hours": 6331,
+    "joint_hours": 355,
+    "support": 0.01401555529235264,
+    "confidence": 0.6141868512110726,
+    "base_rate": 0.24995064945319595,
+    "lift": 2.457232467907954,
+    "rule_id": "R039"
+  },
+  {
+    "antecedents": [
+      "time=afternoon_13_16",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 2031,
+    "consequent_hours": 6331,
+    "joint_hours": 1208,
+    "support": 0.04769236843144222,
+    "confidence": 0.5947808961102905,
+    "base_rate": 0.24995064945319595,
+    "lift": 2.379593321367485,
+    "rule_id": "R040"
+  },
+  {
+    "antecedents": [
+      "time=afternoon_13_16",
+      "weather=Clear"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 1153,
+    "consequent_hours": 6331,
+    "joint_hours": 683,
+    "support": 0.026965138773737612,
+    "confidence": 0.5923677363399826,
+    "base_rate": 0.24995064945319595,
+    "lift": 2.369938776457972,
+    "rule_id": "R041"
+  },
+  {
+    "antecedents": [
+      "time=morning_06_09",
+      "weather=Mist"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 882,
+    "consequent_hours": 6331,
+    "joint_hours": 521,
+    "support": 0.02056930790793162,
+    "confidence": 0.590702947845805,
+    "base_rate": 0.24995064945319595,
+    "lift": 2.363278307690159,
+    "rule_id": "R042"
+  },
+  {
+    "antecedents": [
+      "time=afternoon_13_16"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 4193,
+    "consequent_hours": 6331,
+    "joint_hours": 2471,
+    "support": 0.09755616092226302,
+    "confidence": 0.5893155258764607,
+    "base_rate": 0.24995064945319595,
+    "lift": 2.357727524075955,
+    "rule_id": "R043"
+  },
+  {
+    "antecedents": [
+      "time=morning_06_09",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 1533,
+    "consequent_hours": 6331,
+    "joint_hours": 902,
+    "support": 0.03561135457380868,
+    "confidence": 0.588388780169602,
+    "base_rate": 0.24995064945319595,
+    "lift": 2.3540198093375215,
+    "rule_id": "R044"
+  },
+  {
+    "antecedents": [
+      "time=morning_06_09"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 4150,
+    "consequent_hours": 6331,
+    "joint_hours": 2425,
+    "support": 0.09574006079987367,
+    "confidence": 0.5843373493975904,
+    "base_rate": 0.24995064945319595,
+    "lift": 2.337810886572669,
+    "rule_id": "R045"
+  },
+  {
+    "antecedents": [
+      "time=morning_06_09",
+      "weather=Clear"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 1193,
+    "consequent_hours": 6331,
+    "joint_hours": 689,
+    "support": 0.027202021398397093,
+    "confidence": 0.5775356244761106,
+    "base_rate": 0.24995064945319595,
+    "lift": 2.3105986151248468,
+    "rule_id": "R046"
+  },
+  {
+    "antecedents": [
+      "day=weekend",
+      "time=evening_17_20",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 530,
+    "consequent_hours": 6332,
+    "joint_hours": 304,
+    "support": 0.01200205298274705,
+    "confidence": 0.5735849056603773,
+    "base_rate": 0.24999012989063918,
+    "lift": 2.2944302077497944,
+    "rule_id": "R047"
+  },
+  {
+    "antecedents": [
+      "day=weekend",
+      "time=evening_17_20"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 1185,
+    "consequent_hours": 6332,
+    "joint_hours": 657,
+    "support": 0.025938647400213195,
+    "confidence": 0.5544303797468354,
+    "base_rate": 0.24999012989063918,
+    "lift": 2.2178090790599487,
+    "rule_id": "R048"
+  },
+  {
+    "antecedents": [
+      "time=evening_17_20",
+      "weather=Clear"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 1312,
+    "consequent_hours": 6332,
+    "joint_hours": 577,
+    "support": 0.022780212404753444,
+    "confidence": 0.43978658536585363,
+    "base_rate": 0.24999012989063918,
+    "lift": 1.7592157960726007,
+    "rule_id": "R049"
+  },
+  {
+    "antecedents": [
+      "day=weekend",
+      "time=evening_17_20"
+    ],
+    "consequent": "congestion=Medium",
+    "total_hours": 25329,
+    "antecedent_hours": 1185,
+    "consequent_hours": 6329,
+    "joint_hours": 509,
+    "support": 0.02009554265861266,
+    "confidence": 0.42953586497890295,
+    "base_rate": 0.24987168857830944,
+    "lift": 1.7190257424633644,
+    "rule_id": "R050"
+  },
+  {
+    "antecedents": [
+      "day=weekend",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 2797,
+    "consequent_hours": 6332,
+    "joint_hours": 1167,
+    "support": 0.0460736704962691,
+    "confidence": 0.41723274937432964,
+    "base_rate": 0.24999012989063918,
+    "lift": 1.6689968902246362,
+    "rule_id": "R051"
+  },
+  {
+    "antecedents": [
+      "time=evening_17_20"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 4191,
+    "consequent_hours": 6332,
+    "joint_hours": 1745,
+    "support": 0.0688933633384658,
+    "confidence": 0.41636840849439277,
+    "base_rate": 0.24999012989063918,
+    "lift": 1.6655393902012752,
+    "rule_id": "R052"
+  },
+  {
+    "antecedents": [
+      "time=evening_17_20",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 1888,
+    "consequent_hours": 6332,
+    "joint_hours": 784,
+    "support": 0.03095266295550555,
+    "confidence": 0.4152542372881356,
+    "base_rate": 0.24999012989063918,
+    "lift": 1.6610825294174332,
+    "rule_id": "R053"
+  },
+  {
+    "antecedents": [
+      "day=weekend",
+      "weather=Mist"
+    ],
+    "consequent": "congestion=Low",
+    "total_hours": 25329,
+    "antecedent_hours": 1008,
+    "consequent_hours": 6337,
+    "joint_hours": 406,
+    "support": 0.01602905760195823,
+    "confidence": 0.4027777777777778,
+    "base_rate": 0.25018753207785543,
+    "lift": 1.6099034769344063,
+    "rule_id": "R054"
+  },
+  {
+    "antecedents": [
+      "time=evening_17_20"
+    ],
+    "consequent": "congestion=Medium",
+    "total_hours": 25329,
+    "antecedent_hours": 4191,
+    "consequent_hours": 6329,
+    "joint_hours": 1672,
+    "support": 0.06601129140510877,
+    "confidence": 0.3989501312335958,
+    "base_rate": 0.24987168857830944,
+    "lift": 1.5966199832541867,
+    "rule_id": "R055"
+  },
+  {
+    "antecedents": [
+      "time=evening_17_20",
+      "weather=Clear"
+    ],
+    "consequent": "congestion=Medium",
+    "total_hours": 25329,
+    "antecedent_hours": 1312,
+    "consequent_hours": 6329,
+    "joint_hours": 520,
+    "support": 0.020529827470488374,
+    "confidence": 0.39634146341463417,
+    "base_rate": 0.24987168857830944,
+    "lift": 1.5861799536781906,
+    "rule_id": "R056"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=evening_17_20"
+    ],
+    "consequent": "congestion=Medium",
+    "total_hours": 25329,
+    "antecedent_hours": 3006,
+    "consequent_hours": 6329,
+    "joint_hours": 1163,
+    "support": 0.045915748746496114,
+    "confidence": 0.38689288090485696,
+    "base_rate": 0.24987168857830944,
+    "lift": 1.5483662159012677,
+    "rule_id": "R057"
+  },
+  {
+    "antecedents": [
+      "time=afternoon_13_16",
+      "weather=Clear"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 1153,
+    "consequent_hours": 6332,
+    "joint_hours": 446,
+    "support": 0.017608275099688105,
+    "confidence": 0.3868169991326973,
+    "base_rate": 0.24999012989063918,
+    "lift": 1.5473290857599638,
+    "rule_id": "R058"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=evening_17_20",
+      "weather=Clear"
+    ],
+    "consequent": "congestion=Medium",
+    "total_hours": 25329,
+    "antecedent_hours": 921,
+    "consequent_hours": 6329,
+    "joint_hours": 354,
+    "support": 0.013976074854909393,
+    "confidence": 0.38436482084690554,
+    "base_rate": 0.24987168857830944,
+    "lift": 1.5382487829406337,
+    "rule_id": "R059"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=evening_17_20",
+      "weather=Clear"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 921,
+    "consequent_hours": 6332,
+    "joint_hours": 353,
+    "support": 0.013936594417466145,
+    "confidence": 0.38327904451682954,
+    "base_rate": 0.24999012989063918,
+    "lift": 1.5331767085544497,
+    "rule_id": "R060"
+  },
+  {
+    "antecedents": [
+      "time=afternoon_13_16"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 4193,
+    "consequent_hours": 6332,
+    "joint_hours": 1605,
+    "support": 0.06336610209641123,
+    "confidence": 0.38278082518483186,
+    "base_rate": 0.24999012989063918,
+    "lift": 1.531183752543684,
+    "rule_id": "R061"
+  },
+  {
+    "antecedents": [
+      "time=evening_17_20",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=Medium",
+    "total_hours": 25329,
+    "antecedent_hours": 1888,
+    "consequent_hours": 6329,
+    "joint_hours": 719,
+    "support": 0.0283864345216945,
+    "confidence": 0.3808262711864407,
+    "base_rate": 0.24987168857830944,
+    "lift": 1.5240873159869421,
+    "rule_id": "R062"
+  },
+  {
+    "antecedents": [
+      "time=afternoon_13_16",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 2031,
+    "consequent_hours": 6332,
+    "joint_hours": 769,
+    "support": 0.030360456393856844,
+    "confidence": 0.37863121614968,
+    "base_rate": 0.24999012989063918,
+    "lift": 1.5145846610636837,
+    "rule_id": "R063"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=evening_17_20",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=Medium",
+    "total_hours": 25329,
+    "antecedent_hours": 1358,
+    "consequent_hours": 6329,
+    "joint_hours": 506,
+    "support": 0.019977101346282916,
+    "confidence": 0.37260677466863035,
+    "base_rate": 0.24987168857830944,
+    "lift": 1.4911924467659565,
+    "rule_id": "R064"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 7321,
+    "consequent_hours": 6331,
+    "joint_hours": 2681,
+    "support": 0.10584705278534486,
+    "confidence": 0.36620680234940584,
+    "base_rate": 0.24995064945319595,
+    "lift": 1.4651164265847576,
+    "rule_id": "R065"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=evening_17_20"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 3006,
+    "consequent_hours": 6332,
+    "joint_hours": 1088,
+    "support": 0.0429547159382526,
+    "confidence": 0.36194278110445777,
+    "base_rate": 0.24999012989063918,
+    "lift": 1.447828285311878,
+    "rule_id": "R066"
+  },
+  {
+    "antecedents": [
+      "day=weekend",
+      "weather=Mist"
+    ],
+    "consequent": "congestion=Medium",
+    "total_hours": 25329,
+    "antecedent_hours": 1008,
+    "consequent_hours": 6329,
+    "joint_hours": 358,
+    "support": 0.01413399660468238,
+    "confidence": 0.3551587301587302,
+    "base_rate": 0.24987168857830944,
+    "lift": 1.4213644297978316,
+    "rule_id": "R067"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "time=evening_17_20",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 1358,
+    "consequent_hours": 6332,
+    "joint_hours": 480,
+    "support": 0.0189506099727585,
+    "confidence": 0.35346097201767307,
+    "base_rate": 0.24999012989063918,
+    "lift": 1.4138997094497223,
+    "rule_id": "R068"
+  },
+  {
+    "antecedents": [
+      "day=weekend"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 7221,
+    "consequent_hours": 6332,
+    "joint_hours": 2550,
+    "support": 0.10067511548027952,
+    "confidence": 0.3531366846697133,
+    "base_rate": 0.24999012989063918,
+    "lift": 1.4126025088438359,
+    "rule_id": "R069"
+  },
+  {
+    "antecedents": [
+      "day=weekend",
+      "weather=Clear"
+    ],
+    "consequent": "congestion=Medium",
+    "total_hours": 25329,
+    "antecedent_hours": 2421,
+    "consequent_hours": 6329,
+    "joint_hours": 847,
+    "support": 0.0334399305144301,
+    "confidence": 0.34985543163981825,
+    "base_rate": 0.24987168857830944,
+    "lift": 1.400140342550949,
+    "rule_id": "R070"
+  },
+  {
+    "antecedents": [
+      "day=weekend",
+      "weather=Rain"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 908,
+    "consequent_hours": 6332,
+    "joint_hours": 317,
+    "support": 0.012515298669509258,
+    "confidence": 0.3491189427312775,
+    "base_rate": 0.24999012989063918,
+    "lift": 1.3965309065762048,
+    "rule_id": "R071"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "weather=Rain"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 2541,
+    "consequent_hours": 6331,
+    "joint_hours": 882,
+    "support": 0.03482174582494374,
+    "confidence": 0.34710743801652894,
+    "base_rate": 0.24995064945319595,
+    "lift": 1.3887038852504598,
+    "rule_id": "R072"
+  },
+  {
+    "antecedents": [
+      "weather=Mist",
+      "weather=Snow"
+    ],
+    "consequent": "congestion=Low",
+    "total_hours": 25329,
+    "antecedent_hours": 768,
+    "consequent_hours": 6337,
+    "joint_hours": 262,
+    "support": 0.01034387461013068,
+    "confidence": 0.3411458333333333,
+    "base_rate": 0.25018753207785543,
+    "lift": 1.3635604880069432,
+    "rule_id": "R073"
+  },
+  {
+    "antecedents": [
+      "day=weekday"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 18108,
+    "consequent_hours": 6331,
+    "joint_hours": 6126,
+    "support": 0.24185715977733033,
+    "confidence": 0.3383035122597747,
+    "base_rate": 0.24995064945319595,
+    "lift": 1.3534812291940976,
+    "rule_id": "R074"
+  },
+  {
+    "antecedents": [
+      "weather=Mist"
+    ],
+    "consequent": "congestion=Low",
+    "total_hours": 25329,
+    "antecedent_hours": 3471,
+    "consequent_hours": 6337,
+    "joint_hours": 1167,
+    "support": 0.0460736704962691,
+    "confidence": 0.3362143474503025,
+    "base_rate": 0.25018753207785543,
+    "lift": 1.3438493303722125,
+    "rule_id": "R075"
+  },
+  {
+    "antecedents": [
+      "day=weekend",
+      "weather=Clear"
+    ],
+    "consequent": "congestion=High",
+    "total_hours": 25329,
+    "antecedent_hours": 2421,
+    "consequent_hours": 6332,
+    "joint_hours": 809,
+    "support": 0.031939673891586716,
+    "confidence": 0.33415943824865757,
+    "base_rate": 0.24999012989063918,
+    "lift": 1.3366905261213278,
+    "rule_id": "R076"
+  },
+  {
+    "antecedents": [
+      "day=weekend"
+    ],
+    "consequent": "congestion=Medium",
+    "total_hours": 25329,
+    "antecedent_hours": 7221,
+    "consequent_hours": 6329,
+    "joint_hours": 2399,
+    "support": 0.09471356942634925,
+    "confidence": 0.3322254535382911,
+    "base_rate": 0.24987168857830944,
+    "lift": 1.3295842175179926,
+    "rule_id": "R077"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "weather=Mist",
+      "weather=Rain"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 775,
+    "consequent_hours": 6331,
+    "joint_hours": 255,
+    "support": 0.010067511548027952,
+    "confidence": 0.32903225806451614,
+    "base_rate": 0.24995064945319595,
+    "lift": 1.3163888903042378,
+    "rule_id": "R078"
+  },
+  {
+    "antecedents": [
+      "day=weekend",
+      "weather=Rain"
+    ],
+    "consequent": "congestion=Medium",
+    "total_hours": 25329,
+    "antecedent_hours": 908,
+    "consequent_hours": 6329,
+    "joint_hours": 295,
+    "support": 0.011646729045757828,
+    "confidence": 0.3248898678414097,
+    "base_rate": 0.24987168857830944,
+    "lift": 1.3002268071662295,
+    "rule_id": "R079"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "weather=Mist"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 2463,
+    "consequent_hours": 6331,
+    "joint_hours": 778,
+    "support": 0.030715780330846067,
+    "confidence": 0.3158749492488835,
+    "base_rate": 0.24995064945319595,
+    "lift": 1.2637492638643135,
+    "rule_id": "R080"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "weather=Clear"
+    ],
+    "consequent": "congestion=Severe",
+    "total_hours": 25329,
+    "antecedent_hours": 5592,
+    "consequent_hours": 6331,
+    "joint_hours": 1753,
+    "support": 0.06920920683801177,
+    "confidence": 0.313483547925608,
+    "base_rate": 0.24995064945319595,
+    "lift": 1.2541817699269824,
+    "rule_id": "R081"
+  },
+  {
+    "antecedents": [
+      "day=weekend",
+      "weather=Clouds"
+    ],
+    "consequent": "congestion=Medium",
+    "total_hours": 25329,
+    "antecedent_hours": 2797,
+    "consequent_hours": 6329,
+    "joint_hours": 870,
+    "support": 0.03434798057562478,
+    "confidence": 0.3110475509474437,
+    "base_rate": 0.24987168857830944,
+    "lift": 1.244829106959678,
+    "rule_id": "R082"
+  },
+  {
+    "antecedents": [
+      "day=weekday",
+      "weather=Mist"
+    ],
+    "consequent": "congestion=Low",
+    "total_hours": 25329,
+    "antecedent_hours": 2463,
+    "consequent_hours": 6337,
+    "joint_hours": 761,
+    "support": 0.03004461289431087,
+    "confidence": 0.3089727974015428,
+    "base_rate": 0.25018753207785543,
+    "lift": 1.2349648075404258,
+    "rule_id": "R083"
+  }
+]

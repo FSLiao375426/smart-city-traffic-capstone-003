@@ -1,0 +1,72 @@
+{
+  "source_sha256": "3f2328d1f3e0e4691788b422063e1b59929b0e3abce70e993e940fc0594a8d3e",
+  "train_hours": 25329,
+  "validation_hours": 8713,
+  "test_transactions_created": false,
+  "algorithm": "FP-growth",
+  "mlxtend_version": "0.25.0",
+  "item_catalog": [
+    "time=night_00_05",
+    "time=morning_06_09",
+    "time=midday_10_12",
+    "time=afternoon_13_16",
+    "time=evening_17_20",
+    "time=late_evening_21_23",
+    "day=weekday",
+    "day=weekend",
+    "weather=Clear",
+    "weather=Clouds",
+    "weather=Drizzle",
+    "weather=Fog",
+    "weather=Haze",
+    "weather=Mist",
+    "weather=Rain",
+    "weather=Smoke",
+    "weather=Snow",
+    "weather=Squall",
+    "weather=Thunderstorm",
+    "congestion=Low",
+    "congestion=Medium",
+    "congestion=High",
+    "congestion=Severe"
+  ],
+  "time_bins": [
+    "night_00_05",
+    "morning_06_09",
+    "midday_10_12",
+    "afternoon_13_16",
+    "evening_17_20",
+    "late_evening_21_23"
+  ],
+  "congestion_labels": {
+    "1": "Low",
+    "2": "Medium",
+    "3": "High",
+    "4": "Severe"
+  },
+  "thresholds": {
+    "q1": 1204.0,
+    "q2": 3339.0,
+    "q3": 4932.0
+  },
+  "criteria": {
+    "min_support": 0.01,
+    "min_joint_hours": 254,
+    "min_antecedent_hours": 500,
+    "min_confidence": 0.3,
+    "min_lift": 1.2,
+    "max_antecedent_items": 3
+  },
+  "frequent_itemsets": 291,
+  "selected_rules": 83,
+  "mlflow_run_id": "cf3975529aa9450db952199912c54cf9",
+  "ranking": "Training lift descending, then training support descending; never validation selection",
+  "limitations": [
+    "Descriptive co-occurrence, not causation or a forecast",
+    "Weather items overlap; one observed hour is one transaction",
+    "Repeated nested antecedents are not independent discoveries",
+    "Minimum support suppresses rare weather; absent rules do not imply safety",
+    "Fixed time bins and thresholds affect discoveries",
+    "No multiplicity-adjusted significance claim"
+  ]
+}

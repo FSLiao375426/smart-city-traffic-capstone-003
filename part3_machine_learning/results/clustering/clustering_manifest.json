@@ -1,0 +1,120 @@
+{
+  "selected_k": 6,
+  "selection_rule": "Highest silhouette on the same 2000 seeded training samples; ties prefer smaller k",
+  "features": [
+    "traffic_volume",
+    "hour_sin",
+    "hour_cos",
+    "adverse_weather"
+  ],
+  "source_sha256": "3f2328d1f3e0e4691788b422063e1b59929b0e3abce70e993e940fc0594a8d3e",
+  "fit_end": "2016-12-31 23:59:59",
+  "sample_indices_sha256": "fe71abd21310cd4798d74640c12366cac67330a66599d80c44b168754369bacb",
+  "model_sha256": "b7976018436dc67063d5c110362d1dcb39886af008047ad9084640c3fc2ad79f",
+  "test_assigned": false,
+  "tracking_uri": "sqlite:///C:/Users/f_s_l/Documents/GitHub/smart-city-traffic-capstone-003/part3_machine_learning/mlflow/mlflow.db",
+  "runs": [
+    {
+      "k": 2,
+      "run_id": "cd7d0201ad2c4575b929f90050d5c1da",
+      "status": "FINISHED",
+      "params": {
+        "k": "2",
+        "n_init": "10",
+        "random_seed": "42",
+        "train_hours": "25329",
+        "silhouette_sample_hours": "2000",
+        "feature_count": "4",
+        "fit_end": "2016-12-31 23:59:59"
+      },
+      "metrics": {
+        "train_sample_silhouette": 0.37837030744020844,
+        "train_inertia": 63191.48664905252,
+        "minimum_cluster_fraction": 0.4819771803071578
+      }
+    },
+    {
+      "k": 3,
+      "run_id": "86c16f6262ef449794539582892bd4f1",
+      "status": "FINISHED",
+      "params": {
+        "k": "3",
+        "n_init": "10",
+        "random_seed": "42",
+        "train_hours": "25329",
+        "silhouette_sample_hours": "2000",
+        "feature_count": "4",
+        "fit_end": "2016-12-31 23:59:59"
+      },
+      "metrics": {
+        "train_sample_silhouette": 0.4327196945654061,
+        "train_inertia": 44987.476296865876,
+        "minimum_cluster_fraction": 0.19850763946464528
+      }
+    },
+    {
+      "k": 4,
+      "run_id": "9fe031c8973c4de4ae8df6f12a903386",
+      "status": "FINISHED",
+      "params": {
+        "k": "4",
+        "n_init": "10",
+        "random_seed": "42",
+        "train_hours": "25329",
+        "silhouette_sample_hours": "2000",
+        "feature_count": "4",
+        "fit_end": "2016-12-31 23:59:59"
+      },
+      "metrics": {
+        "train_sample_silhouette": 0.4226912935509559,
+        "train_inertia": 34197.24187618791,
+        "minimum_cluster_fraction": 0.19850763946464528
+      }
+    },
+    {
+      "k": 5,
+      "run_id": "d64289ed084a42a285bfb41b7957ac65",
+      "status": "FINISHED",
+      "params": {
+        "k": "5",
+        "n_init": "10",
+        "random_seed": "42",
+        "train_hours": "25329",
+        "silhouette_sample_hours": "2000",
+        "feature_count": "4",
+        "fit_end": "2016-12-31 23:59:59"
+      },
+      "metrics": {
+        "train_sample_silhouette": 0.4596892690680303,
+        "train_inertia": 26693.571779699705,
+        "minimum_cluster_fraction": 0.09605590429941964
+      }
+    },
+    {
+      "k": 6,
+      "run_id": "1bddb4977f7c47bb93bf31a8630b3584",
+      "status": "FINISHED",
+      "params": {
+        "k": "6",
+        "n_init": "10",
+        "random_seed": "42",
+        "train_hours": "25329",
+        "silhouette_sample_hours": "2000",
+        "feature_count": "4",
+        "fit_end": "2016-12-31 23:59:59"
+      },
+      "metrics": {
+        "train_sample_silhouette": 0.46131464966231206,
+        "train_inertia": 19638.25106225258,
+        "minimum_cluster_fraction": 0.09605590429941964
+      }
+    }
+  ],
+  "limitations": [
+    "Traffic descriptions, not future forecasts or accident classes",
+    "Arbitrary cluster IDs; name only after inspecting profiles",
+    "K-means assumes Euclidean geometry and depends on scaling/feature choice",
+    "Binary adverse weather is a category assumption",
+    "Silhouette is an internal training-sample measure, not external validity"
+  ]
+}

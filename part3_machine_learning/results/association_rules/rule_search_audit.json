@@ -1,0 +1,41 @@
+{
+  "context_items": {
+    "time": 6,
+    "day_type": 2,
+    "weather": 11
+  },
+  "outcome_items": 4,
+  "antecedent_size_limit": 3,
+  "unrestricted_context_combinations": 1159,
+  "unrestricted_rules_including_impossible_contexts": 4636,
+  "compatible_contexts_by_size": {
+    "1": 19,
+    "2": 155,
+    "3": 737
+  },
+  "compatible_theoretical_rules": 3644,
+  "frequent_itemsets_all_types": 291,
+  "filter_order_counts": {
+    "outcome_rules_with_joint_support_at_least_254": 164,
+    "antecedent_hours_at_least_500": 150,
+    "confidence_at_least_0_30": 83,
+    "lift_at_least_1_20": 83
+  },
+  "selected_rules_by_antecedent_size": {
+    "1": 12,
+    "2": 49,
+    "3": 22
+  },
+  "threshold_rationale": {
+    "antecedent_500": "Analyst-chosen first-pass support floor; not course requirement or a statistical guarantee",
+    "joint_254": "ceil(0.01 * 25329), following analyst-chosen minimum support 1%"
+  },
+  "notes": [
+    "Theoretical count excludes two time bins or both day types in one antecedent; includes unobserved weather combinations",
+    "Filter stage drop counts depend on order; filters overlap",
+    "FP-growth prunes infrequent combinations; it did not enumerate and score all theoretical rules",
+    "No sensitivity analysis or proof these cutoffs are optimal",
+    "No model, threshold, rule selection or test results changed during this audit"
+  ],
+  "frozen_rules_sha256": "daf0b73f341ec278d3898949749078dbe4e5dbbfcec0577e202571f2301a349a"
+}

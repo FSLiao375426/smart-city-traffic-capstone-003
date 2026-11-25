@@ -1,0 +1,8 @@
+2026-11-24T18:32:07Z | INFO | __main__ | K-means: 25329 training hours; k=2..6; same 2000 training samples for silhouette
+2026-11-24T18:32:10Z | INFO | __main__ | k=2 silhouette=0.37837 inertia=63191.49 minimum share=0.482
+2026-11-24T18:32:11Z | INFO | __main__ | k=3 silhouette=0.43272 inertia=44987.48 minimum share=0.199
+2026-11-24T18:32:12Z | INFO | __main__ | k=4 silhouette=0.42269 inertia=34197.24 minimum share=0.199
+2026-11-24T18:32:13Z | INFO | __main__ | k=5 silhouette=0.45969 inertia=26693.57 minimum share=0.096
+2026-11-24T18:32:14Z | INFO | __main__ | k=6 silhouette=0.46131 inertia=19638.25 minimum share=0.096
+2026-11-24T18:32:19Z | INFO | __main__ | Saved figure C:\Users\f_s_l\Documents\GitHub\smart-city-traffic-capstone-003\part3_machine_learning\figures\kmeans_selection_profiles.png
+2026-11-24T18:32:19Z | INFO | __main__ | Selected k=6 by training silhouette; saved 34042 train/validation assignments; no 2018 assignment

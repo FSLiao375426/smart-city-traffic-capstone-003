@@ -1,0 +1,2 @@
+2026-11-25T03:39:57Z | INFO | __main__ | Transactions: 25329 train, 8713 validation, 23 Boolean items; no 2018 transactions
+2026-11-25T03:39:58Z | INFO | __main__ | Saved 83 train-selected rules from 291 frequent itemsets; fixed-rule validation only

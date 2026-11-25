@@ -1,0 +1,17 @@
+{
+  "selected_k": 6,
+  "features": [
+    "traffic_volume",
+    "hour_sin",
+    "hour_cos",
+    "adverse_weather"
+  ],
+  "fit_end": "2016-12-31 23:59:59",
+  "limitations": [
+    "Traffic descriptions, not future forecasts or accident classes",
+    "Arbitrary cluster IDs; name only after inspecting profiles",
+    "K-means assumes Euclidean geometry and depends on scaling/feature choice",
+    "Binary adverse weather is a category assumption",
+    "Silhouette is an internal training-sample measure, not external validity"
+  ]
+}
