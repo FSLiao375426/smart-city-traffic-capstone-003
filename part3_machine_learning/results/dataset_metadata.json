@@ -1,0 +1,73 @@
+{
+  "prediction_mode": "Conditional same-hour estimate with observed weather; not a forward forecast",
+  "source": "data\\processed\\traffic_model_features.csv",
+  "source_sha256": "d1f0f1683ee0775ce22adf8487c4e0ba4cd002041e9bc9f062e48aa037f7c52d",
+  "output_sha256": "3f2328d1f3e0e4691788b422063e1b59929b0e3abce70e993e940fc0594a8d3e",
+  "fit_end": "2016-12-31 23:59:59",
+  "features": [
+    "hour_sin",
+    "hour_cos",
+    "day_of_week_sin",
+    "day_of_week_cos",
+    "is_weekend",
+    "is_holiday",
+    "temp_z",
+    "clouds_all_z",
+    "rain_1h",
+    "snow_1h",
+    "weather_Clear",
+    "weather_Clouds",
+    "weather_Drizzle",
+    "weather_Fog",
+    "weather_Haze",
+    "weather_Mist",
+    "weather_Rain",
+    "weather_Smoke",
+    "weather_Snow",
+    "weather_Squall",
+    "weather_Thunderstorm"
+  ],
+  "classification_target": "high_risk = (quartile >= 3) AND risky_weather",
+  "regression_target": "traffic_volume",
+  "severe_weather": [
+    "Snow",
+    "Thunderstorm",
+    "Squall"
+  ],
+  "low_visibility_weather": [
+    "Fog",
+    "Mist",
+    "Haze",
+    "Smoke"
+  ],
+  "quartile_thresholds": {
+    "q1": 1204.0,
+    "q2": 3339.0,
+    "q3": 4932.0
+  },
+  "shape": [
+    40575,
+    43
+  ],
+  "split_counts": {
+    "train": 25329,
+    "validation": 8713,
+    "test": 6533
+  },
+  "pre_test_target_summary": {
+    "train": {
+      "positive_hours": 2257,
+      "positive_fraction": 0.08910734730940818
+    },
+    "validation": {
+      "positive_hours": 1003,
+      "positive_fraction": 0.11511534488695054
+    }
+  },
+  "limitations": [
+    "Constructed proxy, not real accident outcomes or probabilities",
+    "Weather used in the proxy also appears as inputs: performance partly reproduces the label rule",
+    "Low visibility is a category-based assumption, not a measured visibility value",
+    "Missing hours are absent; no lag features or row-based next-hour targets"
+  ]
+}

@@ -1,0 +1,3 @@
+# Recreated local tracking database and duplicated artifact store.
+# Portable exported run evidence in results/ remains trackable.
+/mlflow/

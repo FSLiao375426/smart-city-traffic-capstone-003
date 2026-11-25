@@ -1,0 +1,3 @@
+2026-11-24T16:53:21Z | INFO | __main__ | train: 25329 hours, 2257 proxy positives
+2026-11-24T16:53:21Z | INFO | __main__ | validation: 8713 hours, 1003 proxy positives
+2026-11-24T16:53:22Z | INFO | __main__ | Saved traffic_supervised.csv: 40575 rows, 43 columns; 21 common inputs; no test metrics computed
