@@ -1,0 +1,71 @@
+{
+  "plan_sha256": "4fd6bb5579a7ddae1a7653d56267a9d3805eca2fe309982b63389e0cdbb01ad5",
+  "predictions_sha256": "5e5d0aa2ea9ff9f9fcb20f06920cbebfb721236252aacfc26fa9214fb90b0d3d",
+  "first_hour": "2018-01-01 00:00:00",
+  "last_hour": "2018-09-30 23:00:00",
+  "overall": {
+    "hours": 6533,
+    "actual_positive_hours": 727,
+    "tn": 5688,
+    "fp": 118,
+    "fn": 6,
+    "tp": 721,
+    "precision": 0.8593563766388558,
+    "recall": 0.9917469050894085,
+    "mae": 241.5400872361431,
+    "accuracy": 0.9810194397673351,
+    "f1": 0.9208173690932312,
+    "roc_auc": 0.9963640989897563,
+    "r2": 0.9599560761968621
+  },
+  "slices": {
+    "is_weekend": {
+      "0": {
+        "hours": 4671,
+        "actual_positive_hours": 604,
+        "tn": 4016,
+        "fp": 51,
+        "fn": 1,
+        "tp": 603,
+        "precision": 0.9220183486238532,
+        "recall": 0.9983443708609272,
+        "mae": 223.34307636691608
+      },
+      "1": {
+        "hours": 1862,
+        "actual_positive_hours": 123,
+        "tn": 1672,
+        "fp": 67,
+        "fn": 5,
+        "tp": 118,
+        "precision": 0.6378378378378379,
+        "recall": 0.959349593495935,
+        "mae": 287.1889797013201
+      }
+    },
+    "risky_weather": {
+      "0": {
+        "hours": 4904,
+        "actual_positive_hours": 0,
+        "tn": 4904,
+        "fp": 0,
+        "fn": 0,
+        "tp": 0,
+        "precision": null,
+        "recall": null,
+        "mae": 225.96851088183868
+      },
+      "1": {
+        "hours": 1629,
+        "actual_positive_hours": 727,
+        "tn": 784,
+        "fp": 118,
+        "fn": 6,
+        "tp": 721,
+        "precision": 0.8593563766388558,
+        "recall": 0.9917469050894085,
+        "mae": 288.41731893749903
+      }
+    }
+  }
+}
