@@ -1,0 +1,15 @@
+2026-11-25T11:01:13Z | INFO | werkzeug | 127.0.0.1 - - [25/Nov/2026 19:01:13] "GET /health HTTP/1.1" 200 -
+2026-11-25T11:01:13Z | INFO | part3_machine_learning.serve | Prediction status=ok hours=11 elapsed_ms=175.868 model_run_id=fce53c631e684562b8a5238f03cfaa4f
+2026-11-25T11:01:13Z | INFO | werkzeug | 127.0.0.1 - - [25/Nov/2026 19:01:13] "POST /predict HTTP/1.1" 200 -
+2026-11-25T11:01:13Z | INFO | part3_machine_learning.serve | Prediction status=ok hours=11 elapsed_ms=64.019 model_run_id=fce53c631e684562b8a5238f03cfaa4f
+2026-11-25T11:01:13Z | INFO | werkzeug | 127.0.0.1 - - [25/Nov/2026 19:01:13] "POST /predict HTTP/1.1" 200 -
+2026-11-25T11:01:13Z | INFO | part3_machine_learning.serve | Prediction status=ok hours=11 elapsed_ms=62.109 model_run_id=fce53c631e684562b8a5238f03cfaa4f
+2026-11-25T11:01:13Z | INFO | werkzeug | 127.0.0.1 - - [25/Nov/2026 19:01:13] "POST /predict HTTP/1.1" 200 -
+2026-11-25T11:01:13Z | INFO | part3_machine_learning.serve | Prediction status=insufficient_support hours=11 elapsed_ms=61.671 model_run_id=fce53c631e684562b8a5238f03cfaa4f
+2026-11-25T11:01:13Z | INFO | werkzeug | 127.0.0.1 - - [25/Nov/2026 19:01:13] "POST /predict HTTP/1.1" 200 -
+2026-11-25T11:01:13Z | WARNING | part3_machine_learning.serve | Rejected prediction request: Provide date, start_hour, end_hour, window_hours, weather and is_holiday; no unknown fields
+2026-11-25T11:01:13Z | INFO | werkzeug | 127.0.0.1 - - [25/Nov/2026 19:01:13] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2026-11-25T11:01:13Z | WARNING | part3_machine_learning.serve | Rejected prediction request: Provide date, start_hour, end_hour, window_hours, weather and is_holiday; no unknown fields
+2026-11-25T11:01:13Z | INFO | werkzeug | 127.0.0.1 - - [25/Nov/2026 19:01:13] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2026-11-25T11:01:13Z | WARNING | part3_machine_learning.serve | Rejected prediction request: Provide date, start_hour, end_hour, window_hours, weather and is_holiday; no unknown fields
+2026-11-25T11:01:13Z | INFO | werkzeug | 127.0.0.1 - - [25/Nov/2026 19:01:13] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -

@@ -1,0 +1,715 @@
+{
+  "transport": "real loopback HTTP; ephemeral local server stopped after verification",
+  "bundle_sha256": "cd1e201cc111f9c2c8a490b9dc529f0e5b638116d12c46d799a9c734789192e8",
+  "training_performed": false,
+  "cases": [
+    {
+      "name": "health",
+      "http_status": 200,
+      "response": {
+        "mode": "local_candidate_mock_not_final_test_approved",
+        "model_run_id": "fce53c631e684562b8a5238f03cfaa4f",
+        "status": "ready"
+      }
+    },
+    {
+      "name": "weekday_clear",
+      "http_status": 200,
+      "response": {
+        "best_window": {
+          "end_hour": 12,
+          "mean_estimated_traffic": 4425.213305770007,
+          "minimum_support_hours": 205,
+          "start_hour": 10
+        },
+        "hourly_estimates": [
+          {
+            "estimated_traffic": 5567.661199067843,
+            "historical_mean_traffic": 5667.9775280898875,
+            "hour": 8,
+            "support_hours": 178,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4751.095769632041,
+            "historical_mean_traffic": 5001.333333333333,
+            "hour": 9,
+            "support_hours": 198,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4372.982515110128,
+            "historical_mean_traffic": 4484.248780487805,
+            "hour": 10,
+            "support_hours": 205,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4477.4440964298865,
+            "historical_mean_traffic": 4747.846153846154,
+            "hour": 11,
+            "support_hours": 208,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4774.123310511903,
+            "historical_mean_traffic": 5006.787878787879,
+            "hour": 12,
+            "support_hours": 198,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4792.884072019483,
+            "historical_mean_traffic": 4989.065656565656,
+            "hour": 13,
+            "support_hours": 198,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 5171.79746270647,
+            "historical_mean_traffic": 5322.125654450262,
+            "hour": 14,
+            "support_hours": 191,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 5659.013810431155,
+            "historical_mean_traffic": 5699.439153439153,
+            "hour": 15,
+            "support_hours": 189,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 6302.131999666588,
+            "historical_mean_traffic": 6308.726368159204,
+            "hour": 16,
+            "support_hours": 201,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 5939.728829284586,
+            "historical_mean_traffic": 5888.834224598931,
+            "hour": 17,
+            "support_hours": 187,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4325.42286284304,
+            "historical_mean_traffic": 4545.826291079812,
+            "hour": 18,
+            "support_hours": 213,
+            "support_sufficient": true
+          }
+        ],
+        "limitations": [
+          "Departure window, not trip duration or route optimization",
+          "No live traffic, future weather service or accident probability",
+          "Lower estimated traffic does not guarantee shorter travel time or greater safety",
+          "Default support floor 30 is an analyst setting, not a statistical guarantee"
+        ],
+        "minimum_support_hours": 30,
+        "model": "random_forest_regressor",
+        "model_run_id": "fce53c631e684562b8a5238f03cfaa4f",
+        "numeric_imputation_assumptions": [],
+        "outside_training_weather_range": [],
+        "prediction_mode": "conditional_same_hour_scenario",
+        "ranked_supported_windows": [
+          {
+            "end_hour": 12,
+            "mean_estimated_traffic": 4425.213305770007,
+            "minimum_support_hours": 205,
+            "start_hour": 10
+          },
+          {
+            "end_hour": 11,
+            "mean_estimated_traffic": 4562.039142371084,
+            "minimum_support_hours": 198,
+            "start_hour": 9
+          },
+          {
+            "end_hour": 13,
+            "mean_estimated_traffic": 4625.783703470895,
+            "minimum_support_hours": 198,
+            "start_hour": 11
+          },
+          {
+            "end_hour": 14,
+            "mean_estimated_traffic": 4783.503691265692,
+            "minimum_support_hours": 198,
+            "start_hour": 12
+          },
+          {
+            "end_hour": 15,
+            "mean_estimated_traffic": 4982.340767362976,
+            "minimum_support_hours": 191,
+            "start_hour": 13
+          },
+          {
+            "end_hour": 19,
+            "mean_estimated_traffic": 5132.5758460638135,
+            "minimum_support_hours": 187,
+            "start_hour": 17
+          },
+          {
+            "end_hour": 10,
+            "mean_estimated_traffic": 5159.378484349942,
+            "minimum_support_hours": 178,
+            "start_hour": 8
+          },
+          {
+            "end_hour": 16,
+            "mean_estimated_traffic": 5415.405636568812,
+            "minimum_support_hours": 189,
+            "start_hour": 14
+          },
+          {
+            "end_hour": 17,
+            "mean_estimated_traffic": 5980.572905048872,
+            "minimum_support_hours": 189,
+            "start_hour": 15
+          },
+          {
+            "end_hour": 18,
+            "mean_estimated_traffic": 6120.930414475587,
+            "minimum_support_hours": 187,
+            "start_hour": 16
+          }
+        ],
+        "recommendation": "2017-06-05 08:00–19:00 各候選小時採用相同天氣條件（使用者提供，來源未註明）：Clear，氣溫 20°C、雲量 1%、每小時雨量 0 mm、每小時雪量 0 mm。\n在你指定的 08:00-19:00 區間與固定天氣情境下，可考慮 10:00-12:00 出發；該窗口平均估計車流為 4425 輛／小時。這是情境比較，不是即時或提前路況預報。",
+        "request": {
+          "clouds_all": 1.0,
+          "date": "2017-06-05",
+          "end_hour": 19,
+          "is_holiday": 0,
+          "rain_1h": 0.0,
+          "snow_1h": 0.0,
+          "start_hour": 8,
+          "temp_c": 20.0,
+          "weather": [
+            "Clear"
+          ],
+          "window_hours": 2
+        },
+        "source_calendar_day_type": "weekday",
+        "status": "ok",
+        "support_note": "Training-only cohort: same hour, day type, holiday and exact weather label set; numerical weather is not matched; not a calibrated confidence interval",
+        "weather_assumed_constant_across_hours": true
+      }
+    },
+    {
+      "name": "weekend_clear",
+      "http_status": 200,
+      "response": {
+        "best_window": {
+          "end_hour": 10,
+          "mean_estimated_traffic": 2842.3524224456096,
+          "minimum_support_hours": 90,
+          "start_hour": 8
+        },
+        "hourly_estimates": [
+          {
+            "estimated_traffic": 2451.7459897879894,
+            "historical_mean_traffic": 2362.266666666667,
+            "hour": 8,
+            "support_hours": 105,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 3232.9588551032302,
+            "historical_mean_traffic": 3042.6666666666665,
+            "hour": 9,
+            "support_hours": 90,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4449.52050001671,
+            "historical_mean_traffic": 3756.4910714285716,
+            "hour": 10,
+            "support_hours": 112,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4372.236307767936,
+            "historical_mean_traffic": 3968.2444444444445,
+            "hour": 11,
+            "support_hours": 90,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4500.732184585652,
+            "historical_mean_traffic": 4315.673913043478,
+            "hour": 12,
+            "support_hours": 92,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4527.511949832665,
+            "historical_mean_traffic": 4285.292682926829,
+            "hour": 13,
+            "support_hours": 82,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4591.03001758765,
+            "historical_mean_traffic": 4289.176470588235,
+            "hour": 14,
+            "support_hours": 85,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4536.927522334239,
+            "historical_mean_traffic": 4343.03488372093,
+            "hour": 15,
+            "support_hours": 86,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4527.294454053714,
+            "historical_mean_traffic": 4379.482758620689,
+            "hour": 16,
+            "support_hours": 87,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4419.823062506552,
+            "historical_mean_traffic": 4159.395061728395,
+            "hour": 17,
+            "support_hours": 81,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 3940.4677697996444,
+            "historical_mean_traffic": 3779.5,
+            "hour": 18,
+            "support_hours": 96,
+            "support_sufficient": true
+          }
+        ],
+        "limitations": [
+          "Departure window, not trip duration or route optimization",
+          "No live traffic, future weather service or accident probability",
+          "Lower estimated traffic does not guarantee shorter travel time or greater safety",
+          "Default support floor 30 is an analyst setting, not a statistical guarantee"
+        ],
+        "minimum_support_hours": 30,
+        "model": "random_forest_regressor",
+        "model_run_id": "fce53c631e684562b8a5238f03cfaa4f",
+        "numeric_imputation_assumptions": [],
+        "outside_training_weather_range": [],
+        "prediction_mode": "conditional_same_hour_scenario",
+        "ranked_supported_windows": [
+          {
+            "end_hour": 10,
+            "mean_estimated_traffic": 2842.3524224456096,
+            "minimum_support_hours": 90,
+            "start_hour": 8
+          },
+          {
+            "end_hour": 11,
+            "mean_estimated_traffic": 3841.23967755997,
+            "minimum_support_hours": 90,
+            "start_hour": 9
+          },
+          {
+            "end_hour": 19,
+            "mean_estimated_traffic": 4180.145416153098,
+            "minimum_support_hours": 81,
+            "start_hour": 17
+          },
+          {
+            "end_hour": 12,
+            "mean_estimated_traffic": 4410.878403892322,
+            "minimum_support_hours": 90,
+            "start_hour": 10
+          },
+          {
+            "end_hour": 13,
+            "mean_estimated_traffic": 4436.484246176794,
+            "minimum_support_hours": 90,
+            "start_hour": 11
+          },
+          {
+            "end_hour": 18,
+            "mean_estimated_traffic": 4473.558758280133,
+            "minimum_support_hours": 81,
+            "start_hour": 16
+          },
+          {
+            "end_hour": 14,
+            "mean_estimated_traffic": 4514.122067209159,
+            "minimum_support_hours": 82,
+            "start_hour": 12
+          },
+          {
+            "end_hour": 17,
+            "mean_estimated_traffic": 4532.1109881939765,
+            "minimum_support_hours": 86,
+            "start_hour": 15
+          },
+          {
+            "end_hour": 15,
+            "mean_estimated_traffic": 4559.270983710157,
+            "minimum_support_hours": 82,
+            "start_hour": 13
+          },
+          {
+            "end_hour": 16,
+            "mean_estimated_traffic": 4563.978769960944,
+            "minimum_support_hours": 85,
+            "start_hour": 14
+          }
+        ],
+        "recommendation": "2017-06-10 08:00–19:00 各候選小時採用相同天氣條件（使用者提供，來源未註明）：Clear，氣溫 20°C、雲量 1%、每小時雨量 0 mm、每小時雪量 0 mm。\n在你指定的 08:00-19:00 區間與固定天氣情境下，可考慮 08:00-10:00 出發；該窗口平均估計車流為 2842 輛／小時。這是情境比較，不是即時或提前路況預報。",
+        "request": {
+          "clouds_all": 1.0,
+          "date": "2017-06-10",
+          "end_hour": 19,
+          "is_holiday": 0,
+          "rain_1h": 0.0,
+          "snow_1h": 0.0,
+          "start_hour": 8,
+          "temp_c": 20.0,
+          "weather": [
+            "Clear"
+          ],
+          "window_hours": 2
+        },
+        "source_calendar_day_type": "weekend",
+        "status": "ok",
+        "support_note": "Training-only cohort: same hour, day type, holiday and exact weather label set; numerical weather is not matched; not a calibrated confidence interval",
+        "weather_assumed_constant_across_hours": true
+      }
+    },
+    {
+      "name": "weekday_rain",
+      "http_status": 200,
+      "response": {
+        "best_window": {
+          "end_hour": 12,
+          "mean_estimated_traffic": 4304.864968201711,
+          "minimum_support_hours": 45,
+          "start_hour": 10
+        },
+        "hourly_estimates": [
+          {
+            "estimated_traffic": 5840.141221095276,
+            "historical_mean_traffic": 5577.704545454545,
+            "hour": 8,
+            "support_hours": 44,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4885.441186694687,
+            "historical_mean_traffic": 5003.6,
+            "hour": 9,
+            "support_hours": 45,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4277.452464246537,
+            "historical_mean_traffic": 4367.2444444444445,
+            "hour": 10,
+            "support_hours": 45,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4332.277472156885,
+            "historical_mean_traffic": 4693.21875,
+            "hour": 11,
+            "support_hours": 64,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4685.19484909844,
+            "historical_mean_traffic": 4886.322580645161,
+            "hour": 12,
+            "support_hours": 62,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4722.79180563037,
+            "historical_mean_traffic": 4902.537313432836,
+            "hour": 13,
+            "support_hours": 67,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4869.7270648093745,
+            "historical_mean_traffic": 5272.459016393443,
+            "hour": 14,
+            "support_hours": 61,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 5605.583615672804,
+            "historical_mean_traffic": 5722.555555555556,
+            "hour": 15,
+            "support_hours": 63,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 6281.587761453786,
+            "historical_mean_traffic": 6250.9152542372885,
+            "hour": 16,
+            "support_hours": 59,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 5857.653386720665,
+            "historical_mean_traffic": 5873.0615384615385,
+            "hour": 17,
+            "support_hours": 65,
+            "support_sufficient": true
+          },
+          {
+            "estimated_traffic": 4232.11940862294,
+            "historical_mean_traffic": 4488.707692307692,
+            "hour": 18,
+            "support_hours": 65,
+            "support_sufficient": true
+          }
+        ],
+        "limitations": [
+          "Departure window, not trip duration or route optimization",
+          "No live traffic, future weather service or accident probability",
+          "Lower estimated traffic does not guarantee shorter travel time or greater safety",
+          "Default support floor 30 is an analyst setting, not a statistical guarantee"
+        ],
+        "minimum_support_hours": 30,
+        "model": "random_forest_regressor",
+        "model_run_id": "fce53c631e684562b8a5238f03cfaa4f",
+        "numeric_imputation_assumptions": [],
+        "outside_training_weather_range": [],
+        "prediction_mode": "conditional_same_hour_scenario",
+        "ranked_supported_windows": [
+          {
+            "end_hour": 12,
+            "mean_estimated_traffic": 4304.864968201711,
+            "minimum_support_hours": 45,
+            "start_hour": 10
+          },
+          {
+            "end_hour": 13,
+            "mean_estimated_traffic": 4508.736160627663,
+            "minimum_support_hours": 62,
+            "start_hour": 11
+          },
+          {
+            "end_hour": 11,
+            "mean_estimated_traffic": 4581.446825470612,
+            "minimum_support_hours": 45,
+            "start_hour": 9
+          },
+          {
+            "end_hour": 14,
+            "mean_estimated_traffic": 4703.993327364405,
+            "minimum_support_hours": 62,
+            "start_hour": 12
+          },
+          {
+            "end_hour": 15,
+            "mean_estimated_traffic": 4796.259435219872,
+            "minimum_support_hours": 61,
+            "start_hour": 13
+          },
+          {
+            "end_hour": 19,
+            "mean_estimated_traffic": 5044.886397671802,
+            "minimum_support_hours": 65,
+            "start_hour": 17
+          },
+          {
+            "end_hour": 16,
+            "mean_estimated_traffic": 5237.655340241089,
+            "minimum_support_hours": 61,
+            "start_hour": 14
+          },
+          {
+            "end_hour": 10,
+            "mean_estimated_traffic": 5362.791203894982,
+            "minimum_support_hours": 44,
+            "start_hour": 8
+          },
+          {
+            "end_hour": 17,
+            "mean_estimated_traffic": 5943.585688563295,
+            "minimum_support_hours": 59,
+            "start_hour": 15
+          },
+          {
+            "end_hour": 18,
+            "mean_estimated_traffic": 6069.620574087226,
+            "minimum_support_hours": 59,
+            "start_hour": 16
+          }
+        ],
+        "recommendation": "2017-06-05 08:00–19:00 各候選小時採用相同天氣條件（使用者提供，來源未註明）：Rain，氣溫 15°C、雲量 90%、每小時雨量 1 mm、每小時雪量 0 mm。\n在你指定的 08:00-19:00 區間與固定天氣情境下，可考慮 10:00-12:00 出發；該窗口平均估計車流為 4305 輛／小時。這是情境比較，不是即時或提前路況預報。",
+        "request": {
+          "clouds_all": 90.0,
+          "date": "2017-06-05",
+          "end_hour": 19,
+          "is_holiday": 0,
+          "rain_1h": 1.0,
+          "snow_1h": 0.0,
+          "start_hour": 8,
+          "temp_c": 15.0,
+          "weather": [
+            "Rain"
+          ],
+          "window_hours": 2
+        },
+        "source_calendar_day_type": "weekday",
+        "status": "ok",
+        "support_note": "Training-only cohort: same hour, day type, holiday and exact weather label set; numerical weather is not matched; not a calibrated confidence interval",
+        "weather_assumed_constant_across_hours": true
+      }
+    },
+    {
+      "name": "rare_squall",
+      "http_status": 200,
+      "response": {
+        "best_window": null,
+        "hourly_estimates": [
+          {
+            "estimated_traffic": 5611.268600318523,
+            "historical_mean_traffic": null,
+            "hour": 8,
+            "support_hours": 0,
+            "support_sufficient": false
+          },
+          {
+            "estimated_traffic": 4916.345673726864,
+            "historical_mean_traffic": null,
+            "hour": 9,
+            "support_hours": 0,
+            "support_sufficient": false
+          },
+          {
+            "estimated_traffic": 4390.8260238009325,
+            "historical_mean_traffic": null,
+            "hour": 10,
+            "support_hours": 0,
+            "support_sufficient": false
+          },
+          {
+            "estimated_traffic": 4590.476848884647,
+            "historical_mean_traffic": null,
+            "hour": 11,
+            "support_hours": 0,
+            "support_sufficient": false
+          },
+          {
+            "estimated_traffic": 4693.492351928975,
+            "historical_mean_traffic": null,
+            "hour": 12,
+            "support_hours": 0,
+            "support_sufficient": false
+          },
+          {
+            "estimated_traffic": 4702.367333631848,
+            "historical_mean_traffic": null,
+            "hour": 13,
+            "support_hours": 0,
+            "support_sufficient": false
+          },
+          {
+            "estimated_traffic": 5044.592694447708,
+            "historical_mean_traffic": null,
+            "hour": 14,
+            "support_hours": 0,
+            "support_sufficient": false
+          },
+          {
+            "estimated_traffic": 5482.9874415763215,
+            "historical_mean_traffic": null,
+            "hour": 15,
+            "support_hours": 0,
+            "support_sufficient": false
+          },
+          {
+            "estimated_traffic": 6299.235640135488,
+            "historical_mean_traffic": null,
+            "hour": 16,
+            "support_hours": 0,
+            "support_sufficient": false
+          },
+          {
+            "estimated_traffic": 5937.036402127493,
+            "historical_mean_traffic": null,
+            "hour": 17,
+            "support_hours": 0,
+            "support_sufficient": false
+          },
+          {
+            "estimated_traffic": 4286.848374292374,
+            "historical_mean_traffic": null,
+            "hour": 18,
+            "support_hours": 0,
+            "support_sufficient": false
+          }
+        ],
+        "limitations": [
+          "Departure window, not trip duration or route optimization",
+          "No live traffic, future weather service or accident probability",
+          "Lower estimated traffic does not guarantee shorter travel time or greater safety",
+          "Default support floor 30 is an analyst setting, not a statistical guarantee"
+        ],
+        "minimum_support_hours": 30,
+        "model": "random_forest_regressor",
+        "model_run_id": "fce53c631e684562b8a5238f03cfaa4f",
+        "numeric_imputation_assumptions": [],
+        "outside_training_weather_range": [],
+        "prediction_mode": "conditional_same_hour_scenario",
+        "ranked_supported_windows": [],
+        "recommendation": "2017-06-05 08:00–19:00 各候選小時採用相同天氣條件（使用者提供，來源未註明）：Squall，氣溫 20°C、雲量 75%、每小時雨量 0 mm、每小時雪量 0 mm。\n可出發區間內沒有足夠訓練情境支持的完整窗口；不把缺資料解讀為零車流。",
+        "request": {
+          "clouds_all": 75.0,
+          "date": "2017-06-05",
+          "end_hour": 19,
+          "is_holiday": 0,
+          "rain_1h": 0.0,
+          "snow_1h": 0.0,
+          "start_hour": 8,
+          "temp_c": 20.0,
+          "weather": [
+            "Squall"
+          ],
+          "window_hours": 2
+        },
+        "source_calendar_day_type": "weekday",
+        "status": "insufficient_support",
+        "support_note": "Training-only cohort: same hour, day type, holiday and exact weather label set; numerical weather is not matched; not a calibrated confidence interval",
+        "weather_assumed_constant_across_hours": true
+      }
+    },
+    {
+      "name": "invalid_input",
+      "input": {},
+      "http_status": 400,
+      "response": {
+        "detail": "Provide date, start_hour, end_hour, window_hours, weather and is_holiday; no unknown fields",
+        "error": "invalid_request"
+      }
+    },
+    {
+      "name": "invalid_input",
+      "input": {
+        "traffic_volume": 1
+      },
+      "http_status": 400,
+      "response": {
+        "detail": "Provide date, start_hour, end_hour, window_hours, weather and is_holiday; no unknown fields",
+        "error": "invalid_request"
+      }
+    },
+    {
+      "name": "invalid_input",
+      "input": [],
+      "http_status": 400,
+      "response": {
+        "detail": "Provide date, start_hour, end_hour, window_hours, weather and is_holiday; no unknown fields",
+        "error": "invalid_request"
+      }
+    }
+  ]
+}
