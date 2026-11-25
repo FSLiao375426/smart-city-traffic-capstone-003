@@ -1,0 +1,11 @@
+2026-11-25T05:49:18Z | WARNING | tensorflow | TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-11-25T05:49:20Z | INFO | __main__ | Training MLP (3521 parameters), 25329 training hours; test period excluded
+2026-11-25T05:49:21Z | INFO | __main__ | Epoch 1: train MAE 958.74; validation MAE 723.96 vehicles/hour
+2026-11-25T05:49:24Z | INFO | __main__ | Epoch 10: train MAE 338.98; validation MAE 328.62 vehicles/hour
+2026-11-25T05:49:28Z | INFO | __main__ | Epoch 20: train MAE 302.58; validation MAE 298.41 vehicles/hour
+2026-11-25T05:49:33Z | INFO | __main__ | Epoch 30: train MAE 293.27; validation MAE 278.85 vehicles/hour
+2026-11-25T05:49:38Z | INFO | __main__ | Epoch 40: train MAE 289.41; validation MAE 278.80 vehicles/hour
+2026-11-25T05:49:43Z | INFO | __main__ | Epoch 50: train MAE 286.41; validation MAE 279.54 vehicles/hour
+2026-11-25T05:49:44Z | INFO | __main__ | Neural metrics: {'train_mae': 281.68522853203467, 'train_r2': 0.9521744502233025, 'validation_mae': 268.78243446273103, 'validation_r2': 0.9548156162813878, 'fit_seconds': 23.479204400005983}; computing Kernel SHAP on 24 fixed validation cases
+2026-11-25T05:49:48Z | INFO | __main__ | Saved three neural/SHAP figures in C:\Users\f_s_l\Documents\GitHub\smart-city-traffic-capstone-003\part3_machine_learning\figures
+2026-11-25T05:49:49Z | INFO | __main__ | Saved neural model, three figures and SHAP checks; no final-test predictions

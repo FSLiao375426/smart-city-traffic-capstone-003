@@ -1,0 +1,69 @@
+{
+  "source_sha256": "7aa0c57332dcef8518b839a4afb9c1b606a59519b7923cf91396804f337a896b",
+  "feature_group": "time_weather_flags",
+  "features": [
+    "hour_sin",
+    "hour_cos",
+    "day_of_week_sin",
+    "day_of_week_cos",
+    "is_weekend",
+    "is_holiday",
+    "weather_Clear",
+    "weather_Clouds",
+    "weather_Drizzle",
+    "weather_Fog",
+    "weather_Haze",
+    "weather_Mist",
+    "weather_Rain",
+    "weather_Smoke",
+    "weather_Snow",
+    "weather_Squall",
+    "weather_Thunderstorm"
+  ],
+  "architecture": [
+    128,
+    64
+  ],
+  "fixed_epochs": 25,
+  "inner_mean_mae": 331.19341063404727,
+  "selection_data_before": "2017-01-01",
+  "eligible_feature_groups": [
+    "full",
+    "without_weekend",
+    "time_weather_flags"
+  ],
+  "folds": [
+    [
+      "through2014_to2015",
+      "2015-01-01",
+      "2016-01-01"
+    ],
+    [
+      "through2015_to2016",
+      "2016-01-01",
+      "2017-01-01"
+    ]
+  ],
+  "metrics": {
+    "validation_mae": 288.45465044039764,
+    "validation_r2": 0.9498906898696141
+  },
+  "test_scored": false,
+  "fit_max": "2016-12-31 23:00:00",
+  "fit_hours": 25329,
+  "outer_validation_hours": 8713,
+  "final_run_id": "e379b8bc9e5c4654b213bf98d22c4061",
+  "trial_count": 14,
+  "selection_method": "Two-stage bounded search: fixed-architecture feature ablation then selected-group architecture comparison; equal mean of two fold MAEs",
+  "limitations": [
+    "Not exhaustive AutoML or global feature/architecture optimum",
+    "One seed, two time folds; 2015 has missing months",
+    "Inner assessment periods also select early-stopping epochs; scores are selection evidence",
+    "2017 was already used for earlier models and is not a pristine outer test",
+    "No further selection based on this 2017 check; 2018 remains reserved",
+    "Ablations and architecture choices interact; not all joint combinations searched"
+  ],
+  "version": "v2_inner_time_search",
+  "model_sha256": "749938570cfedc3e41b327e623fcbdbc201555b622c57ef999ee5efd3c1be6cb",
+  "preprocessing_sha256": "e939f53ec9fbe4fcc88a2e901f9211029ff0f67a4cc9031d29d42bbafbb99ead"
+}

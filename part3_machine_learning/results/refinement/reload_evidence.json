@@ -1,0 +1,14 @@
+{
+  "model": "refined_neural",
+  "fresh_process_id": 18100,
+  "validation_hours": 8713,
+  "max_absolute_prediction_difference": 5.002220859751105e-11,
+  "absolute_tolerance": 1e-06,
+  "relative_tolerance": 0,
+  "test_scored": false,
+  "preprocessing_loaded_from_disk": true,
+  "model_loaded_from_disk": true,
+  "model_sha256": "749938570cfedc3e41b327e623fcbdbc201555b622c57ef999ee5efd3c1be6cb",
+  "preprocessing_sha256": "e939f53ec9fbe4fcc88a2e901f9211029ff0f67a4cc9031d29d42bbafbb99ead",
+  "scope": "Reloaded model/scalers and prepared validation features; refined model also reloads fitted imputation/scaling state"
+}

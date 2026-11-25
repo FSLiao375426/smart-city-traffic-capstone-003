@@ -1,0 +1,369 @@
+[
+  {
+    "run_id": "e09aa7948c0c4e80a70541313c655778",
+    "status": "FINISHED",
+    "params": {
+      "phase": "feature_ablation",
+      "feature_group": "full",
+      "feature_count": "21",
+      "architecture": "64_32",
+      "fold": "through2014_to2015",
+      "train_hours": "13898",
+      "validation_hours": "3593",
+      "train_before": "2015-01-01",
+      "assessment_before": "2016-01-01",
+      "max_epochs": "40",
+      "patience": "5",
+      "seed": "42"
+    },
+    "metrics": {
+      "fold_mae": 354.9367219613186,
+      "fold_r2": 0.9192020479796272,
+      "fit_seconds": 25.06357769999886,
+      "epochs": 31.0,
+      "best_epoch": 26.0
+    }
+  },
+  {
+    "run_id": "ffe8eb6c62c24d918cc86f5e082e2b8b",
+    "status": "FINISHED",
+    "params": {
+      "phase": "feature_ablation",
+      "feature_group": "full",
+      "feature_count": "21",
+      "architecture": "64_32",
+      "fold": "through2015_to2016",
+      "train_hours": "17491",
+      "validation_hours": "7838",
+      "train_before": "2016-01-01",
+      "assessment_before": "2017-01-01",
+      "max_epochs": "40",
+      "patience": "5",
+      "seed": "42"
+    },
+    "metrics": {
+      "fold_mae": 379.85697716055176,
+      "fold_r2": 0.9175926135133406,
+      "fit_seconds": 12.435793400014518,
+      "epochs": 23.0,
+      "best_epoch": 18.0
+    }
+  },
+  {
+    "run_id": "39c6de3107934b0db3919037b783b202",
+    "status": "FINISHED",
+    "params": {
+      "phase": "feature_ablation",
+      "feature_group": "without_weekend",
+      "feature_count": "20",
+      "architecture": "64_32",
+      "fold": "through2014_to2015",
+      "train_hours": "13898",
+      "validation_hours": "3593",
+      "train_before": "2015-01-01",
+      "assessment_before": "2016-01-01",
+      "max_epochs": "40",
+      "patience": "5",
+      "seed": "42"
+    },
+    "metrics": {
+      "fold_mae": 340.21068301316194,
+      "fold_r2": 0.925424154520345,
+      "fit_seconds": 15.53025629997137,
+      "epochs": 40.0,
+      "best_epoch": 36.0
+    }
+  },
+  {
+    "run_id": "68ba895d20214de98735ae69c68b1bc5",
+    "status": "FINISHED",
+    "params": {
+      "phase": "feature_ablation",
+      "feature_group": "without_weekend",
+      "feature_count": "20",
+      "architecture": "64_32",
+      "fold": "through2015_to2016",
+      "train_hours": "17491",
+      "validation_hours": "7838",
+      "train_before": "2016-01-01",
+      "assessment_before": "2017-01-01",
+      "max_epochs": "40",
+      "patience": "5",
+      "seed": "42"
+    },
+    "metrics": {
+      "fold_mae": 378.8132788737205,
+      "fold_r2": 0.9160111482149006,
+      "fit_seconds": 9.333113000000594,
+      "epochs": 26.0,
+      "best_epoch": 21.0
+    }
+  },
+  {
+    "run_id": "7bc18bebdb5448b3bc436e310c0e4839",
+    "status": "FINISHED",
+    "params": {
+      "phase": "feature_ablation",
+      "feature_group": "time_only",
+      "feature_count": "6",
+      "architecture": "64_32",
+      "fold": "through2014_to2015",
+      "train_hours": "13898",
+      "validation_hours": "3593",
+      "train_before": "2015-01-01",
+      "assessment_before": "2016-01-01",
+      "max_epochs": "40",
+      "patience": "5",
+      "seed": "42"
+    },
+    "metrics": {
+      "fold_mae": 298.0485317870813,
+      "fold_r2": 0.9355025436853427,
+      "fit_seconds": 3.51319890000741,
+      "epochs": 16.0,
+      "best_epoch": 11.0
+    }
+  },
+  {
+    "run_id": "7e887ba6411b4004a4479847f4b30148",
+    "status": "FINISHED",
+    "params": {
+      "phase": "feature_ablation",
+      "feature_group": "time_only",
+      "feature_count": "6",
+      "architecture": "64_32",
+      "fold": "through2015_to2016",
+      "train_hours": "17491",
+      "validation_hours": "7838",
+      "train_before": "2016-01-01",
+      "assessment_before": "2017-01-01",
+      "max_epochs": "40",
+      "patience": "5",
+      "seed": "42"
+    },
+    "metrics": {
+      "fold_mae": 323.60098026809646,
+      "fold_r2": 0.9316858817675112,
+      "fit_seconds": 3.207488399988506,
+      "epochs": 13.0,
+      "best_epoch": 8.0
+    }
+  },
+  {
+    "run_id": "14e8f5b46c954f28a7654ef855d5ea01",
+    "status": "FINISHED",
+    "params": {
+      "phase": "feature_ablation",
+      "feature_group": "time_numeric",
+      "feature_count": "10",
+      "architecture": "64_32",
+      "fold": "through2014_to2015",
+      "train_hours": "13898",
+      "validation_hours": "3593",
+      "train_before": "2015-01-01",
+      "assessment_before": "2016-01-01",
+      "max_epochs": "40",
+      "patience": "5",
+      "seed": "42"
+    },
+    "metrics": {
+      "fold_mae": 298.69651118509205,
+      "fold_r2": 0.938443749909566,
+      "fit_seconds": 9.454833800002234,
+      "epochs": 29.0,
+      "best_epoch": 24.0
+    }
+  },
+  {
+    "run_id": "32ee35d85603421b8e574cd38091bbee",
+    "status": "FINISHED",
+    "params": {
+      "phase": "feature_ablation",
+      "feature_group": "time_numeric",
+      "feature_count": "10",
+      "architecture": "64_32",
+      "fold": "through2015_to2016",
+      "train_hours": "17491",
+      "validation_hours": "7838",
+      "train_before": "2016-01-01",
+      "assessment_before": "2017-01-01",
+      "max_epochs": "40",
+      "patience": "5",
+      "seed": "42"
+    },
+    "metrics": {
+      "fold_mae": 356.1748866110977,
+      "fold_r2": 0.9279454271770022,
+      "fit_seconds": 8.039103300019633,
+      "epochs": 14.0,
+      "best_epoch": 9.0
+    }
+  },
+  {
+    "run_id": "d5f4f318476d44e19986d48e35e4d99d",
+    "status": "FINISHED",
+    "params": {
+      "phase": "feature_ablation",
+      "feature_group": "time_weather_flags",
+      "feature_count": "17",
+      "architecture": "64_32",
+      "fold": "through2014_to2015",
+      "train_hours": "13898",
+      "validation_hours": "3593",
+      "train_before": "2015-01-01",
+      "assessment_before": "2016-01-01",
+      "max_epochs": "40",
+      "patience": "5",
+      "seed": "42"
+    },
+    "metrics": {
+      "fold_mae": 325.3308630013546,
+      "fold_r2": 0.9295568631845339,
+      "fit_seconds": 10.873458499991102,
+      "epochs": 33.0,
+      "best_epoch": 28.0
+    }
+  },
+  {
+    "run_id": "231f99a3f82b45f9b7d1f9016a83b9c5",
+    "status": "FINISHED",
+    "params": {
+      "phase": "feature_ablation",
+      "feature_group": "time_weather_flags",
+      "feature_count": "17",
+      "architecture": "64_32",
+      "fold": "through2015_to2016",
+      "train_hours": "17491",
+      "validation_hours": "7838",
+      "train_before": "2016-01-01",
+      "assessment_before": "2017-01-01",
+      "max_epochs": "40",
+      "patience": "5",
+      "seed": "42"
+    },
+    "metrics": {
+      "fold_mae": 351.1249331364853,
+      "fold_r2": 0.924502791359411,
+      "fit_seconds": 12.796737600001507,
+      "epochs": 34.0,
+      "best_epoch": 29.0
+    }
+  },
+  {
+    "run_id": "6e8b721367fb4348aef344870ce98f43",
+    "status": "FINISHED",
+    "params": {
+      "phase": "architecture_search",
+      "feature_group": "time_weather_flags",
+      "feature_count": "17",
+      "architecture": "32",
+      "fold": "through2014_to2015",
+      "train_hours": "13898",
+      "validation_hours": "3593",
+      "train_before": "2015-01-01",
+      "assessment_before": "2016-01-01",
+      "max_epochs": "40",
+      "patience": "5",
+      "seed": "42"
+    },
+    "metrics": {
+      "fold_mae": 436.9980724583878,
+      "fold_r2": 0.8995812066304725,
+      "fit_seconds": 7.4198999000072945,
+      "epochs": 40.0,
+      "best_epoch": 40.0
+    }
+  },
+  {
+    "run_id": "3e06c0fb1ea14097bd898c9f28d5bc2e",
+    "status": "FINISHED",
+    "params": {
+      "phase": "architecture_search",
+      "feature_group": "time_weather_flags",
+      "feature_count": "17",
+      "architecture": "32",
+      "fold": "through2015_to2016",
+      "train_hours": "17491",
+      "validation_hours": "7838",
+      "train_before": "2016-01-01",
+      "assessment_before": "2017-01-01",
+      "max_epochs": "40",
+      "patience": "5",
+      "seed": "42"
+    },
+    "metrics": {
+      "fold_mae": 431.3834998451338,
+      "fold_r2": 0.899180309287389,
+      "fit_seconds": 7.610685699997703,
+      "epochs": 40.0,
+      "best_epoch": 40.0
+    }
+  },
+  {
+    "run_id": "c25814e51fe94ccfb514a604da4cad89",
+    "status": "FINISHED",
+    "params": {
+      "phase": "architecture_search",
+      "feature_group": "time_weather_flags",
+      "feature_count": "17",
+      "architecture": "128_64",
+      "fold": "through2014_to2015",
+      "train_hours": "13898",
+      "validation_hours": "3593",
+      "train_before": "2015-01-01",
+      "assessment_before": "2016-01-01",
+      "max_epochs": "40",
+      "patience": "5",
+      "seed": "42"
+    },
+    "metrics": {
+      "fold_mae": 320.54696828952785,
+      "fold_r2": 0.9307062789283673,
+      "fit_seconds": 9.110816700005671,
+      "epochs": 31.0,
+      "best_epoch": 26.0
+    }
+  },
+  {
+    "run_id": "e061b033adb14213836f8c3e64b1f3b1",
+    "status": "FINISHED",
+    "params": {
+      "phase": "architecture_search",
+      "feature_group": "time_weather_flags",
+      "feature_count": "17",
+      "architecture": "128_64",
+      "fold": "through2015_to2016",
+      "train_hours": "17491",
+      "validation_hours": "7838",
+      "train_before": "2016-01-01",
+      "assessment_before": "2017-01-01",
+      "max_epochs": "40",
+      "patience": "5",
+      "seed": "42"
+    },
+    "metrics": {
+      "fold_mae": 341.8398529785666,
+      "fold_r2": 0.927440384681102,
+      "fit_seconds": 12.72198760000174,
+      "epochs": 28.0,
+      "best_epoch": 23.0
+    }
+  },
+  {
+    "run_id": "e379b8bc9e5c4654b213bf98d22c4061",
+    "status": "FINISHED",
+    "params": {
+      "feature_group": "time_weather_flags",
+      "features": "17",
+      "architecture": "128_64",
+      "fixed_epochs": "25",
+      "selection": "inner_2015_2016_mean_mae",
+      "no_2017_early_stopping": "True",
+      "seed": "42"
+    },
+    "metrics": {
+      "validation_mae": 288.45465044039764,
+      "validation_r2": 0.9498906898696141
+    }
+  }
+]

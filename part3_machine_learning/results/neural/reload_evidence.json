@@ -1,0 +1,14 @@
+{
+  "model": "neural_regressor",
+  "fresh_process_id": 18100,
+  "validation_hours": 8713,
+  "max_absolute_prediction_difference": 5.002220859751105e-11,
+  "absolute_tolerance": 1e-06,
+  "relative_tolerance": 0,
+  "test_scored": false,
+  "preprocessing_loaded_from_disk": true,
+  "model_loaded_from_disk": true,
+  "model_sha256": "8d9d9b6e06a4f1f0e3c8367793b991cf4ec4d82fb299c74690619e35dc0c8bf2",
+  "preprocessing_sha256": "82c8d30538b0f7c70d23b77aed75a444d9573ab19d0bf2e5d0c89278710eb771",
+  "scope": "Reloaded model/scalers and prepared validation features; refined model also reloads fitted imputation/scaling state"
+}

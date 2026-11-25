@@ -1,0 +1,6 @@
+feature_group,feature_count,architecture,mean_fold_mae,folds,mae_std,eligible_final_candidate
+time_only,6,64_32,310.8247560276,2,18.0683095968,False
+time_numeric,10,64_32,327.4356988981,2,40.6433490353,False
+time_weather_flags,17,64_32,338.2278980689,2,18.2391619070,True
+without_weekend,20,64_32,359.5119809434,2,27.2961573044,True
+full,21,64_32,367.3968495609,2,17.6212814403,True

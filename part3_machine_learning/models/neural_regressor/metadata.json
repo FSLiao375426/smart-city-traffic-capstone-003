@@ -1,0 +1,34 @@
+{
+  "features": [
+    "hour_sin",
+    "hour_cos",
+    "day_of_week_sin",
+    "day_of_week_cos",
+    "is_weekend",
+    "is_holiday",
+    "temp_z",
+    "clouds_all_z",
+    "rain_1h",
+    "snow_1h",
+    "weather_Clear",
+    "weather_Clouds",
+    "weather_Drizzle",
+    "weather_Fog",
+    "weather_Haze",
+    "weather_Mist",
+    "weather_Rain",
+    "weather_Smoke",
+    "weather_Snow",
+    "weather_Squall",
+    "weather_Thunderstorm"
+  ],
+  "target": "traffic_volume",
+  "prediction_mode": "Conditional same-hour estimate with observed weather; not a forward forecast",
+  "metrics": {
+    "train_mae": 281.68522853203467,
+    "train_r2": 0.9521744502233025,
+    "validation_mae": 268.78243446273103,
+    "validation_r2": 0.9548156162813878,
+    "fit_seconds": 23.479204400005983
+  }
+}

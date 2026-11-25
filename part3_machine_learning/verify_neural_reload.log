@@ -1,0 +1,3 @@
+2026-11-25T06:21:06Z | WARNING | tensorflow | TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-11-25T06:21:07Z | INFO | __main__ | Fresh-process bundle neural_regressor: 8713 predictions match; max absolute difference 5.00222086e-11
+2026-11-25T06:21:07Z | INFO | __main__ | Fresh-process bundle refined_neural: 8713 predictions match; max absolute difference 5.00222086e-11

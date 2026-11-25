@@ -1,0 +1,30 @@
+{
+  "run_id": "b45fde84ca164568a0467d7a040c76d4",
+  "status": "FINISHED",
+  "params": {
+    "hidden_layers": "64,32",
+    "activation": "relu",
+    "optimizer": "Adam",
+    "learning_rate": "0.001",
+    "batch_size": "256",
+    "max_epochs": "80",
+    "early_stopping_patience": "8",
+    "early_stopping_monitor": "val_loss",
+    "random_seed": "42",
+    "train_hours": "25329",
+    "validation_hours": "8713",
+    "target": "traffic_volume",
+    "feature_count": "21",
+    "parameter_count": "3521",
+    "shap_background_hours": "64",
+    "shap_validation_hours": "24",
+    "shap_nsamples": "256"
+  },
+  "metrics": {
+    "train_mae": 281.68522853203467,
+    "train_r2": 0.9521744502233025,
+    "validation_mae": 268.78243446273103,
+    "validation_r2": 0.9548156162813878,
+    "fit_seconds": 23.479204400005983
+  }
+}
