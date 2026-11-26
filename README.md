@@ -37,6 +37,8 @@ The recommendation ranks supported windows under user-supplied conditions; rare 
 | 2 · Python pipeline | [Pipeline, CLI and logging instructions](part2_python/README.md) | [Part 2 ZIP](output/submission/capstone_part2.zip) · [acceptance record](part2_python/validation/submission_acceptance.json) |
 | 3 · Machine learning | [Final report](part3_machine_learning/final_capstone_report.md) · [technical README](part3_machine_learning/README.md) | [Part 3 ZIP](output/submission/capstone_part3.zip) · [package acceptance](output/submission/capstone_part3_acceptance.json) |
 
+The Part 2 report is a dated development snapshot: its statement that the final modelling split was undecided describes the earlier Part 2 stage. For the subsequently frozen split and evaluation, see the Part 3 final report and protocol linked above.
+
 The Part 3 ZIP includes models, scripts and portable MLflow exports; the original host's tracking database is not included. The acceptance record states which checks were run and whether a fresh environment installation was tested.
 
 ## Run and reproduce
