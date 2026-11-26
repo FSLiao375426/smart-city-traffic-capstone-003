@@ -15,7 +15,7 @@ Regression estimates vehicles per hour. Classification predicts a constructed la
 | Classification model and evaluation period | Accuracy | Precision | Recall | F1 | ROC AUC |
 |---|---:|---:|---:|---:|---:|
 | Majority baseline, 2017 | .8849 | .0000 | .0000 | .0000 | .5000 |
-| Logistic regression, 2017 | .9412 | .6687 | .9701 | .7917 | .9899 |
+| Logistic regression, 2017 | .9412 | .6687 | .9701 | .7917 | .9900 |
 | Random forest, 2017 | .9882 | .9198 | .9831 | .9504 | .9986 |
 | Frozen random forest, 2018 | .9810 | .8594 | .9917 | .9208 | .9964 |
 
