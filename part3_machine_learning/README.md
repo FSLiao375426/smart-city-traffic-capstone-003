@@ -6,7 +6,7 @@ The first Part 3 implementation estimates traffic volume and a constructed binar
 
 ## Review and reproduction
 
-For current results, start with the final report, `results/final_2018/metrics.json`, and `../output/submission/capstone_part3_acceptance.json`. Later sections document successive development stages; historical statements that the 2018 test was unscored or that tasks remained pending do not describe the current status.
+For current results, start with the final report and `results/final_2018/metrics.json`. The submission acceptance record is available at `output/submission/capstone_part3_acceptance.json` in the project repository; it is not included in the portable ZIP. Later sections document successive development stages; historical statements that the 2018 test was unscored or that tasks remained pending do not describe the current status.
 
 **Protect the frozen evidence:** training and verification commands write outputs and logs. Retraining replaces saved models and result files and creates MLflow runs; `verify_baselines` also writes an export and needs the original local tracking store. Use a separate copy for reproduction and preserve the frozen evaluation protocol.
 
