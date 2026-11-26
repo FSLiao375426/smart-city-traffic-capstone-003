@@ -4,9 +4,15 @@ Read the [final capstone report](final_capstone_report.md) for the seven tasks a
 
 The first Part 3 implementation estimates traffic volume and a constructed binary risk proxy, conditional on the same hour's observed weather and calendar information. It is not a one-hour-ahead forecast or a real accident prediction system. The user approved this initial task and the operational weather definitions on 2026-11-25.
 
-## Reproduce
+## Review and reproduction
 
-From the repository root, use the existing capstone Python environment:
+For current results, start with the final report, `results/final_2018/metrics.json`, and `../output/submission/capstone_part3_acceptance.json`. Later sections document successive development stages; historical statements that the 2018 test was unscored or that tasks remained pending do not describe the current status.
+
+**Protect the frozen evidence:** training and verification commands write outputs and logs. Retraining replaces saved models and result files and creates MLflow runs; `verify_baselines` also writes an export and needs the original local tracking store. Use a separate copy for reproduction and preserve the frozen evaluation protocol.
+
+The documented environment used Python 3.11.17 and the dependencies in `requirements.txt`. The acceptance record describes its checks and notes that installation in a fresh environment was not tested. Reproduction also requires Part 2 outputs; the Part 2 pipeline regenerates processed files and logs.
+
+Original development commands, for an isolated reproduction:
 
 ```powershell
 python -m part3_machine_learning.dataset
@@ -15,9 +21,7 @@ python -W error -m unittest discover -s part3_machine_learning/tests -v
 python -m part3_machine_learning.verify_baselines
 ```
 
-The installed Python 3.11.17, NumPy 2.4.6, pandas 3.1.1, scikit-learn 1.9.1 and MLflow 3.18.0 were actually imported and used. requirements.txt includes the Part 2 runtime requirements. Report generation dependencies are not needed for training.
-
-Prerequisite: Part 2 outputs exist; regenerate them with `python -m part2_python.pipeline --all` if needed. The new dataset does not overwrite any Part 2 table, figure, report or submission ZIP. Each entry point configures console/file logging once, while library operations use named loggers. UTC times in logs can be on 2026-11-24 while the corresponding Singapore run date is 2026-11-25.
+The original local MLflow store is required for `verify_baselines`; portable exports permit review without it. Model scores use same-hour observed weather and do not measure end-to-end performance using future weather forecasts.
 
 ## Targets and feature availability
 

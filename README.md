@@ -72,7 +72,7 @@ The [UCI dataset page](https://archive.ics.uci.edu/dataset/492/metro%2Binterstat
 
 ## Part 2 reproduction
 
-Run python -m part2_python.pipeline --all from this repository root for raw-to-figures processing. The three user queries are python -m part2_python.cli at, summary and compare; arguments and evidence are documented in [Part 2 README](part2_python/README.md). The Part 2 report and portable submission package are available below; final cross-part review remains pending.
+Run python -m part2_python.pipeline --all from this repository root for raw-to-figures processing. The three user queries are python -m part2_python.cli at, summary and compare; arguments and evidence are documented in [Part 2 README](part2_python/README.md). The Part 2 report and portable submission package are available below. See the submission acceptance records for the scope and limitations of prior checks.
 
 Part 2 report: [two-page methods and results](output/pdf/part2_traffic_pipeline_report.pdf). Portable course package: output/submission/capstone_part2.zip; build with python -m part2_python.build_submission. See Part 2 README for reproduction and verification details.
 
