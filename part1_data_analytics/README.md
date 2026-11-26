@@ -1,8 +1,10 @@
 # Historical Traffic Analysis
 
-This SQL draft implements raw/hourly loading and verification, annual totals and changes for 2012–2017, and holiday-temperature comparisons for 2015–2017. Interpretations and qualifications appear below. Descriptive statistics, probabilities, weather stratification and a two-page insights report are now available alongside the previously verified Power BI dashboard. New deliverables await user review and commit/push.
+This section contains SQL analysis, descriptive statistics, probability analysis, the Power BI dashboard and the two-page insights report. Read the linked results and validation records for their scope. Later dated sections preserve development history; historical statements about pending publication do not describe the current repository status.
 
 ## Run
+
+**Preserve existing evidence:** these commands regenerate processed data, database tables, results and logs. To reproduce without changing the submitted artifacts, work in a separate copy and compare outputs with the recorded evidence.
 
 From the project root in the verified `capstone` Python environment:
 
@@ -25,7 +27,7 @@ If the verified cleaning output already exists, only the second command is neede
 - `results/load_validation.json`: Source hashes, row/hour counts, SQLite integrity and query scope.
 - `sqlite_analysis.log`: Execution and validation evidence.
 
-The raw table retains repeated weather observations and invalid readings for provenance. Annual traffic analysis uses the hourly table so that multiple weather descriptions do not repeatedly count the same hour's traffic. Zero traffic is retained; unobserved hours and months remain absent. Full-calendar coverage is available in `data/processed/coverage_by_year.csv`.
+The raw table retains repeated weather observations and invalid readings for provenance. Annual traffic analysis uses the hourly table so that multiple weather descriptions do not repeatedly count the same hour's traffic. Zero traffic is retained; unobserved hours and months remain absent. Full-calendar coverage is available in `data/processed/coverage_by_year.csv`. The source describes its timestamps as local CST but does not clarify in its field description whether clock time switches with daylight saving. Distinct timestamp labels are therefore not proof of elapsed-hour coverage around clock changes; the current analysis does not infer a DST effect.
 
 SUM measures observed traffic, COUNT measures observed hours in the hourly table, and AVG measures traffic per observed hour. Incomplete calendar coverage and differing seasonal/time-of-day coverage limit comparisons; neither totals nor averages alone establish a change in underlying demand.
 
