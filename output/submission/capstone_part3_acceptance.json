@@ -1,89 +1,108 @@
 {
-  "archive_sha256": "b8b48f2c40518d6f7accf0c19f964ed5859fa6c7f698cb011df110045577c59e",
-  "archive_bytes": 23151222,
+  "archive_sha256": "5d884e9ce214fb890bbef296c969087fa78c20eba2830977888eccc2ea284a4a",
+  "archive_bytes": 23151223,
   "verification_date_singapore": "2026-11-26",
-  "method": "Updated the previous archive by replacing only the Part 3 technical README and manifest; all other uncompressed archive members matched byte-for-byte.",
+  "method": "Updated previous archive by replacing only the fairness report and manifest; all other uncompressed members matched byte-for-byte.",
   "fresh_environment_install_tested": false,
   "checks": {
     "zip_integrity": "passed",
     "manifest_files_verified": 141,
-    "readme_matches_repo": true,
+    "fairness_report_matches_repo": true,
     "other_members_match_previous_archive": true,
-    "unit_tests": {
-      "python": "3.11.17 existing capstone environment",
-      "command": "python -W error -m unittest discover -s part3_machine_learning/tests -v",
-      "tests_passed": 23,
-      "returncode": 0,
-      "scope": "new archive extracted into isolated workspace"
-    }
+    "fit_seconds_cross_checked_against": [
+      "part3_machine_learning/results/validation_metrics.csv",
+      "part3_machine_learning/results/mlflow_evidence.json"
+    ],
+    "unit_tests_rerun_for_prose_only_change": false
   },
   "previous_archive_acceptance": {
-    "archive_sha256": "f75d8519190d84fcfbc50a84167f7e244815ca0d61aff7d5bb1f439f229c4faa",
-    "archive_bytes": 23335704,
-    "python": "3.11.17",
+    "archive_sha256": "b8b48f2c40518d6f7accf0c19f964ed5859fa6c7f698cb011df110045577c59e",
+    "archive_bytes": 23151222,
+    "verification_date_singapore": "2026-11-26",
+    "method": "Updated the previous archive by replacing only the Part 3 technical README and manifest; all other uncompressed archive members matched byte-for-byte.",
     "fresh_environment_install_tested": false,
-    "manifest_files_verified": 141,
-    "relative_links_verified": 27,
-    "commands": [
-      {
-        "args": [
-          "-W",
-          "error",
-          "-m",
-          "part3_machine_learning.recommend",
-          "--request",
-          "part3_machine_learning/results/recommendation/requests/weekday_clear.json"
-        ],
-        "returncode": 0
-      },
-      {
-        "args": [
-          "-W",
-          "error",
-          "-m",
-          "unittest",
-          "discover",
-          "-s",
-          "part3_machine_learning/tests"
-        ],
-        "returncode": 0
-      },
-      {
-        "args": [
-          "-W",
-          "error",
-          "-m",
-          "part3_machine_learning.verify_api"
-        ],
-        "returncode": 0
-      },
-      {
-        "args": [
-          "-W",
-          "error",
-          "-m",
-          "part3_machine_learning.monitoring"
-        ],
-        "returncode": 0
+    "checks": {
+      "zip_integrity": "passed",
+      "manifest_files_verified": 141,
+      "readme_matches_repo": true,
+      "other_members_match_previous_archive": true,
+      "unit_tests": {
+        "python": "3.11.17 existing capstone environment",
+        "command": "python -W error -m unittest discover -s part3_machine_learning/tests -v",
+        "tests_passed": 23,
+        "returncode": 0,
+        "scope": "new archive extracted into isolated workspace"
       }
-    ],
-    "weekday_clear": {
-      "start_hour": 10,
-      "end_hour": 12,
-      "mean_estimated_traffic": 4425.213305770007,
-      "minimum_support_hours": 205
     },
-    "tests_passed": 23,
-    "http_cases": 8,
-    "monitoring": {
-      "reference_replay": "PASS",
-      "synthetic_shift": "ALERT",
-      "too_small": "ALERT"
+    "previous_archive_acceptance": {
+      "archive_sha256": "f75d8519190d84fcfbc50a84167f7e244815ca0d61aff7d5bb1f439f229c4faa",
+      "archive_bytes": 23335704,
+      "python": "3.11.17",
+      "fresh_environment_install_tested": false,
+      "manifest_files_verified": 141,
+      "relative_links_verified": 27,
+      "commands": [
+        {
+          "args": [
+            "-W",
+            "error",
+            "-m",
+            "part3_machine_learning.recommend",
+            "--request",
+            "part3_machine_learning/results/recommendation/requests/weekday_clear.json"
+          ],
+          "returncode": 0
+        },
+        {
+          "args": [
+            "-W",
+            "error",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "part3_machine_learning/tests"
+          ],
+          "returncode": 0
+        },
+        {
+          "args": [
+            "-W",
+            "error",
+            "-m",
+            "part3_machine_learning.verify_api"
+          ],
+          "returncode": 0
+        },
+        {
+          "args": [
+            "-W",
+            "error",
+            "-m",
+            "part3_machine_learning.monitoring"
+          ],
+          "returncode": 0
+        }
+      ],
+      "weekday_clear": {
+        "start_hour": 10,
+        "end_hour": 12,
+        "mean_estimated_traffic": 4425.213305770007,
+        "minimum_support_hours": 205
+      },
+      "tests_passed": 23,
+      "http_cases": 8,
+      "monitoring": {
+        "reference_replay": "PASS",
+        "synthetic_shift": "ALERT",
+        "too_small": "ALERT"
+      },
+      "cross_part_checks": [
+        "Part 1 PBIX and PDF match recorded hashes",
+        "Part 2 ZIP matches recorded hash and embedded PDF matches repo PDF"
+      ]
     },
-    "cross_part_checks": [
-      "Part 1 PBIX and PDF match recorded hashes",
-      "Part 2 ZIP matches recorded hash and embedded PDF matches repo PDF"
-    ]
+    "note": "Previous acceptance is retained as historical evidence for the original archive; its HTTP, link and cross-Part checks were not repeated for this updated archive."
   },
-  "note": "Previous acceptance is retained as historical evidence for the original archive; its HTTP, link and cross-Part checks were not repeated for this updated archive."
+  "note": "Prior archive acceptance retained as historical evidence. Unit tests were not rerun because only report prose and the manifest changed."
 }
