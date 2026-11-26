@@ -66,8 +66,13 @@ Source repository: https://github.com/FSLiao375426/smart-city-traffic-capstone-0
 The repository preserves incremental Git history; the ZIP is a portable snapshot.
 Data: Hogue (2019), Metro Interstate Traffic Volume, UCI Machine Learning Repository,
 https://doi.org/10.24432/C5X60B (CC BY 4.0).
-The labels are traffic-volume proxies, not observed accident risk. Full-period plots
-are descriptive; the final modelling split and forecast-time inputs remain undecided.
+The Part 2 PDF is a dated development snapshot: its statement that the final model
+split was undecided reflects that stage. In Part 3, training runs through 2016, 2017
+is used for validation, and the frozen models are evaluated on available 2018 data.
+The models use same-hour observed weather; a future forecast requires separate
+evaluation with weather inputs available at prediction time. See the Part 3 final
+report in the source repository. Traffic-volume labels are not observed accident risk.
+Full-period plots are descriptive.
 """
     with ZipFile(output, "w", compression=ZIP_DEFLATED, compresslevel=6) as archive:
         def write(name, data):

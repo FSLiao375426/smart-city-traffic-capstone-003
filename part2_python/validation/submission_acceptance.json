@@ -1,86 +1,101 @@
 {
-  "archive_sha256": "e489e1d41f2763ae462d68a5ccdb45ff8addb2093de1073951cb81da8d56548e",
-  "manifest_files_verified": 40,
-  "raw_input_unchanged": true,
-  "extraction_directory": "tmp\\submission_check_cccfad2140fe473c8d8f1b7c7b499f4a\\capstone_part2",
-  "commands": [
-    {
-      "arguments": [
-        "-W",
-        "error",
-        "pipeline.py",
-        "--all"
-      ],
-      "returncode": 0,
-      "stdout": "",
-      "stderr": "2026-11-24T15:38:30Z | INFO | part2_python.pipeline | Loaded raw CSV: 48204 rows, 9 columns\n2026-11-24T15:38:30Z | INFO | part2_python.pipeline | Schema validated: all 9 required columns are present\n2026-11-24T15:38:30Z | INFO | part2_python.pipeline | Schema validated: all 9 required columns are present\n2026-11-24T15:38:30Z | INFO | part2_python.pipeline | Categorical text checked: holiday; no changes\n2026-11-24T15:38:31Z | INFO | part2_python.pipeline | Categorical text checked: weather_main; no changes\n2026-11-24T15:38:31Z | WARNING | part2_python.pipeline | Standardised 1730 rows in weather_description: inconsistent categorical text\n2026-11-24T15:38:31Z | INFO | part2_python.pipeline | Parsed and validated 48204 hourly timestamps\n2026-11-24T15:38:31Z | WARNING | part2_python.pipeline | Dropped 17 duplicate rows: all nine values identical after standardisation\n2026-11-24T15:38:31Z | INFO | part2_python.pipeline | Traffic consistency checked: same-hour traffic volumes agree\n2026-11-24T15:38:31Z | WARNING | part2_python.pipeline | Marked 10 rows invalid in temp: missing/non-finite or rule violation\n2026-11-24T15:38:31Z | WARNING | part2_python.pipeline | Marked 1 rows invalid in rain_1h: missing/non-finite or rule violation\n2026-11-24T15:38:31Z | INFO | part2_python.pipeline | Validity checks completed: snow_1h; no readings changed\n2026-11-24T15:38:31Z | INFO | part2_python.pipeline | Validity checks completed: clouds_all; no readings changed\n2026-11-24T15:38:53Z | WARNING | part2_python.pipeline | Updated 1150 hourly holiday labels: propagated known labels within the same calendar date\n2026-11-24T15:38:53Z | WARNING | part2_python.pipeline | Collapsed 7612 additional weather-observation rows to 40575 unique traffic hours; weather labels retained separately\n2026-11-24T15:38:53Z | INFO | part2_python.pipeline | Hourly tables built: 40575 traffic hours and 47893 hour/weather pairs\n2026-11-24T15:38:53Z | WARNING | part2_python.pipeline | Imputed 4 hourly temp readings in month 1 using reference-period median 264.2500\n2026-11-24T15:38:53Z | WARNING | part2_python.pipeline | Imputed 6 hourly temp readings in month 2 using reference-period median 264.1500\n2026-11-24T15:38:53Z | WARNING | part2_python.pipeline | Imputed 1 hourly rain_1h readings in month 7 using reference-period median 0.0000\n2026-11-24T15:38:53Z | WARNING | part2_python.pipeline | Coverage audit: 9 full months absent and 11976 unobserved hours inside the time range; no hours fabricated\n2026-11-24T15:38:54Z | INFO | part2_python.pipeline | Saved processed\\traffic_hourly.csv: 40575 rows, 28 columns\n2026-11-24T15:38:54Z | INFO | part2_python.pipeline | Saved processed\\hourly_weather.csv: 47893 rows, 3 columns\n2026-11-24T15:38:54Z | INFO | part2_python.pipeline | Saved processed\\coverage_by_year.csv: 7 rows, 8 columns\n2026-11-24T15:38:54Z | INFO | part2_python.pipeline | Saved processed\\time_gaps.csv: 2588 rows, 3 columns\n2026-11-24T15:38:54Z | INFO | part2_python.pipeline | Saved processing metadata: quality_report.json\n2026-11-24T15:38:54Z | INFO | part2_python.pipeline | Saved processing metadata: imputation_values.json\n2026-11-24T15:38:54Z | INFO | part2_python.pipeline | Pipeline completed: 40575 observed hours; raw input SHA-256 unchanged\n2026-11-24T15:38:55Z | INFO | part2_python.pipeline | Starting feature stage: time only\n2026-11-24T15:38:55Z | INFO | part2_python.features | Loaded cleaned hourly table: 40575 rows, 28 columns\n2026-11-24T15:38:55Z | INFO | part2_python.features | Added 3 calendar features to 40575 rows: hour, day_of_week, is_weekend\n2026-11-24T15:38:55Z | INFO | part2_python.features | Added 2 cyclic hour features using the fixed 24-hour period\n2026-11-24T15:38:56Z | INFO | part2_python.features | Saved traffic_time_features.csv: 40575 rows, 33 columns; input observations and file unchanged\n2026-11-24T15:38:56Z | INFO | part2_python.pipeline | Starting feature stage: ['--scale']\n2026-11-24T15:38:56Z | INFO | part2_python.features | Loaded cleaned hourly table: 40575 rows, 28 columns\n2026-11-24T15:38:56Z | INFO | part2_python.features | Added 3 calendar features to 40575 rows: hour, day_of_week, is_weekend\n2026-11-24T15:38:56Z | INFO | part2_python.features | Added 2 cyclic hour features using the fixed 24-hour period\n2026-11-24T15:38:56Z | INFO | part2_python.features | Scaled temp: reference=25329, fit_end=2016-12-31 23:59:59, mean=280.94088130, population_std=13.15421926\n2026-11-24T15:38:56Z | INFO | part2_python.features | Scaled clouds_all: reference=25329, fit_end=2016-12-31 23:59:59, mean=45.43313988, population_std=38.47978187\n2026-11-24T15:38:57Z | INFO | part2_python.features | Saved traffic_scaled_features.csv: 40575 rows, 35 columns; input observations and file unchanged\n2026-11-24T15:38:57Z | INFO | part2_python.pipeline | Starting feature stage: ['--quartiles']\n2026-11-24T15:38:57Z | INFO | part2_python.features | Loaded cleaned hourly table: 40575 rows, 28 columns\n2026-11-24T15:38:57Z | INFO | part2_python.features | Added 3 calendar features to 40575 rows: hour, day_of_week, is_weekend\n2026-11-24T15:38:57Z | INFO | part2_python.features | Added 2 cyclic hour features using the fixed 24-hour period\n2026-11-24T15:38:57Z | INFO | part2_python.features | Scaled temp: reference=25329, fit_end=2016-12-31 23:59:59, mean=280.94088130, population_std=13.15421926\n2026-11-24T15:38:57Z | INFO | part2_python.features | Scaled clouds_all: reference=25329, fit_end=2016-12-31 23:59:59, mean=45.43313988, population_std=38.47978187\n2026-11-24T15:38:57Z | INFO | part2_python.features | Quartile counts (reference): {1: 6337, 2: 6329, 3: 6332, 4: 6331}\n2026-11-24T15:38:57Z | INFO | part2_python.features | Quartile counts (holdout): {1: 3625, 2: 3567, 3: 4062, 4: 3992}\n2026-11-24T15:38:58Z | INFO | part2_python.features | Saved traffic_model_features.csv: 40575 rows, 36 columns; input observations and file unchanged\n2026-11-24T15:38:58Z | INFO | part2_python.pipeline | Starting visualization stage\n2026-11-24T15:38:59Z | INFO | part2_python.visualize | Saved figure C:\\Users\\f_s_l\\Documents\\GitHub\\smart-city-traffic-capstone-003\\tmp\\submission_check_cccfad2140fe473c8d8f1b7c7b499f4a\\capstone_part2\\part2_python\\figures\\01_hourly_profile.png\n2026-11-24T15:38:59Z | INFO | part2_python.visualize | Saved figure C:\\Users\\f_s_l\\Documents\\GitHub\\smart-city-traffic-capstone-003\\tmp\\submission_check_cccfad2140fe473c8d8f1b7c7b499f4a\\capstone_part2\\part2_python\\figures\\02_traffic_distribution.png\n2026-11-24T15:39:01Z | INFO | part2_python.visualize | Saved figure C:\\Users\\f_s_l\\Documents\\GitHub\\smart-city-traffic-capstone-003\\tmp\\submission_check_cccfad2140fe473c8d8f1b7c7b499f4a\\capstone_part2\\part2_python\\figures\\03_temperature_traffic.png\n2026-11-24T15:39:01Z | INFO | part2_python.visualize | Verified 40575 observed hours; source hash unchanged; r=0.13949269\n2026-11-24T15:39:01Z | INFO | part2_python.pipeline | End-to-end pipeline completed: raw CSV, cleaning, features and three figures\n"
-    },
-    {
-      "arguments": [
-        "-m",
-        "unittest",
-        "discover",
-        "-s",
-        "part2_python/tests",
-        "-v"
-      ],
-      "returncode": 0,
-      "stdout": "",
-      "stderr": "test_cli_stdout_is_only_json_answer (test_cli.QueryTests.test_cli_stdout_is_only_json_answer) ... ok\ntest_inclusive_date_range_and_counts (test_cli.QueryTests.test_inclusive_date_range_and_counts) ... ok\ntest_invalid_input_has_error_without_traceback (test_cli.QueryTests.test_invalid_input_has_error_without_traceback) ... ok\ntest_single_group_comparison (test_cli.QueryTests.test_single_group_comparison) ... ok\ntest_zero_is_observed_and_absence_is_null (test_cli.QueryTests.test_zero_is_observed_and_absence_is_null) ... No observed hours match this query; missing data is not zero traffic\nok\ntest_boundaries_and_holdout_isolation (test_features.QuartileTests.test_boundaries_and_holdout_isolation) ... ok\ntest_saved_quartiles (test_features.QuartileTests.test_saved_quartiles) ... ok\ntest_holdout_cannot_change_fit (test_features.ScalingTests.test_holdout_cannot_change_fit) ... ok\ntest_saved_artifact (test_features.ScalingTests.test_saved_artifact) ... ok\ntest_conflicting_traffic_is_not_silently_averaged (test_pipeline.PipelineTests.test_conflicting_traffic_is_not_silently_averaged) ... ok\ntest_known_holiday_extends_only_within_its_date (test_pipeline.PipelineTests.test_known_holiday_extends_only_within_its_date) ... Updated 1 hourly holiday labels: propagated known labels within the same calendar date\nok\ntest_log_path_cannot_overwrite_raw_input (test_pipeline.PipelineTests.test_log_path_cannot_overwrite_raw_input) ... usage: python.exe -m unittest [-h] [--input INPUT] [--output-dir OUTPUT_DIR]\n                              [--log-file LOG_FILE] [--fit-end FIT_END]\n                              [--log-level {DEBUG,INFO,WARNING,ERROR}] [--all]\npython.exe -m unittest: error: The raw input must differ from all generated output and log paths\nok\ntest_monthly_imputation_excludes_held_out_future (test_pipeline.PipelineTests.test_monthly_imputation_excludes_held_out_future) ... Imputed 1 hourly temp readings in month 1 using reference-period median 282.0000\nok\ntest_one_hour_keeps_zero_traffic_and_all_weather_labels (test_pipeline.PipelineTests.test_one_hour_keeps_zero_traffic_and_all_weather_labels) ... Dropped 1 duplicate rows: all nine values identical after standardisation\nCollapsed 1 additional weather-observation rows to 1 unique traffic hours; weather labels retained separately\nok\ntest_repeated_weather_descriptions_do_not_reweight_numeric_median (test_pipeline.PipelineTests.test_repeated_weather_descriptions_do_not_reweight_numeric_median) ... Collapsed 2 additional weather-observation rows to 1 unique traffic hours; weather labels retained separately\nok\ntest_schema_rejects_missing_columns (test_pipeline.PipelineTests.test_schema_rejects_missing_columns) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 1.551s\n\nOK\n"
-    },
-    {
-      "arguments": [
-        "traffic_app.py",
-        "at",
-        "--time",
-        "2017-01-01 00:00:00"
-      ],
-      "returncode": 0,
-      "stdout": "{\n  \"status\": \"ok\",\n  \"date_time\": \"2017-01-01 00:00:00\",\n  \"traffic_volume\": 1848,\n  \"temp_c\": -3.3999999999999773,\n  \"clouds_all\": 75.0,\n  \"traffic_volume_quartile\": 2\n}\n",
-      "stderr": "2026-11-24T15:39:09Z | INFO | part2_python.cli | CLI invoked with arguments: ['at', '--time', '2017-01-01 00:00:00']\n2026-11-24T15:39:09Z | INFO | part2_python.cli | CLI command at completed: ok\n"
-    },
-    {
-      "arguments": [
-        "traffic_app.py",
-        "summary",
-        "--start",
-        "2017-01-01",
-        "--end",
-        "2017-01-31"
-      ],
-      "returncode": 0,
-      "stdout": "{\n  \"status\": \"ok\",\n  \"observed_hours\": 744,\n  \"mean_traffic\": 3120.2647849462364,\n  \"min_traffic\": 216,\n  \"max_traffic\": 6772,\n  \"quartile_counts\": {\n    \"1\": 188,\n    \"2\": 193,\n    \"3\": 220,\n    \"4\": 143\n  }\n}\n",
-      "stderr": "2026-11-24T15:39:12Z | INFO | part2_python.cli | CLI invoked with arguments: ['summary', '--start', '2017-01-01', '--end', '2017-01-31']\n2026-11-24T15:39:12Z | INFO | part2_python.cli | CLI command summary completed: ok\n"
-    },
-    {
-      "arguments": [
-        "traffic_app.py",
-        "compare",
-        "--start",
-        "2017-01-01",
-        "--end",
-        "2017-01-31"
-      ],
-      "returncode": 0,
-      "stdout": "{\n  \"status\": \"ok\",\n  \"observed_hours\": 744,\n  \"groups\": {\n    \"weekday\": {\n      \"observed_hours\": 528,\n      \"mean_traffic\": 3347.4469696969695\n    },\n    \"weekend\": {\n      \"observed_hours\": 216,\n      \"mean_traffic\": 2564.9305555555557\n    }\n  },\n  \"note\": \"Means per observed hour; year/season composition is not adjusted.\"\n}\n",
-      "stderr": "2026-11-24T15:39:15Z | INFO | part2_python.cli | CLI invoked with arguments: ['compare', '--start', '2017-01-01', '--end', '2017-01-31']\n2026-11-24T15:39:15Z | INFO | part2_python.cli | CLI command compare completed: ok\n"
-    },
-    {
-      "arguments": [
-        "feature_engineering.py",
-        "--help"
-      ],
-      "returncode": 0,
-      "stdout": "usage: feature_engineering.py [-h] [--scale] [--quartiles]\n                              [--log-level {DEBUG,INFO,WARNING,ERROR}]\n\nAdd calendar and cyclic-hour features without altering cleaned observations.\nRun after cleaning with: python -m part2_python.features\n\noptions:\n  -h, --help            show this help message and exit\n  --scale               Add temp_z and clouds_all_z using the cleaning\n                        reference period\n  --quartiles           Include scaling and reference-fitted traffic quartile\n                        labels\n  --log-level {DEBUG,INFO,WARNING,ERROR}\n",
-      "stderr": ""
-    },
-    {
-      "arguments": [
-        "visualizations.py"
-      ],
-      "returncode": 0,
-      "stdout": "",
-      "stderr": "2026-11-24T15:39:21Z | INFO | part2_python.visualize | Saved figure C:\\Users\\f_s_l\\Documents\\GitHub\\smart-city-traffic-capstone-003\\tmp\\submission_check_cccfad2140fe473c8d8f1b7c7b499f4a\\capstone_part2\\part2_python\\figures\\01_hourly_profile.png\n2026-11-24T15:39:21Z | INFO | part2_python.visualize | Saved figure C:\\Users\\f_s_l\\Documents\\GitHub\\smart-city-traffic-capstone-003\\tmp\\submission_check_cccfad2140fe473c8d8f1b7c7b499f4a\\capstone_part2\\part2_python\\figures\\02_traffic_distribution.png\n2026-11-24T15:39:22Z | INFO | part2_python.visualize | Saved figure C:\\Users\\f_s_l\\Documents\\GitHub\\smart-city-traffic-capstone-003\\tmp\\submission_check_cccfad2140fe473c8d8f1b7c7b499f4a\\capstone_part2\\part2_python\\figures\\03_temperature_traffic.png\n2026-11-24T15:39:22Z | INFO | part2_python.visualize | Verified 40575 observed hours; source hash unchanged; r=0.13949269\n"
-    }
-  ]
+  "archive_sha256": "d3e0488c025c46963d84aaf43cbf1c75b05bd4405ab5e0fd03732d658cfa5271",
+  "archive_bytes": 4684078,
+  "verification_date_singapore": "2026-11-26",
+  "method": "Updated previous archive by replacing only generated top-level README and manifest; other uncompressed members matched byte-for-byte.",
+  "fresh_environment_install_tested": false,
+  "checks": {
+    "zip_integrity": "passed",
+    "manifest_files_verified": 40,
+    "readme_matches_generator": true,
+    "other_members_match_previous_archive": true,
+    "tests_rerun_for_text_only_change": false
+  },
+  "previous_archive_acceptance": {
+    "archive_sha256": "e489e1d41f2763ae462d68a5ccdb45ff8addb2093de1073951cb81da8d56548e",
+    "manifest_files_verified": 40,
+    "raw_input_unchanged": true,
+    "extraction_directory": "tmp\\submission_check_cccfad2140fe473c8d8f1b7c7b499f4a\\capstone_part2",
+    "commands": [
+      {
+        "arguments": [
+          "-W",
+          "error",
+          "pipeline.py",
+          "--all"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "2026-11-24T15:38:30Z | INFO | part2_python.pipeline | Loaded raw CSV: 48204 rows, 9 columns\n2026-11-24T15:38:30Z | INFO | part2_python.pipeline | Schema validated: all 9 required columns are present\n2026-11-24T15:38:30Z | INFO | part2_python.pipeline | Schema validated: all 9 required columns are present\n2026-11-24T15:38:30Z | INFO | part2_python.pipeline | Categorical text checked: holiday; no changes\n2026-11-24T15:38:31Z | INFO | part2_python.pipeline | Categorical text checked: weather_main; no changes\n2026-11-24T15:38:31Z | WARNING | part2_python.pipeline | Standardised 1730 rows in weather_description: inconsistent categorical text\n2026-11-24T15:38:31Z | INFO | part2_python.pipeline | Parsed and validated 48204 hourly timestamps\n2026-11-24T15:38:31Z | WARNING | part2_python.pipeline | Dropped 17 duplicate rows: all nine values identical after standardisation\n2026-11-24T15:38:31Z | INFO | part2_python.pipeline | Traffic consistency checked: same-hour traffic volumes agree\n2026-11-24T15:38:31Z | WARNING | part2_python.pipeline | Marked 10 rows invalid in temp: missing/non-finite or rule violation\n2026-11-24T15:38:31Z | WARNING | part2_python.pipeline | Marked 1 rows invalid in rain_1h: missing/non-finite or rule violation\n2026-11-24T15:38:31Z | INFO | part2_python.pipeline | Validity checks completed: snow_1h; no readings changed\n2026-11-24T15:38:31Z | INFO | part2_python.pipeline | Validity checks completed: clouds_all; no readings changed\n2026-11-24T15:38:53Z | WARNING | part2_python.pipeline | Updated 1150 hourly holiday labels: propagated known labels within the same calendar date\n2026-11-24T15:38:53Z | WARNING | part2_python.pipeline | Collapsed 7612 additional weather-observation rows to 40575 unique traffic hours; weather labels retained separately\n2026-11-24T15:38:53Z | INFO | part2_python.pipeline | Hourly tables built: 40575 traffic hours and 47893 hour/weather pairs\n2026-11-24T15:38:53Z | WARNING | part2_python.pipeline | Imputed 4 hourly temp readings in month 1 using reference-period median 264.2500\n2026-11-24T15:38:53Z | WARNING | part2_python.pipeline | Imputed 6 hourly temp readings in month 2 using reference-period median 264.1500\n2026-11-24T15:38:53Z | WARNING | part2_python.pipeline | Imputed 1 hourly rain_1h readings in month 7 using reference-period median 0.0000\n2026-11-24T15:38:53Z | WARNING | part2_python.pipeline | Coverage audit: 9 full months absent and 11976 unobserved hours inside the time range; no hours fabricated\n2026-11-24T15:38:54Z | INFO | part2_python.pipeline | Saved processed\\traffic_hourly.csv: 40575 rows, 28 columns\n2026-11-24T15:38:54Z | INFO | part2_python.pipeline | Saved processed\\hourly_weather.csv: 47893 rows, 3 columns\n2026-11-24T15:38:54Z | INFO | part2_python.pipeline | Saved processed\\coverage_by_year.csv: 7 rows, 8 columns\n2026-11-24T15:38:54Z | INFO | part2_python.pipeline | Saved processed\\time_gaps.csv: 2588 rows, 3 columns\n2026-11-24T15:38:54Z | INFO | part2_python.pipeline | Saved processing metadata: quality_report.json\n2026-11-24T15:38:54Z | INFO | part2_python.pipeline | Saved processing metadata: imputation_values.json\n2026-11-24T15:38:54Z | INFO | part2_python.pipeline | Pipeline completed: 40575 observed hours; raw input SHA-256 unchanged\n2026-11-24T15:38:55Z | INFO | part2_python.pipeline | Starting feature stage: time only\n2026-11-24T15:38:55Z | INFO | part2_python.features | Loaded cleaned hourly table: 40575 rows, 28 columns\n2026-11-24T15:38:55Z | INFO | part2_python.features | Added 3 calendar features to 40575 rows: hour, day_of_week, is_weekend\n2026-11-24T15:38:55Z | INFO | part2_python.features | Added 2 cyclic hour features using the fixed 24-hour period\n2026-11-24T15:38:56Z | INFO | part2_python.features | Saved traffic_time_features.csv: 40575 rows, 33 columns; input observations and file unchanged\n2026-11-24T15:38:56Z | INFO | part2_python.pipeline | Starting feature stage: ['--scale']\n2026-11-24T15:38:56Z | INFO | part2_python.features | Loaded cleaned hourly table: 40575 rows, 28 columns\n2026-11-24T15:38:56Z | INFO | part2_python.features | Added 3 calendar features to 40575 rows: hour, day_of_week, is_weekend\n2026-11-24T15:38:56Z | INFO | part2_python.features | Added 2 cyclic hour features using the fixed 24-hour period\n2026-11-24T15:38:56Z | INFO | part2_python.features | Scaled temp: reference=25329, fit_end=2016-12-31 23:59:59, mean=280.94088130, population_std=13.15421926\n2026-11-24T15:38:56Z | INFO | part2_python.features | Scaled clouds_all: reference=25329, fit_end=2016-12-31 23:59:59, mean=45.43313988, population_std=38.47978187\n2026-11-24T15:38:57Z | INFO | part2_python.features | Saved traffic_scaled_features.csv: 40575 rows, 35 columns; input observations and file unchanged\n2026-11-24T15:38:57Z | INFO | part2_python.pipeline | Starting feature stage: ['--quartiles']\n2026-11-24T15:38:57Z | INFO | part2_python.features | Loaded cleaned hourly table: 40575 rows, 28 columns\n2026-11-24T15:38:57Z | INFO | part2_python.features | Added 3 calendar features to 40575 rows: hour, day_of_week, is_weekend\n2026-11-24T15:38:57Z | INFO | part2_python.features | Added 2 cyclic hour features using the fixed 24-hour period\n2026-11-24T15:38:57Z | INFO | part2_python.features | Scaled temp: reference=25329, fit_end=2016-12-31 23:59:59, mean=280.94088130, population_std=13.15421926\n2026-11-24T15:38:57Z | INFO | part2_python.features | Scaled clouds_all: reference=25329, fit_end=2016-12-31 23:59:59, mean=45.43313988, population_std=38.47978187\n2026-11-24T15:38:57Z | INFO | part2_python.features | Quartile counts (reference): {1: 6337, 2: 6329, 3: 6332, 4: 6331}\n2026-11-24T15:38:57Z | INFO | part2_python.features | Quartile counts (holdout): {1: 3625, 2: 3567, 3: 4062, 4: 3992}\n2026-11-24T15:38:58Z | INFO | part2_python.features | Saved traffic_model_features.csv: 40575 rows, 36 columns; input observations and file unchanged\n2026-11-24T15:38:58Z | INFO | part2_python.pipeline | Starting visualization stage\n2026-11-24T15:38:59Z | INFO | part2_python.visualize | Saved figure C:\\Users\\f_s_l\\Documents\\GitHub\\smart-city-traffic-capstone-003\\tmp\\submission_check_cccfad2140fe473c8d8f1b7c7b499f4a\\capstone_part2\\part2_python\\figures\\01_hourly_profile.png\n2026-11-24T15:38:59Z | INFO | part2_python.visualize | Saved figure C:\\Users\\f_s_l\\Documents\\GitHub\\smart-city-traffic-capstone-003\\tmp\\submission_check_cccfad2140fe473c8d8f1b7c7b499f4a\\capstone_part2\\part2_python\\figures\\02_traffic_distribution.png\n2026-11-24T15:39:01Z | INFO | part2_python.visualize | Saved figure C:\\Users\\f_s_l\\Documents\\GitHub\\smart-city-traffic-capstone-003\\tmp\\submission_check_cccfad2140fe473c8d8f1b7c7b499f4a\\capstone_part2\\part2_python\\figures\\03_temperature_traffic.png\n2026-11-24T15:39:01Z | INFO | part2_python.visualize | Verified 40575 observed hours; source hash unchanged; r=0.13949269\n2026-11-24T15:39:01Z | INFO | part2_python.pipeline | End-to-end pipeline completed: raw CSV, cleaning, features and three figures\n"
+      },
+      {
+        "arguments": [
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "part2_python/tests",
+          "-v"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "test_cli_stdout_is_only_json_answer (test_cli.QueryTests.test_cli_stdout_is_only_json_answer) ... ok\ntest_inclusive_date_range_and_counts (test_cli.QueryTests.test_inclusive_date_range_and_counts) ... ok\ntest_invalid_input_has_error_without_traceback (test_cli.QueryTests.test_invalid_input_has_error_without_traceback) ... ok\ntest_single_group_comparison (test_cli.QueryTests.test_single_group_comparison) ... ok\ntest_zero_is_observed_and_absence_is_null (test_cli.QueryTests.test_zero_is_observed_and_absence_is_null) ... No observed hours match this query; missing data is not zero traffic\nok\ntest_boundaries_and_holdout_isolation (test_features.QuartileTests.test_boundaries_and_holdout_isolation) ... ok\ntest_saved_quartiles (test_features.QuartileTests.test_saved_quartiles) ... ok\ntest_holdout_cannot_change_fit (test_features.ScalingTests.test_holdout_cannot_change_fit) ... ok\ntest_saved_artifact (test_features.ScalingTests.test_saved_artifact) ... ok\ntest_conflicting_traffic_is_not_silently_averaged (test_pipeline.PipelineTests.test_conflicting_traffic_is_not_silently_averaged) ... ok\ntest_known_holiday_extends_only_within_its_date (test_pipeline.PipelineTests.test_known_holiday_extends_only_within_its_date) ... Updated 1 hourly holiday labels: propagated known labels within the same calendar date\nok\ntest_log_path_cannot_overwrite_raw_input (test_pipeline.PipelineTests.test_log_path_cannot_overwrite_raw_input) ... usage: python.exe -m unittest [-h] [--input INPUT] [--output-dir OUTPUT_DIR]\n                              [--log-file LOG_FILE] [--fit-end FIT_END]\n                              [--log-level {DEBUG,INFO,WARNING,ERROR}] [--all]\npython.exe -m unittest: error: The raw input must differ from all generated output and log paths\nok\ntest_monthly_imputation_excludes_held_out_future (test_pipeline.PipelineTests.test_monthly_imputation_excludes_held_out_future) ... Imputed 1 hourly temp readings in month 1 using reference-period median 282.0000\nok\ntest_one_hour_keeps_zero_traffic_and_all_weather_labels (test_pipeline.PipelineTests.test_one_hour_keeps_zero_traffic_and_all_weather_labels) ... Dropped 1 duplicate rows: all nine values identical after standardisation\nCollapsed 1 additional weather-observation rows to 1 unique traffic hours; weather labels retained separately\nok\ntest_repeated_weather_descriptions_do_not_reweight_numeric_median (test_pipeline.PipelineTests.test_repeated_weather_descriptions_do_not_reweight_numeric_median) ... Collapsed 2 additional weather-observation rows to 1 unique traffic hours; weather labels retained separately\nok\ntest_schema_rejects_missing_columns (test_pipeline.PipelineTests.test_schema_rejects_missing_columns) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 1.551s\n\nOK\n"
+      },
+      {
+        "arguments": [
+          "traffic_app.py",
+          "at",
+          "--time",
+          "2017-01-01 00:00:00"
+        ],
+        "returncode": 0,
+        "stdout": "{\n  \"status\": \"ok\",\n  \"date_time\": \"2017-01-01 00:00:00\",\n  \"traffic_volume\": 1848,\n  \"temp_c\": -3.3999999999999773,\n  \"clouds_all\": 75.0,\n  \"traffic_volume_quartile\": 2\n}\n",
+        "stderr": "2026-11-24T15:39:09Z | INFO | part2_python.cli | CLI invoked with arguments: ['at', '--time', '2017-01-01 00:00:00']\n2026-11-24T15:39:09Z | INFO | part2_python.cli | CLI command at completed: ok\n"
+      },
+      {
+        "arguments": [
+          "traffic_app.py",
+          "summary",
+          "--start",
+          "2017-01-01",
+          "--end",
+          "2017-01-31"
+        ],
+        "returncode": 0,
+        "stdout": "{\n  \"status\": \"ok\",\n  \"observed_hours\": 744,\n  \"mean_traffic\": 3120.2647849462364,\n  \"min_traffic\": 216,\n  \"max_traffic\": 6772,\n  \"quartile_counts\": {\n    \"1\": 188,\n    \"2\": 193,\n    \"3\": 220,\n    \"4\": 143\n  }\n}\n",
+        "stderr": "2026-11-24T15:39:12Z | INFO | part2_python.cli | CLI invoked with arguments: ['summary', '--start', '2017-01-01', '--end', '2017-01-31']\n2026-11-24T15:39:12Z | INFO | part2_python.cli | CLI command summary completed: ok\n"
+      },
+      {
+        "arguments": [
+          "traffic_app.py",
+          "compare",
+          "--start",
+          "2017-01-01",
+          "--end",
+          "2017-01-31"
+        ],
+        "returncode": 0,
+        "stdout": "{\n  \"status\": \"ok\",\n  \"observed_hours\": 744,\n  \"groups\": {\n    \"weekday\": {\n      \"observed_hours\": 528,\n      \"mean_traffic\": 3347.4469696969695\n    },\n    \"weekend\": {\n      \"observed_hours\": 216,\n      \"mean_traffic\": 2564.9305555555557\n    }\n  },\n  \"note\": \"Means per observed hour; year/season composition is not adjusted.\"\n}\n",
+        "stderr": "2026-11-24T15:39:15Z | INFO | part2_python.cli | CLI invoked with arguments: ['compare', '--start', '2017-01-01', '--end', '2017-01-31']\n2026-11-24T15:39:15Z | INFO | part2_python.cli | CLI command compare completed: ok\n"
+      },
+      {
+        "arguments": [
+          "feature_engineering.py",
+          "--help"
+        ],
+        "returncode": 0,
+        "stdout": "usage: feature_engineering.py [-h] [--scale] [--quartiles]\n                              [--log-level {DEBUG,INFO,WARNING,ERROR}]\n\nAdd calendar and cyclic-hour features without altering cleaned observations.\nRun after cleaning with: python -m part2_python.features\n\noptions:\n  -h, --help            show this help message and exit\n  --scale               Add temp_z and clouds_all_z using the cleaning\n                        reference period\n  --quartiles           Include scaling and reference-fitted traffic quartile\n                        labels\n  --log-level {DEBUG,INFO,WARNING,ERROR}\n",
+        "stderr": ""
+      },
+      {
+        "arguments": [
+          "visualizations.py"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "2026-11-24T15:39:21Z | INFO | part2_python.visualize | Saved figure C:\\Users\\f_s_l\\Documents\\GitHub\\smart-city-traffic-capstone-003\\tmp\\submission_check_cccfad2140fe473c8d8f1b7c7b499f4a\\capstone_part2\\part2_python\\figures\\01_hourly_profile.png\n2026-11-24T15:39:21Z | INFO | part2_python.visualize | Saved figure C:\\Users\\f_s_l\\Documents\\GitHub\\smart-city-traffic-capstone-003\\tmp\\submission_check_cccfad2140fe473c8d8f1b7c7b499f4a\\capstone_part2\\part2_python\\figures\\02_traffic_distribution.png\n2026-11-24T15:39:22Z | INFO | part2_python.visualize | Saved figure C:\\Users\\f_s_l\\Documents\\GitHub\\smart-city-traffic-capstone-003\\tmp\\submission_check_cccfad2140fe473c8d8f1b7c7b499f4a\\capstone_part2\\part2_python\\figures\\03_temperature_traffic.png\n2026-11-24T15:39:22Z | INFO | part2_python.visualize | Verified 40575 observed hours; source hash unchanged; r=0.13949269\n"
+      }
+    ]
+  },
+  "note": "Previous acceptance retained as historical evidence. This archive changes only documentation and manifest; tests were not rerun for this change. Separate V2 isolated tests of the preceding archive passed on 2026-11-26."
 }
